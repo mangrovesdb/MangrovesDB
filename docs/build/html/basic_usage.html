@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MGDB Project &mdash; MangrovesDB 0.0 documentation</title>
+  <title>Where to Use MangrovesDB &mdash; MangrovesDB 0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Connect or Create a Database" href="documentation.html" />
-    <link rel="prev" title="Installation" href="installation.html" /> 
+    <link rel="next" title="Frequently Asked Questions" href="FAQ.html" />
+    <link rel="prev" title="Sample Queries" href="queries_on_mgdb.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,11 +41,8 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">MGDB Project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#sql-operations">SQL Operations</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fundamentals.html">MGDB Project</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
@@ -55,11 +52,16 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Queries on MangrovesDB</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="queries_on_mgdb.html">Query on MangrovesDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queries_on_mgdb.html">Sample Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queries_on_mgdb.html#real-world-queries">Real World Queries</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Basic usage</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="basic_usage.html">Basic usage</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Where to Use MangrovesDB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#transactions-on-mangrovesdb">Transactions on MangrovesDB</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#basic-use-cases">Basic Use-Cases</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -84,9 +86,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>MGDB Project</li>
+      <li>Where to Use MangrovesDB</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/fundamentals.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/basic_usage.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -94,20 +96,26 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="mgdb-project">
-<h1>MGDB Project<a class="headerlink" href="#mgdb-project" title="Permalink to this headline"></a></h1>
-<p>In this section we are going to describe the key features of the MGDB.</p>
-<div class="section" id="sql-operations">
-<h2>SQL Operations<a class="headerlink" href="#sql-operations" title="Permalink to this headline"></a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Wc2h1ywyr88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  <div class="section" id="where-to-use-mangrovesdb">
+<h1>Where to Use MangrovesDB<a class="headerlink" href="#where-to-use-mangrovesdb" title="Permalink to this headline"></a></h1>
+<div class="section" id="transactions-on-mangrovesdb">
+<h2>Transactions on MangrovesDB<a class="headerlink" href="#transactions-on-mangrovesdb" title="Permalink to this headline"></a></h2>
+<p>In MGDB, transactions are used to read or write the data on the underlying blockchain network using SQL commands. Almost all the capabilities of the SQL are supported in the platform.</p>
+<p>The generated transactions are the very basic kind of request taht is handled in the network and can read records stored on any blockchain platform and also write by on these platforms by leveraging MGDB.
+There are two kinds of operations that are supported in a transaction: CRAETE (TABLE), READ (SELECT), WRITE (INSERT and UPDATE).</p>
+<p>You can view the transaction specifications in <a class="reference external" href="https://github.com/mangrovesdb/mangroves.git">Github</a>, which describe transaction components and the conditions they have to fulfill in order to be valid.</p>
+</div>
+</div>
+<div class="section" id="basic-use-cases">
+<h1>Basic Use-Cases<a class="headerlink" href="#basic-use-cases" title="Permalink to this headline"></a></h1>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="documentation.html" class="btn btn-neutral float-right" title="Connect or Create a Database" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="queries_on_mgdb.html" class="btn btn-neutral float-left" title="Sample Queries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="FAQ.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

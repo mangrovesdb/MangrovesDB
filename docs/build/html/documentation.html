@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MGDB Project &mdash; MangrovesDB 0.0 documentation</title>
+  <title>Connect or Create a Database &mdash; MangrovesDB 0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -17,8 +17,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Connect or Create a Database" href="documentation.html" />
-    <link rel="prev" title="Installation" href="installation.html" /> 
+    <link rel="next" title="Query on MangrovesDB" href="queries_on_mgdb.html" />
+    <link rel="prev" title="MGDB Project" href="fundamentals.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -41,17 +41,21 @@
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">MGDB Project</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#sql-operations">SQL Operations</a></li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fundamentals.html">MGDB Project</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html">Connect or Create a Database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html#sql-queries-over-blockchain">SQL Queries over Blockchain</a></li>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html#blockchain-netwroks-on-mgdb">Blockchain Netwroks on MGDB</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Connect or Create a Database</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sql-queries-over-blockchain">SQL Queries over Blockchain</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#postgresql">PostgreSQL</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#blockchain-netwroks-on-mgdb">Blockchain Netwroks on MGDB</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ethereum">Ethereum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hyperledger">Hyperledger</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Queries on MangrovesDB</span></p>
 <ul>
@@ -84,9 +88,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>MGDB Project</li>
+      <li>Connect or Create a Database</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/fundamentals.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/documentation.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -94,20 +98,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="mgdb-project">
-<h1>MGDB Project<a class="headerlink" href="#mgdb-project" title="Permalink to this headline"></a></h1>
-<p>In this section we are going to describe the key features of the MGDB.</p>
-<div class="section" id="sql-operations">
-<h2>SQL Operations<a class="headerlink" href="#sql-operations" title="Permalink to this headline"></a></h2>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Wc2h1ywyr88" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+  <div class="section" id="connect-or-create-a-database">
+<h1>Connect or Create a Database<a class="headerlink" href="#connect-or-create-a-database" title="Permalink to this headline"></a></h1>
+<p>To use MangrovesDB, you must first create a connection to a between MGDB and the underlying Blockchain Network. The exact process varies by client and the blockchain network. The network can be also designed by the Mangroves engineers, but the very well practiced solution is to connect the MGDB to the currently available blockchain network.</p>
+<p>See the API docs for client-specific details.</p>
+</div>
+<div class="section" id="sql-queries-over-blockchain">
+<h1>SQL Queries over Blockchain<a class="headerlink" href="#sql-queries-over-blockchain" title="Permalink to this headline"></a></h1>
+<p>Mangroves is designed to enable the users to use SQL to query over any blockchain network. Both Read and Write operations are supported.</p>
+<div class="section" id="postgresql">
+<h2>PostgreSQL<a class="headerlink" href="#postgresql" title="Permalink to this headline"></a></h2>
+<p>ostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.</p>
+</div>
+</div>
+<div class="section" id="blockchain-netwroks-on-mgdb">
+<h1>Blockchain Netwroks on MGDB<a class="headerlink" href="#blockchain-netwroks-on-mgdb" title="Permalink to this headline"></a></h1>
+<p>In this section we cover the important blockchain networks which are supported in the MangrovesDB are discussed.</p>
+<div class="section" id="ethereum">
+<h2>Ethereum<a class="headerlink" href="#ethereum" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="hyperledger">
+<h2>Hyperledger<a class="headerlink" href="#hyperledger" title="Permalink to this headline"></a></h2>
+</div>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="documentation.html" class="btn btn-neutral float-right" title="Connect or Create a Database" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="fundamentals.html" class="btn btn-neutral float-left" title="MGDB Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="queries_on_mgdb.html" class="btn btn-neutral float-right" title="Query on MangrovesDB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -11,18 +11,46 @@ Let's :ref:`Install Mangroves First <settingup>`.
 
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Getting Started:
+   :maxdepth: 2
+   :caption: Getting Started
 
    installation
 
 .. toctree::
    :maxdepth: 3
-   :caption: Fundamentals:
+   :caption: Fundamentals
    
    fundamentals
 
+.. toctree::
+   :maxdepth: 3
+   :caption: Documentation
+   
+   documentation
 
+.. toctree::
+   :maxdepth: 3
+   :caption: Queries on MangrovesDB
+   
+   queries_on_mgdb
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Basic usage
+   
+   basic_usage
+
+.. toctree::
+   :maxdepth: 3
+   :caption: FAQ
+   
+   FAQ
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Live Demo
+   
+   live_demo
 
 
 Indices and tables
