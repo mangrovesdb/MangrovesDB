@@ -17,7 +17,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Query on MangrovesDB" href="queries_on_mgdb.html" />
+    <link rel="next" title="SELECT" href="select.html" />
     <link rel="prev" title="MGDB Project" href="fundamentals.html" /> 
 </head>
 
@@ -47,8 +47,20 @@
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Connect or Create a Database</a></li>
-<li class="toctree-l1"><a class="reference internal" href="#sql-queries-over-blockchain">SQL Queries over Blockchain</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#postgresql">PostgreSQL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#mgdb-system-catalogs">MGDB System Catalogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#sql-queries-over-blockchain">SQL Queries over Blockchain</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#postgresql-supported-statements">PostgreSQL Supported Statements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#statements">Statements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="select.html">SELECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="insert.html">Insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="delete.html">Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="update.html">Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="create_table.html">Create Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="create_view.html">Create View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="drop.html">Drop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alter_table.html">Alter Table</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#blockchain-netwroks-on-mgdb">Blockchain Netwroks on MGDB</a><ul>
@@ -59,11 +71,13 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Queries on MangrovesDB</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="queries_on_mgdb.html">Query on MangrovesDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queries_on_mgdb.html">Sample Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="queries_on_mgdb.html#real-world-queries">Real World Queries</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Basic usage</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="basic_usage.html">Basic usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage.html">Where to Use MangrovesDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage.html#basic-use-cases">Basic Use-Cases</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -71,7 +85,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Live Demo</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="live_demo.html">Live Demo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="live_demo.html">Test a Live Demo</a></li>
 </ul>
 
         </div>
@@ -103,12 +117,67 @@
 <p>To use MangrovesDB, you must first create a connection to a between MGDB and the underlying Blockchain Network. The exact process varies by client and the blockchain network. The network can be also designed by the Mangroves engineers, but the very well practiced solution is to connect the MGDB to the currently available blockchain network.</p>
 <p>See the API docs for client-specific details.</p>
 </div>
+<div class="section" id="mgdb-system-catalogs">
+<h1>MGDB System Catalogs<a class="headerlink" href="#mgdb-system-catalogs" title="Permalink to this headline"></a></h1>
+</div>
 <div class="section" id="sql-queries-over-blockchain">
 <h1>SQL Queries over Blockchain<a class="headerlink" href="#sql-queries-over-blockchain" title="Permalink to this headline"></a></h1>
 <p>Mangroves is designed to enable the users to use SQL to query over any blockchain network. Both Read and Write operations are supported.</p>
-<div class="section" id="postgresql">
-<h2>PostgreSQL<a class="headerlink" href="#postgresql" title="Permalink to this headline"></a></h2>
+</div>
+<div class="section" id="postgresql-supported-statements">
+<h1>PostgreSQL Supported Statements<a class="headerlink" href="#postgresql-supported-statements" title="Permalink to this headline"></a></h1>
 <p>ostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.</p>
+<div class="section" id="statements">
+<h2>Statements<a class="headerlink" href="#statements" title="Permalink to this headline"></a></h2>
+<p>Almost all the statements on PostgreSQL are supported in MGDB as well.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Select</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="select.html">SELECT</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Insert</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="insert.html">Insert</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Delete</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="delete.html">Delete</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Update</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="update.html">Update</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Create Table</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="create_table.html">Create Table</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Create View</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="create_view.html">Create View</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Drop</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="drop.html">Drop</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Alter Table</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="alter_table.html">Alter Table</a></li>
+</ul>
+</div>
 </div>
 </div>
 <div class="section" id="blockchain-netwroks-on-mgdb">
@@ -127,7 +196,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="fundamentals.html" class="btn btn-neutral float-left" title="MGDB Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="queries_on_mgdb.html" class="btn btn-neutral float-right" title="Query on MangrovesDB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="select.html" class="btn btn-neutral float-right" title="SELECT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
