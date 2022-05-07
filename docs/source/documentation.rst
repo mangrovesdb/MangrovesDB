@@ -1,99 +1,37 @@
-
-Connect or Create a Database
+MangrovesDB Documentations
 ==============================
 
-To use MangrovesDB, you must first create a connection to a between MGDB and the underlying Blockchain Network. The exact process varies by client and the blockchain network. The network can be also designed by the Mangroves engineers, but the very well practiced solution is to connect the MGDB to the currently available blockchain network. 
-
-See the API docs for client-specific details.
-
-
-MGDB System Catalogs
-==============================
-
-
-SQL Queries over Blockchain
-==============================
-
-Mangroves is designed to enable the users to use SQL to query over any blockchain network. Both Read and Write operations are supported.
-
-
-PostgreSQL Supported Statements
-=================================
-
-ostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
-
-Statements 
---------------------
-Almost all the statements on PostgreSQL are supported in MGDB as well. 
-
+These topics are discussed in the documentation section:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Select
+   :caption: Connect or Create a Database
+   :hidden:
 
-   select
+   Connect_or_Create_a_Database
 
 .. toctree::
    :maxdepth: 2
-   :caption: Insert
+   :caption: MGDB System Catalogs
    
-   insert
+   MGDB_System_Catalogs
 
 .. toctree::
    :maxdepth: 2
-   :caption: Delete
+   :caption: SQL Queries over Blockchain
    
-   delete
-
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Update
-   
-   update
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Create Table
-   
-   create_table
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Create View
-   
-   create_view
+   SQL_Queries_Over_Blockchain
 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Drop
+   :caption: PostgreSQL Supported Statements
    
-   drop
-
+   PostgreSQL_Supported_Statements
 
 .. toctree::
    :maxdepth: 2
-   :caption: Alter Table
+   :caption: Blockchain Netwroks on MGDB
    
-   alter_table
+   Blockchain_Netwroks_on_MGDB
 
-
-
-
-
-
-Blockchain Netwroks on MGDB
-==============================
-
-In this section we cover the important blockchain networks which are supported in the MangrovesDB are discussed.
-
-
-Ethereum
---------------------
-
-
-
-
-Hyperledger
---------------------
