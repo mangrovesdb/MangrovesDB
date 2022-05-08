@@ -1,34 +1,36 @@
 .. _settingup:
 .. image:: /images/mgdbLogo.png
+   
 Installation
 ===============
+
 This is a guide to halp you find out how to install MangrovesDB.
 * Install on Ubuntu
 * Install on Mac-Windows
 
-Prerequisites
------------------------
+Please follow the next steps to install MGDb on your system.
 
 
-Install MGDB on Ubuntu
------------------------
+.. toctree::
+   :maxdepth: 3
+   :caption: Prerequisites
+   :hidden:
+
+   Prerequisites
 
 
-Install MGDB on Ubuntu
-+++++++++++++++++++++++
-
-.. admonition:: Caution
-
-    Please first *install* the **pre-requierments**...
-
-
-.. DANGER::
-   Beware killer rabbits!
+.. toctree::
+   :maxdepth: 3
+   :caption: Install MGDB on Ubuntu
+   :hidden:
+   
+   Install_MGDB_on_Ubuntu
 
 
-You can simply clone the MangrovesDB Open Source project using the command below:
-
-.. code-block:: bash
-
-   $ cd && git clone https://github.com/mangrovesdb/mangroves.
+.. toctree::
+   :maxdepth: 3
+   :caption: Install MGDB on Mac and Windows
+   :hidden:
+   
+   Install_MGDB_on_Mac_Windows
 
