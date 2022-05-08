@@ -7,14 +7,14 @@ Statements
 --------------------
 Almost all the statements on PostgreSQL are supported in MGDB as well. 
 
-* Select
-* Insert
-* Delete
-* Update
-* Create Table
-* Create View
-* Drop
-* Alter Table
+* :ref:`Select <Select>`
+* :ref:`Insert <Insert>`
+* :ref:`Delete <Delete>`
+* :ref:`Update <Update>`
+* :ref:`Create Table <Create_Table>`
+* :ref:`Create View <Create_View>`
+* :ref:`Drop <Drop>`
+* :ref:`Alter Table <Alter_Table>`
 
 .. toctree::
    :maxdepth: 2
