@@ -1,6 +1,10 @@
 Where to Use MangrovesDB
 ===========================
+Do you want to read data from your company's underlying blockchain framework? Do you want to insert data into your blockchain platform? MangrovesDB in a platform
+to democratize the use of blockchain via SQL resources.
 
+**MangrovesDB** is an integration of Blockchain and SQL. The primary purpose is to simplify the use of blockchain in different stages of projects and
+among various technical human resources. You just need  to know SQL; the life would be considerably easier in reading and writing data into blockchain platforms.
 
 Transactions on MangrovesDB
 --------------------------------
