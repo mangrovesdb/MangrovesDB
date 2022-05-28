@@ -1,0 +1,4 @@
+.. _mgeth:
+
+Ethereum Catalog
+======================

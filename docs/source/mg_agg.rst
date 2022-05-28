@@ -1,0 +1,4 @@
+.. _mgagg:
+
+Aggregate Catalog
+======================

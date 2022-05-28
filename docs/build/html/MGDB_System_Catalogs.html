@@ -18,7 +18,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="SQL Queries over Blockchain" href="SQL_Queries_Over_Blockchain.html" />
+    <link rel="next" title="Ethereum Catalog" href="mg_ETH.html" />
     <link rel="prev" title="Connect or Create a Database" href="Connect_or_Create_a_Database.html" /> 
 </head>
 
@@ -49,7 +49,15 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="documentation.html">MangrovesDB Documentations</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="Connect_or_Create_a_Database.html">Connect or Create a Database</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">MGDB System Catalogs</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">MGDB System Catalogs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="mg_ETH.html">Ethereum Catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_HyperLedger.html">HyperLedger Catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_TimeZone.html">Time-Zone Catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_database.html">Database Catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_agg.html">Aggregate Catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_type.html">Type Catalog</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="SQL_Queries_Over_Blockchain.html">SQL Queries over Blockchain</a></li>
 <li class="toctree-l2"><a class="reference internal" href="PostgreSQL_Supported_Statements.html">PostgreSQL Supported Statements</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Blockchain_Netwroks_on_MGDB.html">Blockchain Netwroks on MGDB</a></li>
@@ -102,6 +110,32 @@
              
   <div class="section" id="mgdb-system-catalogs">
 <h1>MGDB System Catalogs<a class="headerlink" href="#mgdb-system-catalogs" title="Permalink to this headline"></a></h1>
+<p>Technically, liek the other relational database management systems, the system catalogs are the palce where all the data related to the schema metadata, such as information about tables and columns, and internal bookkeeping information, are stored.
+MGDB-SQL’s system catalogs are regular tables pre-defined in the platform, i.e., the approach of the PostgreSQL as well.
+Similar to the PostgreSQL, you can apply SQL statements, e.g., drop and recreate the tables, add columns, insert and update values in these Catalog Tables. This is how
+you can set up what is best for your buisiness, however, this can cause severe problems and mess up with your system. Please kindly follow the guidance provided in this section to use SQL commands if
+you want to make changes to these tables. The alternation should not be made by hand.
+In what follows information related to these catalog tables are provided:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="mg_ETH.html#mgeth"><span class="std std-ref">Ethereum Catalog</span></a></p></li>
+<li><p><a class="reference internal" href="mg_HyperLedger.html#mghplegger"><span class="std std-ref">HyperLedger Catalog</span></a></p></li>
+<li><p><a class="reference internal" href="mg_TimeZone.html#mgtz"><span class="std std-ref">Time-Zone Catalog</span></a></p></li>
+<li><p><a class="reference internal" href="mg_database.html#mgdb"><span class="std std-ref">Database Catalog</span></a></p></li>
+<li><p><a class="reference internal" href="mg_agg.html#mgagg"><span class="std std-ref">Aggregate Catalog</span></a></p></li>
+<li><p><a class="reference internal" href="mg_type.html#mgty"><span class="std std-ref">Type Catalog</span></a></p></li>
+</ul>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
 
@@ -109,7 +143,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Connect_or_Create_a_Database.html" class="btn btn-neutral float-left" title="Connect or Create a Database" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="SQL_Queries_Over_Blockchain.html" class="btn btn-neutral float-right" title="SQL Queries over Blockchain" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mg_ETH.html" class="btn btn-neutral float-right" title="Ethereum Catalog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

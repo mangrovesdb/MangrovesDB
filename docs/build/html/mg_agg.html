@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Where to Use MangrovesDB &mdash; MangrovesDB 0.0 documentation</title>
+  <title>Aggregate Catalog &mdash; MangrovesDB 0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -18,8 +18,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Frequently Asked Questions" href="FAQ.html" />
-    <link rel="prev" title="Sample Queries" href="queries_on_mgdb.html" /> 
+    <link rel="next" title="Type Catalog" href="mg_type.html" />
+    <link rel="prev" title="Database Catalog" href="mg_database.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -46,8 +46,22 @@
 <li class="toctree-l1"><a class="reference internal" href="fundamentals.html">MGDB Project</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="documentation.html">MangrovesDB Documentations</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="documentation.html">MangrovesDB Documentations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Connect_or_Create_a_Database.html">Connect or Create a Database</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="MGDB_System_Catalogs.html">MGDB System Catalogs</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="mg_ETH.html">Ethereum Catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_TimeZone.html">Time-Zone Catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_database.html">Database Catalog</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Aggregate Catalog</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_type.html">Type Catalog</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="SQL_Queries_Over_Blockchain.html">SQL Queries over Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PostgreSQL_Supported_Statements.html">PostgreSQL Supported Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Blockchain_Netwroks_on_MGDB.html">Blockchain Netwroks on MGDB</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Queries on MangrovesDB</span></p>
 <ul>
@@ -55,12 +69,9 @@
 <li class="toctree-l1"><a class="reference internal" href="queries_on_mgdb.html#real-world-queries">Real World Queries</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Basic usage</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Where to Use MangrovesDB</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#transactions-on-mangrovesdb">Transactions on MangrovesDB</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#basic-use-cases">Basic Use-Cases</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage.html">Where to Use MangrovesDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="basic_usage.html#basic-use-cases">Basic Use-Cases</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
 <ul>
@@ -85,9 +96,11 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Where to Use MangrovesDB</li>
+          <li><a href="documentation.html">MangrovesDB Documentations</a> &raquo;</li>
+          <li><a href="MGDB_System_Catalogs.html">MGDB System Catalogs</a> &raquo;</li>
+      <li>Aggregate Catalog</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/basic_usage.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/mg_agg.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -95,30 +108,16 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="where-to-use-mangrovesdb">
-<h1>Where to Use MangrovesDB<a class="headerlink" href="#where-to-use-mangrovesdb" title="Permalink to this headline"></a></h1>
-<p>Do you want to read data from your company’s underlying blockchain framework? Do you want to insert data into your blockchain platform? MangrovesDB in a platform
-to democratize the use of blockchain via SQL resources.</p>
-<p><strong>MangrovesDB</strong> is an integration of Blockchain and SQL. The primary purpose is to simplify the use of blockchain in different stages of projects and
-among various technical human resources. You just need  to know SQL; the life would be considerably easier in reading and writing data into blockchain platforms.</p>
-<div class="section" id="transactions-on-mangrovesdb">
-<h2>Transactions on MangrovesDB<a class="headerlink" href="#transactions-on-mangrovesdb" title="Permalink to this headline"></a></h2>
-<p>In MGDB, transactions are used to read or write the data on the underlying blockchain network using SQL commands. Almost all the capabilities of the SQL are supported in the platform.</p>
-<p>The generated transactions are the very basic kind of request taht is handled in the network and can read records stored on any blockchain platform and also write by on these platforms by leveraging MGDB.
-There are two kinds of operations that are supported in a transaction: CRAETE (TABLE), READ (SELECT), WRITE (INSERT and UPDATE).</p>
-<p>You can view the transaction specifications in <a class="reference external" href="https://github.com/mangrovesdb/mangroves.git">Github</a>, which describe transaction components and the conditions they have to fulfill in order to be valid.</p>
-</div>
-</div>
-<div class="section" id="basic-use-cases">
-<h1>Basic Use-Cases<a class="headerlink" href="#basic-use-cases" title="Permalink to this headline"></a></h1>
+  <div class="section" id="aggregate-catalog">
+<span id="mgagg"></span><h1>Aggregate Catalog<a class="headerlink" href="#aggregate-catalog" title="Permalink to this headline"></a></h1>
 </div>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="queries_on_mgdb.html" class="btn btn-neutral float-left" title="Sample Queries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="FAQ.html" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="mg_database.html" class="btn btn-neutral float-left" title="Database Catalog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mg_type.html" class="btn btn-neutral float-right" title="Type Catalog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
