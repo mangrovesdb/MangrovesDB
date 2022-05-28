@@ -2,7 +2,8 @@
 
 Ethereum Catalog
 ======================
-There are Seven main catalog tables for the Ethereum-based blockchain networks. These pre-defined tables are:
+There are Seven main catalog tables for the Ethereum-based blockchain networks. The main resource for these tables is this :ref:`https://pypi.org/project/ethereum-etl/1.0.0/ <uniquename>`. 
+These pre-defined tables are:
 * :ref:`Block Table <blocks>`
 * :ref:`Contracts Table<contracts>`
 * :ref:`Logs Table<logs>`
@@ -129,13 +130,149 @@ Logs Table
 Token Transfers Table
 ------------------------
 
++------------------------+------------+
+|      Column Name       |   Type     |
+|                        |            |
++========================+============+
+|     token_address      | varchar(42)| 
++------------------------+------------+
+|     from_address       | varchar(42)| 
++------------------------+------------+
+|      to_address        | varchar(42)| 
++------------------------+------------+
+|        value           | numeric(78)| 
++------------------------+------------+
+|    transaction_hash    | varchar(66)| 
++------------------------+------------+
+|       log_index        |   bigint   | 
++------------------------+------------+
+|    block_timestamp     |  timestamp |
++------------------------+------------+
+|      block_number      |   bigint   | 
++------------------------+------------+
+|       block_hash       | varchar(66)| 
++------------------------+------------+
 
-token_address	     varchar(42),
-from_address	     varchar(42),
-to_address	     varchar(42),
-value	     numeric(78),
-transaction_hash	     varchar(66),
-log_index	     bigint,
-block_timestamp	     timestamp,
-block_number	     bigint,
-block_hash	     varchar(66)
+
+.. _tokens:
+Tokens Table
+------------------------
+
++------------------------+------------+
+|      Column Name       |   Type     |
+|                        |            |
++========================+============+
+|        address         | varchar(42)| 
++------------------------+------------+
+|         name           |    text    | 
++------------------------+------------+
+|        symbol          |    text    | 
++------------------------+------------+
+|      decimals          |   int(11)  | 
++------------------------+------------+
+|    function_sighashes  |   string   | 
++------------------------+------------+
+
+
+.. _traces:
+Traces Table
+------------------------
+
++------------------------+-------------+
+|      Column Name       |   Type      |
+|                        |             |
++========================+=============+
+|    transaction_hash    | varchar(66) |
++------------------------+-------------+
+|   transaction_index    |   bigint    | 
++------------------------+-------------+
+|      from_address      | varchar(42) |
++------------------------+-------------+
+|      to_address        | varchar(42) | 
++------------------------+-------------+
+|        vlaue           | numeric(38) |
++------------------------+-------------+
+|        input           |    text     |
++------------------------+-------------+
+|        output          |    text     |
++------------------------+-------------+
+|      trace_type        | varchar(16) | 
++------------------------+-------------+
+|      call_type         | varchar(16) |
++------------------------+-------------+
+|     reward_type        | varchar(16) | 
++------------------------+-------------+
+|        gas             |   bigint    |
++------------------------+-------------+  
+|      gas_used          |   bigint    |
++------------------------+-------------+ 
+|      subtraces         |   bigint    |
++------------------------+-------------+ 
+|    trace_address       |varchar(8192)|
++------------------------+-------------+ 
+|        error           |    text     |
++------------------------+-------------+
+|        status          |    int      |
++------------------------+-------------+
+|   block_timestamp      |  timestamp  |
++------------------------+-------------+
+|      block_number      |   bigint    |
++------------------------+-------------+ 
+|      block_hash        | varchar(66) |
++------------------------+-------------+ 
+|       trace_id         |    text     |
++------------------------+-------------+
+
+.. _transactions:
+Transactions Table
+------------------------
+
+
++---------------------------+-------------+
+|         Column Name       |     Type    |
+|                           |             |
++===========================+=============+
+|             hash          | varchar(66) |
++---------------------------+-------------+
+|             nonce         |   bigint    | 
++---------------------------+-------------+
+|      transaction_index    |   bigint    |
++---------------------------+-------------+
+|         from_address      | varchar(42) | 
++---------------------------+-------------+
+|         to_address        | varchar(42) | 
++---------------------------+-------------+
+|             value         | numeric(66) |
++---------------------------+-------------+
+|              gas          |   bigint    | 
++---------------------------+-------------+
+|           gas_price       |   bigint    |
++---------------------------+-------------+
+|            input          |    text     | 
++---------------------------+-------------+
+|receipt_cumulative_gas_used|   bigint    |
++---------------------------+-------------+
+|      receipt_gas_used     |   bigint    | 
++---------------------------+-------------+
+| receipt_contract_address  | varchar(42) |
++---------------------------+-------------+
+|        receipt_root       | varchar(66) |
++---------------------------+-------------+
+|      receipt_status       |   bigint    | 
++---------------------------+-------------+
+|      block_timestamp      |  timestamp  |
++---------------------------+-------------+
+|        block_number       |   bigint    | 
++---------------------------+-------------+
+|         block_hash        | varchar(66) |
++---------------------------+-------------+
+|      max_fee_per_gas      |   bigint    | 
++---------------------------+-------------+
+| max_priority_fee_per_gas  |   bigint    | 
++---------------------------+-------------+
+|      transaction_type     |   bigint    | 
++---------------------------+-------------+
+|receipt_effective_gas_price|   bigint    | 
++---------------------------+-------------+
+
+
