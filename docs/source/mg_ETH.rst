@@ -2,29 +2,23 @@
 
 Ethereum Catalog
 ======================
-There are Seven main catalog tables for the Ethereum-based blockchain networks. The main resource for these tables is this :ref:`https://pypi.org/project/ethereum-etl/1.0.0/ <uniquename>`. 
+There are Seven main catalog tables for the Ethereum-based blockchain networks. The main resource for these tables is this `library <https://pypi.org/project/ethereum-etl/1.0.0/>`_. 
 These pre-defined tables are:
+
 * :ref:`Block Table <blocks>`
-* :ref:`Contracts Table<contracts>`
-* :ref:`Logs Table<logs>`
-* :ref:`Token Transfers Table<token_transfers>`
+* :ref:`Contracts Table <contracts>`
+* :ref:`Logs Table <logs>`
+* :ref:`Token Transfers Table <token_transfers>`
 * :ref:`Tokens Table <tokens>`
 * :ref:`Traces Table <traces>`
-* :ref:`Transactions Table<transactions>`
-
-+------------------------+------------+----------+----------+
-| Header row, column 1   | Header 2   | Header 3 | Header 4 |
-| (header rows optional) |            |          |          |
-+========================+============+==========+==========+
-| body row 1, column 1   | column 2   | column 3 | column 4 |
-+------------------------+------------+----------+----------+
-| body row 2             | ...        | ...      |          |
-+------------------------+------------+----------+----------+
+* :ref:`Transactions Table <transactions>`
 
 
 .. _blocks:
+
 Block Table
 -----------------
+
 The data related to the blocks of the Ethereum public network will be saved here. This base table can be used for any further design of a customized Ethereum-based
 platform.
 
@@ -72,9 +66,12 @@ platform.
 +------------------------+------------+ 
 
 
+
 .. _contracts:
+
 Contracts Table
 -----------------
+
 The smart contracts data related to the Ethereum public network will be saved in this tabele. This table can be a good resource for the smart contracts data defined
 in your platform.
 
@@ -92,6 +89,7 @@ in your platform.
 
 
 .. _logs:
+
 Logs Table
 -----------------
 
@@ -127,6 +125,7 @@ Logs Table
 
 
 .. _token_transfers:
+
 Token Transfers Table
 ------------------------
 
@@ -155,6 +154,7 @@ Token Transfers Table
 
 
 .. _tokens:
+
 Tokens Table
 ------------------------
 
@@ -175,6 +175,7 @@ Tokens Table
 
 
 .. _traces:
+
 Traces Table
 ------------------------
 
@@ -224,6 +225,7 @@ Traces Table
 +------------------------+-------------+
 
 .. _transactions:
+
 Transactions Table
 ------------------------
 
