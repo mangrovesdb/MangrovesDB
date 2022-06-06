@@ -92,7 +92,7 @@ in your platform.
 
 Logs Table
 -----------------
-
+The logs related to the Ethereum network are stored in this table. The index of the log, transaction hash and index, adress and other related are inserted to this table. 
 
 +------------------------+------------+
 |      Column Name       |   Type     |
@@ -128,6 +128,7 @@ Logs Table
 
 Token Transfers Table
 ------------------------
+The tokens transferring data, including the address that the transfer originates from and the address receiving the data is added to this table.
 
 +------------------------+------------+
 |      Column Name       |   Type     |
@@ -157,6 +158,7 @@ Token Transfers Table
 
 Tokens Table
 ------------------------
+This table stores the tokens data. Address, name, symbol and other necessary data related to the Ethereum network tokens are stored in this table.
 
 +------------------------+------------+
 |      Column Name       |   Type     |
@@ -178,6 +180,7 @@ Tokens Table
 
 Traces Table
 ------------------------
+The traces of the Ethereum public blockchain are stored in this table. 
 
 +------------------------+-------------+
 |      Column Name       |   Type      |
@@ -228,7 +231,7 @@ Traces Table
 
 Transactions Table
 ------------------------
-
+This table is designed to store the data related to the transactions of the Ethereum network. 
 
 +---------------------------+-------------+
 |         Column Name       |     Type    |
