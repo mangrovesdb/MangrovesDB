@@ -219,4 +219,58 @@ copying.
 ## DeFi Solves Limited Access Problem
 • DeFi gives large underserved groups, such as the global population of the unbanked as well as small businesses that employ substantial portions of
 the workforce (for example, nearly 50% in the United States) direct access to financial services.
-• The resulting impact on the entire global economy should be positive.
+• The resulting impact on the entire global economy should be positive. Even consumers who have access to financial services in traditional finance, (bank accounts, mortgages, and credit cards) do not have access to the financial products with the most competitive pricing and most favorable terms; these products and structures are restricted to large institutions.
+• DeFi allows any user access to the entirety of its financial infrastructure, regardless of her wealth or geographic location.
+
+### Yield farming
+• ```Yield farming``` provides inflationary or contract-funded rewards to users for staking capital or utilizing a protocol.
+• These rewards are payable in the same underlying asset the user holds or in a distinct asset such as a governance token.
+• Any user can participate in yield farming.
+• A user can stake an amount of any size, regardless of how small, and receive a proportional reward.
+
+#### Yield farming benefits
+• Yield farming is particularly powerful in the case of governance tokens.
+• A user of a protocol that issues a governance token via yield farming becomes a partial owner of the platform through the issued token.
+• A rare occurrence in traditional finance, this process is a common way to give ownership of the platform to the people who use and benefit from it.
+
+### Initial DeFi offerings
+• An interesting consequence of yield farming is that a user can create an Initial DeFi Offering (IDO) by market making his own Uniswap trading pair (discussed later).
+• The user can set the initial exchange rate by becoming the first liquidity provider on the pair.
+• Suppose the user’s token is called DFT and has a total supply of 2 million.
+• The user can make each DFT worth 0.10 USDC by opening the market with 1 million DFT and 100,000 USDC.
+• Any ERC-20 token holder can purchase DFT, which drives up the price. As the only liquidity provider, the user also receives all of the trading fees.
+• In this way, the user is able to get his token immediate access to as many users as possible.
+• The method sets an artificial price floor for the token if the user controls the supply outside of the amount supplied to the Uniswap market, and as such, inhibits price discovery.
+• The trade-offs of an IDO should be weighed as an option, or strategy, for a user’s token distribution.
+
+### IDOs democratize access
+• IDOs democratize access to DeFi in two ways.
+• First, an IDO allows a project to list on high-traffic DeFi exchanges that do not have barriers to entry beyond the initial capital.
+• Second, an IDO allows a user access to the best new projects immediately after the project lists.
+
+## DeFi Solves Opacity Problem
+• Traditional finance is not usually transparent.
+• DeFi elegantly solves the transparency problem through the open and contractual nature of agreements.
+• We will explore how smart contracts and tokenization improve transparency within DeFi.
+
+### Smart contracts are transparent
+• All parties of a smart contract are aware of the capitalization of their counterparties and, to the extent required, can see how funds will be deployed.
+• The parties can read the contracts themselves to determine if the terms are agreeable to eliminate any ambiguity as to what will happen when they interact under the contract terms.
+• This transparency substantially eases the threat of legal burdens and brings peace of mind to smaller players.
+• These smaller users, traditional finance, could be abused by powerful counterparties through delaying, increasing the cost, or even completely withholding their end of a financial agreement.
+• Realistically, the average consumer does not understand the contract code, but can rely on the open-source nature of the platform and the wisdom of the crowd to feel secure.
+• Overall, DeFi mitigates counterparty risk and thus creates a host of efficiencies not present under traditional finance.
+### Ensuring appropriate behavior in smart contracts
+• One mechanism for ensuring the appropriate behavior of participants is **staking**.
+• Staking is escrowing a cryptoasset into a contract, so that the contract releases the cryptoasset to the appropriate counterparty only after the contract terms are met; otherwise, the asset reverts to the original holder.
+• Parties can be required to stake on any claims or interactions they make.
+• Staking enforces agreements by imposing a tangible penalty for the misbehaving side and a tangible reward for the counterparty.
+• The tangible reward should be as good as or even better than the outcome
+of the original terms of the contract.
+• These transparent incentive structures provide much securer and more obvious guarantees than traditional financial agreements.
+### Token contracts
+• Another type of smart contract in DeFi that improves transparency is a ```token contract```.
+• Tokenization allows for transparent ownership and economics within a system.
+• Users can know exactly how many tokens are in the system as well as the inflation and deflation parameters.
+
+## DeFi Solves Centralized Control Problem
