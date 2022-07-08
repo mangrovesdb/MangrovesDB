@@ -555,7 +555,8 @@ function.
 - If m = 1 and b = 0, the first TKN would cost 1 ETH, the second would cost 2 ETH, and so on.
 - A monotonically increasing bonding curve rewards early investors, because any incremental demand beyond their purchase price
 would allow them to sell back against the curve at a higher price point.
-[bond_curve_linear](Figs/bond_curve_linear.png)
+
+![bond_curve_linear](Figs/bond_curve_linear.png)
 
 - In above figure, Alice is rewarded for being an early investor.
 - The curve can be represented as ```a single smart contract with options for purchasing and selling the underlying token```.
@@ -565,17 +566,20 @@ would allow them to sell back against the curve at a higher price point.
 #### Super-linear Bonding Curves
 - Example: TKN = S^2
 - More extreme rewards for early investors
-[super linear bonding curve](Figs/super_linear_bonding_curve.png)
+
+![super linear bonding curve](Figs/super_linear_bonding_curve.png)
 
 #### Logistic Bonding Curves
 - Rewards early but then flattens out
-[logistic bonding curve](Figs/logistic_bonding_curve.png)
+
+![logistic bonding curve](Figs/logistic_bonding_curve.png)
 
 
 #### Buy vs. Sell Bonding
 - It is possible to have different curves for buying and selling
 - The spread is kept by the contract
-[logistic bonding curve](Figs/buy_sell_bonding_curve.png)
+
+![logistic bonding curve](Figs/buy_sell_bonding_curve.png)
 
 
 ### Incentives
@@ -872,19 +876,21 @@ reverts to the state before any money ever left the lender’s account.
     - We are using traditional finance parlance, but in DeFi there is no communication from your broker about the need to post additional margin or to liquidate the position and also no grace period.
     - Liquidation can happen immediately.
 
-[makerDAO](Figs/maker_Dao.png)
+![makerDAO](Figs/maker_Dao.png)
 
 #### Credit/Lending: MakerDAO
 - Secanrio 1:
     - Suppose ETH rises by 50% so collateral is worth $1,500.
     - The investor can increase the size of her loan.
     - To maintain the collateralization of 200%, the investor can mint an extra 250 DAI.
-[makerDAO](Figs/DAI_Collateral.png)
+
+![makerDAO](Figs/DAI_Collateral.png)
 
 - Scenario 2:
     - Suppose the value of the ETH drops by 25% from $200 to $150.
     - In this case, the value of the collateral drops to $750 and the collateralization ratio drops to 1.5 ($750/1.5 = 500).
-[makerDAOLiq](Figs/liquidition_DAO.png)
+
+![makerDAOLiq](Figs/liquidition_DAO.png)
 
 - Example
 Suppose the value of the ETH drops by 25% from $200 to $150.
@@ -893,7 +899,7 @@ Suppose the value of the ETH drops by 25% from $200 to $150.
   2. She can use the 500 DAI to pay back the loan and repatriate the 5 ETH. These ETH are now worth $250 less, but the depreciation in value would have happened irrespective of the loan.
   3. The loan is liquidated by a keeper (any external actor).
 
-[makerDAOLiq2](Figs/liquditation_2.png)
+![makerDAOLiq2](Figs/liquditation_2.png)
 
 - The keeper auctions the ETH for enough DAI to pay off the loan.
 - 3.33 ETH are sold and 1.47 ETH returned to the Vault holder.
@@ -1008,7 +1014,7 @@ resupplying or selling to others who resupply.
     - Suppose she also deposits two ETH with a collateral factor of 60 and a price of $200/ETH.
     - The total supply balance is now $500, with 80% being ETH and 20% being DAI. The required collateralization ratio is 100/(0.8*60 + 0.2*90) = 151%.
 
-[compound](Figs/compund_borrowing.png)
+![compound](Figs/compund_borrowing.png)
 
 
 ### Supply and borrow rates
@@ -1043,7 +1049,7 @@ the borrow rate at 0% borrow demand and a slope representing the rate of change 
     - The rate increases to 6% for all borrowers.
     - If the reserve factor is set to 10, then 10% of the borrow interest is diverted to a DAI reserve pool, lowering the supply interest rate to 2.7%. 0.5*0.06*(1-0.10) = 0.027 or 2.7%.
 
-[compound_IR](Figs/compound_interestRate.png)
+![compound_IR](Figs/compound_interestRate.png)
 
 
     - Another way to think about the supply interest rate is that the 6% borrow interest of 50 million is equal to 3 million of borrow payments.
@@ -1095,11 +1101,15 @@ the borrow rate at 0% borrow demand and a slope representing the rate of change 
 
 - Example
     - Assume there are 2,000 DAI in the Compound DAI market and a total 500 cDAI represents the ownership in the market; this ratio of cDAI to DAI is not determinative and could just as easily be 500,000 cDAI.
-[ctokenTrade](Figs/cTokensTrade.png)
+    - 
+![ctokenTrade](Figs/cTokensTrade.png)
+
     - If a trader comes in and deposits 1,000 DAI, the supply increases by 50% (and Compound mints 50% or 250 cDAI)
-[ctokenTrade](Figs/cTokensTrade2.png)
+![ctokenTrade](Figs/cTokensTrade2.png)
     - Currently, 1 cDAI = 4 DAI, but after interest accrues the ratio will change. Let interest = 10%, at year end, 3,300 DAI. Trader redeems 250 cDAI for 1,100 DAI
-[ctokenTrade](Figs/cTokensTrade3.png)
+    - 
+![ctokenTrade](Figs/cTokensTrade3.png)
+
     - Note that the trader can deploy cDAI in the place of DAI so the DAI is not sitting idle but earning interest via the Compound pool.
     - For example, the trader could deploy cDAI as the necessary collateral to open a perpetual futures position on dYdX or she could market make on Uniswap using a cDAI trading pair (discussed later).
 
@@ -1181,7 +1191,7 @@ of the pool.
     - The ```flash loan is a single transaction```.
     - A flash loan used to refinance a position allows for DeFi client applications that let users migrate a levered position from one dApp to another with the single push of a button.
 
-[Aave_flashLoan](Figs/Aave_flashLoan.png)
+![Aave_flashLoan](Figs/Aave_flashLoan.png)
 
 ### Stable loan rate
 - An Aave innovation (and as of this writing only available on Aave) is a **stable rate loan**.
@@ -1244,10 +1254,12 @@ Opacity: Unclear collateralization of lending institutions. | Transparent collat
 
 - Example
     - Investor in the Uniswap USDC/DAI market has 4 DAI (Asset A) and 4 USDC (Asset B). This sets the instantaneous exchange rate at 1 DAI:1 USDC and the invariant at 16 (= x*y).
-    [uniswap](Figs/uniswap.png)
+     
+    ![uniswap](Figs/uniswap.png)
 
     - To sell 4 DAI for USDC, the investor deposits 4 DAI to the contract and withdraws 2 USDC. Now the USDC balance is 4 – 2 = 2 and the DAI balance is 4 + 4 = 8. Invariant remains at 16.
-    [uniswap](Figs/uniswap_invarient.png)
+    
+    ![uniswap](Figs/uniswap_invarient.png)
 
     - Notice that the effective exchange rate was 2 DAI: 1 USDC.
     - The change in the exchange rate is due to slippage because of the low level of liquidity in the market.
@@ -1255,7 +1267,8 @@ Opacity: Unclear collateralization of lending institutions. | Transparent collat
 - Example
     - Assume balance is 100 DAI and 100 USDC; k=10,000
     - If investor sells 4 DAI for USDC, now 3.85 USDC can be withdrawn so much lower slippage at an effective rate of 1.04 DAI: 1 USDC.
-    [uniswap](Figs/uniswap_invarient2.png)
+  
+    ![uniswap](Figs/uniswap_invarient2.png)
 
 ### Importance of liquidity
 - Deep liquidity helps minimize slippage.
@@ -1334,7 +1347,8 @@ execution price (which could have changed if other transactions made it in first
     - The trader can capitalize on this arbitrage via a ```flash swap``` by withdrawing 950 USDC of flash liquidity (liquidity derived from a flash loan) from the DAI/USDC market, purchase 1,000 DAI via the described arbitrage trade, and repay 963 DAI for a profit of 37 DAI— all consummated with no initial capital.
     - The figure of 963 is calculated as 960 (with rounding for ease of illustration) to maintain the 10 billion invariant, and to account for some slippage, plus a 0.30%*960 = 3 DAI transaction fee.
     - The 30bp fee is paid into the pool owned by the liquidity providers.
-    [uniswap](Figs/flashSwap.png)
+   
+    ![uniswap](Figs/flashSwap.png)
 
 
 ### Uniswap Governance
@@ -1344,7 +1358,8 @@ execution price (which could have changed if other transactions made it in first
 - Importantly, each unique Ethereum address that had used Uniswap before a certain cutoff date (over 250,000 addresses) was given 400
 UNI tokens as a free airdrop.
 - At the same time as the airdrop, ```UNI``` was released on Uniswap and the Coinbase Pro exchange for trading.
-[uniswap](Figs/uniswap_trade.png)
+
+![uniswap](Figs/uniswap_trade.png)
 
 ### Main innovation Uniswap v3
 - On May 5, 2021, Uniswap v3 is launched
@@ -1385,7 +1400,7 @@ Opacity: Unknown if the exchange truly owns all user’s entire balance. | Trans
     - B is the balance of token t in the pool
     - W is the normalized weight of token t
 
-[bonding_surface](Figs/bonding_surface.png)
+![bonding_surface](Figs/bonding_surface.png)
 
 ### Token Price and Pool Value
 - The effective price between a single pair of tokens is given by the ratio of the token balances normalized by their weights: [ratio](Figs/ratio.png))
@@ -1402,7 +1417,8 @@ Opacity: Unknown if the exchange truly owns all user’s entire balance. | Trans
 - Impermanent loss can be higher or lower in Balancer depending on the weighting of tokens
 - Two tokens weighted 50/50 and a 5x increase in the token valuation results in an impermanent loss of 25.5%. However, two tokens weighted 95/5 and the same increase results in an impermanent loss of just 3.88%.
 - If a pool creator is confident in a token, they can create more uneven pools to offer themselves selective exposure and earn transaction fees.
-[impermanent_loss](Figs/impermanent_loss.png)
+
+![impermanent_loss](Figs/impermanent_loss.png)
 
 ### Slippage and Smart Order Router
 - Equal token weights in a pool have the lowest slippage, while uneven pools have higher slippage, which disincentivizes traders from using the pool and results in less trading volume and lower transaction fees generated for the pool
@@ -1466,8 +1482,10 @@ Opacity: Unknown if the exchange truly owns all user’s entire balance. | Trans
 - You could deposit ETH in Maker, borrow DAI at 3%, and reinvest in ETH.
 - If ETH goes up by 10%, you would make 7%
 - However, what happens if the variable borrow rate in Maker goes up to 10%? Your profit would be wiped out? This motivates a fixed rate borrow protocol
-[yield](Figs/yield.png)
-[yield2](Figs/yield2.png)
+
+![yield](Figs/yield.png)
+
+![yield2](Figs/yield2.png)
 
 
 ### What is Yield protocol?
@@ -1482,17 +1500,20 @@ Opacity: Unknown if the exchange truly owns all user’s entire balance. | Trans
     - The buyer of yDAI locks in a 8.7% return
     - The borrower locks in a fixed rate loan at 8.7%.
     - The borrower can use the 92 DAI to buy additional ETH.
-    [yield_protocol](Figs/yield_protocol.png)
+    
+    ![yield_protocol](Figs/yield_protocol.png)
 
     - Keeper triggers liquidation if ETH price falls below maintenance point
     - Buyer gets full 8.7% return – even if liquidation happens after one month
     - Borrower gets 0.2 ETH back ($25) + 92 DAI (borrowed earlier) so the cost is 8.7% there is also keeper reward
-    [yield_protocol2](Figs/yield_protocol2.png)
+    
+    ![yield_protocol2](Figs/yield_protocol2.png)
 
     - Suppose ETH holds value at 200 DAI (no liquidation)
     - 0.5 ETH used to buy 100 DAI which is transferred to buyer (who makes 8.7%)
     - Seller/borrower gets the original 92 DAI plus the excess collateral (0.5 ETH worth $100)
-    [yield_protocol3](Figs/yield_protocol3.png)
+    
+    ![yield_protocol3](Figs/yield_protocol3.png)
 
     - The seller/borrower does well if the value of ETH increases
     - If the seller/borrower uses the 92 DAI to buy more ETH, the price of ETH needs to increase by at least 8.7% divided by the collateralization ratio
@@ -1582,11 +1603,13 @@ function calls or transfers.
       4. Repay the flash loan with the 1,000 DAI and
       5. Pocket the 1 ETH profit.
     - All of this happens in a single transaction.
-    [dydx](Figs/dydx.png)
+    
+    ![dydx](Figs/dydx.png)
 
 
 - NOTE: August 3, 2021 dYdX launches its governance token: ```DYDX```
-[dydxgov](Figs/dydxgov.png)
+
+![dydxgov](Figs/dydxgov.png)
 
 
 
@@ -1673,15 +1696,18 @@ function calls or transfers.
 - The investor thus has a positive balance of 10,000, the current price.
 - The collateralization ratio is 10,000/9,000 = 111%, which is a margin percentage of 11% and is nearly the maximum amount of allowed leverage (10% margin).
 #### Long position
-[long_pos](Figs/long_pos.png)
+
+![long_pos](Figs/long_pos.png)
 
 - Long 1 BTC
 - Price increases by 10%
-[long_pos2](Figs/long_pos2.png)
+
+![long_pos2](Figs/long_pos2.png)
 
 - Long 1 BTC
 - Price decreases by -7.5%
-[long_pos3](Figs/long_pos3.png)
+
+![long_pos3](Figs/long_pos3.png)
 
 #### Short position
 - This intuition works similarly for a short position.
@@ -1761,13 +1787,18 @@ asset value (their Synth position) outpaced the growth of the debt (sum of all s
 - Example
     - As an example, three traders each have $20,000 for a total debt of $60,000: one holds 2 sBTC priced at $10,000 each, one holds 100
     sETH priced at $200 each, and one holds 20,000 sUSD priced at $1 each. Each has a debt proportion of 33.3%.
-[Synthetix](Figs/Synthetix.png)
+
+![Synthetix](Figs/Synthetix.png)
+
 - If the price of BTC doubles to $20,000 and the price of ETH goes up 5x to $1,000, the total debt becomes $160,000 = $40,000 (sBTC) +
 $100,000 (sETH) + $20,000 (sUSD).
 - Because each trader is responsible for 33.3%, about $53,300, only the sETH holder is profitable even though the price of BTC doubled.
-[Synthetix2](Figs/Synthetix2.png)
+
+![Synthetix2](Figs/Synthetix2.png)
+
 - If the price of BTC falls to $5,000 and ETH to $100, then the total debt falls to $40,000 and the sUSD holder becomes the only profiting trader.
-[Synthetix3](Figs/Synthetix3.png)
+
+![Synthetix3](Figs/Synthetix3.png)
 
 
 ### Plaform DEX
