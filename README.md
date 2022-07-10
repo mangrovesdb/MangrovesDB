@@ -16,3 +16,9 @@ $ make html
 - 1- ```=================``` is for the ```H1``` titles;
 - 2- ```-----------------``` is considered for the ```H2```;
 - 3- ```+++++++++++++++++``` is considered for the ```H3```;
+
+
+## Convert md to pdf file
+```
+grip your_markdown.md
+```
