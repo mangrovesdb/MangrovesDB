@@ -1945,6 +1945,108 @@ that verify custody of on-chain funds.
     - ERC-3156 (flash loans)
 
 
+# Available APIs to Read Blockchain Data
+
+# Note on Smart Contract Implementation
+
+## Ethereum Virtual Machine (EVM)
+Virtual machines are virtual environments that have their own operating system and applications that run on shared physical hardware.
+So how does that map to Ethereum? ```Ethereum uses its runtime as the Ethereum virtual machine```. What that means is that when you implement a node, in other words, you download and install the ethereal software for A and B, you become a node on a theorem network, what happens is you're running a package or an application that implements the Ethereum virtual machine. So that's basically how the theory and virtual machine presents itself. It is a software application that creates a closed environment and the smart contracts work and they run inside that environment. The event is present on all nodes. That's what makes a computer an Ethereum node. It's because you're running in EVM, so it gets installed with the Ethereum. So whenever you download and install your own block chain client, you actually are installing the EVM.
+Now it's important to understand that all EVM instances play by the same rules. You can get EVMs in different languages. You can download and install different types of packages that support different types of languages. But they all have to be compliant with the etherial standard, which means by they play means they play by the same rules on every node. Any node that breaks the rules becomes a rogue node and they create a rogue blockchain.
+```Smart contract code is deterministic```. That means that smart contract code produces the same results on all nodes. Well, it's the EVM that makes sure that the smart contract code executes exactly the same way. So that's why they have to play by the same rules.
+Any EVM deviation is immediately evident by all the other nodes. It's obvious because things get out of whack. The hashes don't match anymore and it's clear who the offending party is. Any time we have an offending EBM, it'll create an invalid block chain and that copy of the blockchain is no longer part of the network and it's basically the black sheep of the family at that point.
+Why is this so important?
+Because the **EVM provides smart contract execution, which gives clients the only access to the Ethereum blockchain**.
+
+- Summary:
+  - Ethereum uses its runtime environment as the Ethereum Virtual Machine (EVM)
+  - Software application
+  - Creates a closed environment
+  - Smart contracts run in this environment
+  - Present on all nodes
+  - Installed with Ethereum
+  - All EVM instances play by the same rules
+  - Any node that breaks the rules creates a “rogue” blockchain
+  - Any EVM deviation is immediately evident
+  - The offending EVM’s blockchain is deemed invalid
+  - The EVM provides smart contract execution
+  - Only way to access the Ethereum blockchain
+
+
+## What is Gas?
+- Cryptocurrency cost of accessing the blockchain
+- Incentivize storing local blockchain copies and mining
+- Transaction fee
+- Set max amount of gas
+- Incentivizes developers to create efficient smart contracts
+- Reduces malicious code and DoS attacks
+- Increases cost to access the blockchain
+- Gas used
+- Gas price
+- Formula
+    - ```Gas used x gas price = total gas cost```
+- Wei units
+- 1 ETH = 1e18 Wei units (1,000,000,000,000,000,000)
+
+
+## Tools for Ethereum SDLC
+The **Software Development Life Cycle (SDLC)**:
+- SDLC steps
+  - 1. Planning
+  - 2. Coding/development
+  - 3. Testing
+  - 4. Deploying
+- Ethereum SDLC tools:
+  - Ethereum blockchain client
+  - Development/testing blockchain
+  - Compiler/testing framework: We need some solidity compiler mainly use an IDE
+
+
+## Blockchain Client
+- Software that makes a device a node on the Ethereum blockchain
+- Supports Ethereum standards
+- Runs the EVM on a node
+- Full nodes store the whole blockchain
+- Light nodes store only a portion
+- Different clients use different languages
+- Example Blockchain Clients:
+  
+Name | Language | Source | Stars|
+---|---|---|---|
+Cpp‐ethereum | C++ | https://github.com/ethereum/aleth | 3.9k |
+Ethereumjs‐lib | JavaScript | https://github.com/ethereumjs/ethereumjs-monorepo | 1.8k|
+Geth (go‐Ethereum) | Go | https://geth.ethereum.org/ | 38.3 |
+Parity | Rust | https://www.parity.io/ethereum/ | 6.6k |
+Pyethapp | Python | https://github.com/ethereum/pyethapp | 1.3k |
+
+##  Writing and Testing Your Code
+
+### Local Simulated Blockchains
+- Local blockchain: create our own local blockchain we use for development and initial testing
+- Used for development and testing
+- Never deploy to mainnet without testing
+- Same as traditional development
+- Write and test code in safe, simulated environment
+#### Local Test Blockchains
+- You have control
+- You can delete the whole blockchain and start over
+- You don’t affect anyone else
+- Public Test Blockchains
+    - Ex: **Ropsten, Rinkeby, Kovan**
+    - Shared with other users
+    - Don’t have to pay real money
+
+#### Example Development/Testing Blockchains
+Name | Language | Source | Stars|
+---|---|---|---|
+Ganache | Most popular tool with developers to easily create a private network | https://www.trufflesuite.com/ganache | 4.2k |
+Truffle | Suite of development tools that includes its own private network | https://www.trufflesuite.com/ | 13.3k |
+Cliquebait | Uses docker instances to simulate a real blockchain network | https://github.com/f-o-a-m/cliquebait | 98 |
+Local Ethereum Network | Easy to use scripts to setup private blockchain networks | https://github.com/ConsenSys/local_ethereum_network | 31 |
+
+
+
+
 # Notes and Descriptions*
 
 ## What is peg? 
