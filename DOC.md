@@ -154,6 +154,7 @@ The participants agree that the longest chain of blocks is the truth.
 ### Turing complete
 - Gas plays a very important role. A malicious attack would be prohibitively expensive.
 - Ethereum is Turing complete – Bitcoin is not.
+- A Turing complete language means that if given sufficient resources, the language can calculate anything.
 
 ### Gas, Gas Price, and Gas Limit
 - Every operation on the Ethereum blockchain requires gas
@@ -2045,7 +2046,234 @@ Cliquebait | Uses docker instances to simulate a real blockchain network | https
 Local Ethereum Network | Easy to use scripts to setup private blockchain networks | https://github.com/ConsenSys/local_ethereum_network | 31 |
 
 
+#### Source Code Editor/IDE
+- Built-in compiler
+- Syntax checking and assistance
+- Organization and collaboration
+- Integrated development environment (IDE)
+- One workspace with several views and tools
+- Integrated Development Environments (IDEs):
 
+Name | Language | Source | 
+---|---|---|
+Atom | Popular, has Solidity plugins | https://atom.io/ | 
+Visual Studio Code | Microsoft, has Solidity plugins | https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity | 
+Vim Solidity | Solidity plugins for Vim (vi‐like editor) | https://github.com/tomlion/vim‐solidity |
+Remix | Web‐based, popular with new Solidity developers | https://remix.ethereum.org/ |
+EthFiddle | Web‐based, simple | https://remix.ethereum.org/ |
+Superblocks Lab | Web‐based, many blockchain integration features | https://lab.superblocks.com/ |
+
+#### Frameworks
+- After writing source code you need to compile source code into bytecode
+- Deploy to a development or testing blockchain
+- Run your code to test it
+- Manually completing deployment and testing tasks is tedious
+- Frameworks help to simplify smart contract management
+- Development and Testing Frameworks:
+
+Name | Language | Source | 
+---|---|---|
+Truffle | Manage smart contract development, testing, deployment | https://www.trufflesuite.com/ | 
+Solidity compiler (solc) | Solidity software, includes CLI compiler that can be called from IDEs | https://github.com/ethereum/solidity | 
+Solidity compiler (solcjs) | Solidity compiler written in JavaScript | https://github.com/ethereum/solc‐js |
+Remix | Web‐based, suite of development tools, includes Solidity compiler | https://remix.ethereum.org/ |
+Populus | Web‐based IDE for smart contract development | https://github.com/ethereum/populus |
+Embark | Framework for developing dApps for multiple blockchains | https://github.com/embark‐framework/embark |
+
+
+## Ethereum Development Tools
+
+
+### Why so Many Tools?
+- Work through SDLC
+  - Develop code
+  - Deploy and run locally
+  - Deploy on public test blockchain
+  - Deploy to mainnet
+- EVM runtime environment
+  - Different platforms
+  - Different languages
+
+#### Open Source
+- Many contributors
+- Make software free and better
+- Lots of great ideas
+- Lots of problem solvers
+
+
+### Installing Geth Lab (CLI Blockchain Client)
+Geth (Go Ethereum)
+- Go language
+- Full Ethereum node
+- Access complete blockchain
+- Run local EVM
+- Mine ETH
+- Create transactions and smart contracts
+- Examine existing blocks
+
+- Go to [geth](https://geth.ethereum.org/) website and download the latest version based on your OS. You can follow the [installation guide](https://geth.ethereum.org/install/).
+After installation syply run the following command to have your very first live node on Ethereum network:
+```bash
+geth --syncmode "light"
+```
+To sum up, **Geth** is an Ethereum client, which runs the EVM and allows a computer or device to become a node on the Ethereum network.
+
+### Test Blockchain
+- Testing environment: Write smart contract, deploy to the test net locally, not impacting anyone else
+  - Not live
+  - Test out code
+- **Ganache**: we are going use this.
+  - Test blockchain
+  - Deploy contracts
+  - Develop applications
+  - Run tests
+- Move to [Ganache](https://trufflesuite.com/ganache/) and download it based on your OS. Follow these steps to install it:
+  - Ubuntu, open a browser and navigate to https://github.com/trufflesuite/ganache/releases
+  - Download the latest Linux release which will be the *.AppImage file.For example ganache-1.3.0-x86_64.AppImage.
+  - Once the download is complete, open a new terminal and change into the directory with the *.AppImage file.
+  - Use chmod to make the file executable: ```chmod a+x ganache-2.5.4-linux-x86_64.AppImage```
+  - Run this command ```./ganache-2.5.4-linux-x86_64.AppImage```
+    - You will end up with a page like this:
+[ganache](Figs/ganache.png)
+
+- keep it simple and click on quick start. Now you create a test blockchain.
+[ganache](Figs/ganache2.png)
+
+- We have 10 addresses by default, each one has 100 ether. 
+- To sum up, Ganache makes it easy to set up a local private Ethereum network for developing and testing smart contract code. Although Truffle also provides this ability, we are using Ganache for this task.
+
+### Ethereum Testing Environment
+- Test blockchain
+- Need framework on top of test blockchain
+  - Move, compile, and deploy smart contract code
+
+#### Testing Environment
+- Truffle: We have the tools to develop smart contract and we need to test that. We just installed the Ganache as a test blockchain, but we need to put a framework on top of test blockchain to makes it possible for us to conveniently move our smart contract around, compile it, deploy it and manage it and take care of the internals. To do this we want to use **Truffle** to create a test environment.
+  - It Works well with Ganache
+  - Truffle Suite: This helps bridge the gap between development and deployment.
+  - Installing Truffle: Yiu an check the [truffle website](https://trufflesuite.com/docs/truffle/getting-started/installation/). To do this please first install ```node js``` and then run this command on your terminal ```sudo npm install truffle -g```.
+
+```bash
+(base) root@pop-os:~$ truffle version
+Truffle v5.5.21 (core: 5.5.21)
+Ganache v7.2.0
+Solidity v0.5.16 (solc-js)
+Node v12.22.9
+Web3.js v1.7.4
+```
+
+#### Install Integrated Development Environment (IDE)
+- Super text editor
+- Save time
+- Write better code
+- Automatic code completion
+- Syntax help
+- Microsoft Visual Studio Code
+- Free
+- Available for most operating systems (not just Windows)
+- Please ```install Visual Studio Code and then install solidity extension```.
+
+
+## What is an Ethereum Wallet?
+- **Only way to access cryptoassets is with private key**
+  - Digital currency
+  - Anything else stored on the blockchain
+- **Ethereum wallet securely stores private key**
+- Buy, sell, access cryptoassets
+- Enables only you to access your private keys
+
+### Types of Wallets
+- Store private keys in data files
+- **Hot wallet**
+  - Store keys online
+  - Easy access from anywhere
+  - Hacked account can be accessed from anywhere
+- **Cold wallet**
+  - Store keys offline
+  - More secure
+  - Less convenient
+  - Harder to protect
+
+#### Wallet Client Software
+- **Web wallet**
+  - Run on Web browser
+- **Desktop wallet**
+  - Runs on desktop or laptop
+  - Requires Windows/macOS/Linux
+- **Mobile wallet**
+  - Runs on mobile devices
+
+#### Hardware Wallet
+- Device that stores your private key(s)
+- Stores private keys on physical chip
+- Increased security
+- Loss of convenience
+
+#### Paper Wallet
+- Keys printed on paper
+- Most secure
+- Can be lost or stolen
+
+### Popular Wallets
+#### Web Wallets
+- **My Ether Wallet**
+  - Open-source
+  - Most popular
+  - Has been hacked
+- **Coinbase**
+  - Cryptocurrency exchange and wallet
+  - Convenient
+  - Limited token and coin types
+- **Guarda**
+  - Cold wallet, supports multiple cryptocurrencies
+
+#### Desktop Wallets
+- **Exodus**
+  - Multiple cryptocurrencies
+  - Easy to use
+  - Closed-source
+- **Mist**
+  - Official Ethereum cold wallet
+  - Blockchain browser
+  - Less user friendly
+- **MetaMask**
+  - Part of Ethereum ecosystem
+  - Only a web browser extension
+
+#### Mobile Wallets
+- **Jaxx**
+- **Coinomi**
+- **Bread (BRD)**
+- Cold wallets
+  - Stores keys offline
+- Choose based on user interface and ratings
+
+#### Hardware Wallets
+- **Ledger Nano**
+  - Latest version
+  - Most popular
+  - Small
+  - Easy interface
+  - Cost ~$100
+  - Requires client software
+- **Trezor**
+  - Competitor to Ledger
+  - Good reputation
+  - User interface screen is larger
+- **KeepKey**
+  - Competitor to Ledger
+  - Bigger
+  - Larger screen
+- Large vs. small
+- How many types of cryptocurrencies are you trading?
+
+#### Paper Wallets
+- **ETHAddress**
+  - Downloadable software
+  - Run software to generate and print keys
+- **My Ether Wallet**
+  - Web wallet
+  - Can also print out keys instead of storing online
 
 # Notes and Descriptions*
 
