@@ -2275,6 +2275,382 @@ Web3.js v1.7.4
   - Web wallet
   - Can also print out keys instead of storing online
 
+
+## Creating a Truffle Project
+- Identify project to Truffle
+- Organizes activities into projects. 
+- Project artifacts stored in directories
+- To create a new project
+- Create a new directory
+- Ask Truffle to initialize it
+- After creating, edit Truffle config file to configure your project
+
+Truffle is the framework, kind of like the umbrella that we're operating under. Truffle is going to help keep track of all the artifacts and the things that we need to move around. So we need to put things in a place that Truffle can understand them. Now, Truffle organizes its activities into projects, and it uses directories to organize the artifacts into projects. So basically, if you want to create a new truffle project, you just create a new directory and then ask Truffle to initialize it. And you'll put a few files in there, and then we're going to go look and then edit one of those files to change the configuration.
+
+- **Follow these steps to create the very first project under truffle**:
+  - Create the directory you want to put the code in.
+  - In terminal, in that directory type: ```truffle init```. Then these files: ```contracts  migrations  test  truffle-config.js``` will be generated autoatically in the directory. 
+  - Now we should edit ```truffle-config.js``` file in the suitable IDE. Type ```code .``` to launch the visual studio (if you do not have install it). 
+  - We're noe going to deploy and test that using our test blockchain. We have already installed ganache for our test blockchain. We do want to tell truffle where ganache is located. So then when we deploy, truffle knows where to put the code. To do so, uncomment the development section in the config file:
+```
+  development: {
+  host: "127.0.0.1",     // Localhost (default: none)
+  port: 8545,            // Standard Ethereum port (default: none)
+    network_id: "*",       // Any network (default: none)
+  },
+```
+  - Now we have defined a network called ```Development``` with the host "127.0.0.1", which is localhost and the port ```8545``` and the network ID is any network we can specify and as you remember we saw that in Ganush or we can just say this matches any network ID. 
+  - Bring up your installed ganache: ```./ganache-2.5.4-linux-x86_64.AppImage```. You can see for Ganache the port is ```7545```, so we edit the development part of the config file.
+```
+  development: {
+  host: "127.0.0.1",     // Localhost (default: none)
+  port: 7545,            // Standard Ethereum port (default: none)
+    network_id: "*",       // Any network (default: none)
+  },
+```
+  - And now we have defined our truffle environment to point to and connect to our ganache and test blockchain network. That's how we pull a project together, we've defined a project, we've initialized it and we've configured it, so we're ready to start writing some code and actually see how this fits together.
+
+  - Notes before start development:
+    - Remember that the first step in the etherial software development lifecycle is to design your software. So we want to design the smart contracts that are going to provide all the functionality. Blockchain application design is different from traditional applications, but there are some similarities as well. We want to pay attention to as many differences as possible. For example, remember, you have to pay a fee every time you access block chain data. So even when you're just testing your code, you have to pay a fee. That's one of the reasons why we use local block chains and we use public test block chains to test our code. We can prefund the accounts with free money or monopoly money. So **we want to economize how much money we spend through the testing process**. So you test it, you see how much money we spent, how much gas did it use, and you may have to go back and recode to use less gas before you do it for real.
+    - Sometimes when you're used to actually storing a data temporarily in the database for traditional application won't work as well here because storing a data temporarily they are on the blockchain and you have to pay to do that.
+    - Once you write data to the blockchain, you can't change the data and that includes your smart contract code. So anything that you write bugs at all, if you deploy to the test network or to the live network especially, it'll always be there. That's the beauty of a local test network or test blockchain that you control, because if you can control a local blockchain, you can blow it away any time you want to and start from scratch. That is one of the advantages, and that means that that your local version is not truly immutable because you can just vaporize it any time you want to, but always remember that once you put something on a public test or the main net blockchain, it's always going to be there. 
+    - Also, remember that whatever data you put out there in testing or in real application runtime is going to be there for everyone to see. Sometimes during testing, you just throw out some data. You don't really care what it is because it's all local to you. This is for traditional applications. You may use live customer data just to test it. Well, you can't do that anymore if you're going to a public testing blockchain for your local stuff. Sure, you can use whatever data you want, but remember, when you go to a public testing blockchain, that data is persistent and it's available to everyone.
+  - So those are some of the things you want to pay attention to. If you do have sensitive data, of course you want to use encryption, but when you do that, then you have to worry about encryption keys on top of all the other keys. The moral of the story is that spending time thinking through these issues and designing your applications intelligently will always save you effort and time on the backend.
+  - We should follow these steps: 
+    - **1- Run source code**, 
+    - **2- Compile source code**: Next, we compiled the source code that translates it into byte code that the EVM can execute. The EVM cannot execute source code, so we have to translate it. That's what the ```compile process``` is.
+    - **3- Deploy translated source code**: Then once we compile it, we have bytecode, then we deploy it. That means actually write it to the blockchain and yet we have to pay a little bit of ``gas`` to do that.
+    - **4- Call/Invoke the written source code**: Once we write it to the blockchain, then we can actually call or invoke the functions that we've written.
+  - **First Step - writing smart contract into contracts Folder**: You have to be a little careful about where you place your files to make sure that everything flows together well.By default, Truffle wants to see our smart contracts in the contracts folder. Create a new file ```hello_world.sol``` there. Youcan use this sample solidity code:
+```solidity
+pragma solidity ^0.8.0;
+
+contract HelloWorld {
+string private helloMessage = "Hello world";
+function getHelloMessage() public view returns
+(string memory) {
+return helloMessage;
+}
+}
+```
+  - **pragma solidity ^0.8.0**: The first line says pragma solidity and some numbers, pragma or pragma is a line that basically tells solidity what compiler version is valid. The reason this is important for this language, solidity is a brand new language. It hasn't been around all that long and it's undergoing a lot of changes, and as it changes from one version to another, it it may support new functionality and not support old functionality. So the pragma directive is important to tell solidity what version is valid.
+    - Note: Remember if you run the ```truffle version``` the solidity version will be showed as well and this version selection for the solidity code should somehow be in the range of the version.
+
+```bash
+(base) mgdb@pop-os:~/MAngrovesDB/developments$ truffle version
+Truffle v5.5.21 (core: 5.5.21)
+Ganache v7.2.0
+Solidity v0.8.15 (solc-js)
+Node v12.22.9
+Web3.js v1.7.4
+```
+  - **contract HelloWorld**: Then we define the contract name
+  - **string private helloMessage = "Hello world"**: Inside contract we basically have one ```state variable``` and one ```function```. The state variable is a variable called ```Hello Message```. It is a ```string``` data type, which means that we're going to put characters in it and the word after it. ```Private``` just simply means that hello message is ```only available inside this contract```. No external functions or external programs can reference the contents of hello message.
+  - **function getHelloMessage()**: We give the function a name. We tell a little bit about who can use it, who can call the function, and then what does it return? 
+    - So this function has a name get hello message.
+    - The two parentheses here say that I don't pass him any message. We can pass input parameters to a function. 
+    - It's **public**, meaning that ```anybody outside this contract can call get hello message```. 
+    - **View** basically means that i```t only deals with local values```, it doesn't touch the blockchain and 
+    - when I call it, I'm going to return a string that comes from ```my local memory```.
+  - And if we go inside the body, which is inside the brackets with curly braces, it does one thing, it simply returns the value of hello message.
+  - **Second Step - Compiling written code**: Just simply press **F5** key in the visual studio to do so. You will receive such a message after compiling: ```Compilation completed successfully!, with 1 warnings```
+    - NOTE: To download different versions of the Solidity compiler, go to: https://github.com/ethereum/solc-bin/tree/gh-pages/bin, This is necessary when there is an un-match between your solidity version and the compiler version.
+    - NOTE 2: There are tones of works you can done to somehow make a adaptation between the solidity version of your compiler by the truffle vsolidity version. I will post here some of these steps. 
+      - As I promised I am noe explaining how to match the truffle version of the solidity with the solidity compiler extension we added in the 
+  - **Third Step - Deploy translated source code**: Deploying the Smart Contract: To deploy the smart cntract on the ```Ganache``` network, you can use this command: 
+```bash
+truffle deploy --reset
+```
+  - **Forth Step - Call/Invoke the written source code**: In blockchain, it's not really easy to simply type in a command and run code. What you have to do, since it's a decentralized, kind of detached asynchronous type of environment, is to deploy your code to the blockchain, which we already did, then what you have to do is we're going to start up a truffle console and then we're going to actually issue line commands one at a time to invoke our functions. It's kind of tedious and we'll learn a better way later on. But for right now, we're going to have to be typing some commands. Follow these steps in terminal:
+    - 1- Go to the truffle console using this command: ```truffle console```. Now we're in trouble, connected to the development network. Make sure you are in truffle console like below:
+
+```bash
+truffle(development)> HelloWorld.deployed().then(function(instance) {return instance });
+```
+    - 2- Let's invoke our function: So what I'm going to do is I'm going to invoke a function on the object hello World Diployed, which basically is a pointer to where we deployed our actual Hello World Smart contract. Write down these commands:
+```bash
+truffle(development)> HelloWorld.deployed().then(function(instance) {return instance });
+```
+    - NOTE: If you got an error, please add this commands to your ```1_initial_migration.js``` file:
+```js
+const Migrations = artifacts.require("Migrations");
+
+module.exports = function (deployer) {
+  deployer.deploy(Migrations);
+};
+
+var HelloWorld = artifacts.require('HelloWorld');
+
+module.exports = function(deployer) {
+  // Use deployer to state migration tasks.
+  deployer.deploy(HelloWorld);
+};
+```
+    - Basically what we are doing here is using deployer to state migration tasks. After running ```HelloWorld.deployed().then(function(instance) {return instance });``` you will get a lot of json files back like this:
+```bash
+TruffleContract {
+  constructor: [Function: TruffleContract] {
+    _constructorMethods: {
+      configureNetwork: [Function: configureNetwork],
+      setProvider: [Function: setProvider],
+      new: [Function: new],
+      at: [AsyncFunction: at],
+      deployed: [AsyncFunction: deployed],
+      defaults: [Function: defaults],
+      hasNetwork: [Function: hasNetwork],
+      isDeployed: [Function: isDeployed],
+      detectNetwork: [AsyncFunction: detectNetwork],
+      setNetwork: [Function: setNetwork],
+      setNetworkType: [Function: setNetworkType],
+      setWallet: [Function: setWallet],
+      resetAddress: [Function: resetAddress],
+      link: [Function: link],
+      clone: [Function: clone],
+      addProp: [Function: addProp],
+      toJSON: [Function: toJSON],
+      decodeLogs: [Function: decodeLogs]
+    },
+    _properties: {
+      contract_name: [Object],
+      contractName: [Object],
+      gasMultiplier: [Object],
+      timeoutBlocks: [Object],
+      autoGas: [Object],
+      numberFormat: [Object],
+      abi: [Object],
+      metadata: [Function: metadata],
+      network: [Function: network],
+      networks: [Function: networks],
+      address: [Object],
+      transactionHash: [Object],
+      links: [Function: links],
+      events: [Function: events],
+      binary: [Function: binary],
+      deployedBinary: [Function: deployedBinary],
+      unlinked_binary: [Object],
+      bytecode: [Object],
+      deployedBytecode: [Object],
+      sourceMap: [Object],
+      deployedSourceMap: [Object],
+      source: [Object],
+      sourcePath: [Object],
+      legacyAST: [Object],
+      ast: [Object],
+      compiler: [Object],
+      schema_version: [Function: schema_version],
+      schemaVersion: [Function: schemaVersion],
+      updated_at: [Function: updated_at],
+      updatedAt: [Function: updatedAt],
+      userdoc: [Function: userdoc],
+      devdoc: [Function: devdoc],
+      networkType: [Object],
+      immutableReferences: [Object],
+      generatedSources: [Object],
+      deployedGeneratedSources: [Object],
+      db: [Object]
+    },
+    _property_values: {},
+    _json: {
+      contractName: 'HelloWorld',
+      abi: [Array],
+      metadata: '{"compiler":{"version":"0.5.16+commit.9c3226ce"},"language":"Solidity","output":{"abi":[{"constant":true,"inputs":[],"name":"getHelloMessage","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"}],"devdoc":{"methods":{}},"userdoc":{"methods":{}}},"settings":{"compilationTarget":{"project:/contracts/hello_world.sol":"HelloWorld"},"evmVersion":"istanbul","libraries":{},"optimizer":{"enabled":false,"runs":200},"remappings":[]},"sources":{"project:/contracts/hello_world.sol":{"keccak256":"0x0570d883d15ea3c4392337fd8148009245ccaa3fe30332c15b7d086e2523fea1","urls":["bzz-raw://64fda12777f0d4e01b7f8734193efe75705314631ed6e3b7e701b1a5c7d80755","dweb:/ipfs/QmcNkSGnVg25u5pHoTTjHEyxjfakUBkuVsZqniXEEjiurK"]}},"version":1}',
+      bytecode: '0x60806040526040518060400160405280600b81526020017f48656c6c6f20776f726c640000000000000000000000000000000000000000008152506000908051906020019061004f929190610062565b5034801561005c57600080fd5b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b61018a806101166000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80633493b37c14610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561014b5780601f106101205761010080835404028352916020019161014b565b820191906000526020600020905b81548152906001019060200180831161012e57829003601f168201915b505050505090509056fea265627a7a7231582082604d9e32c6931c6e68243393e5271cc12abdf5aa68d05610e978a36b163f2064736f6c63430005100032',
+      deployedBytecode: '0x608060405234801561001057600080fd5b506004361061002b5760003560e01c80633493b37c14610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561014b5780601f106101205761010080835404028352916020019161014b565b820191906000526020600020905b81548152906001019060200180831161012e57829003601f168201915b505050505090509056fea265627a7a7231582082604d9e32c6931c6e68243393e5271cc12abdf5aa68d05610e978a36b163f2064736f6c63430005100032',
+      immutableReferences: undefined,
+      generatedSources: undefined,
+      deployedGeneratedSources: undefined,
+      sourceMap: '25:156:0:-;;;47:43;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;25:156;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:156:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;',
+      deployedSourceMap: '25:156:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:156:0;;;;;;;;;;;;;;;;;;;92:87;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;92:87:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;140:13;164:12;157:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;92:87;:::o',
+      source: 'pragma solidity ^0.5.0;\n' +
+        '\n' +
+        'contract HelloWorld {\n' +
+        'string private helloMessage = "Hello world";\n' +
+        'function getHelloMessage() public view returns\n' +
+        '(string memory) {\n' +
+        'return helloMessage;\n' +
+        '}\n' +
+        '}',
+      sourcePath: '/home/MGDB/MAngrovesDB/developments/workspace/first_solidity_project/contracts/hello_world.sol',
+      ast: [Object],
+      legacyAST: [Object],
+      compiler: [Object],
+      networks: [Object],
+      schemaVersion: '3.4.8',
+      updatedAt: '2022-07-21T01:22:22.203Z',
+      networkType: 'ethereum',
+      devdoc: [Object],
+      userdoc: [Object],
+      db: undefined
+    },
+    configureNetwork: [Function: bound configureNetwork],
+    setProvider: [Function: bound setProvider],
+    new: [Function: bound new] {
+      estimateGas: [Function: bound estimateDeployment],
+      request: [Function: bound requestDeployment]
+    },
+    at: [Function: bound at] AsyncFunction,
+    deployed: [Function: bound deployed] AsyncFunction,
+    defaults: [Function: bound defaults],
+    hasNetwork: [Function: bound hasNetwork],
+    isDeployed: [Function: bound isDeployed],
+    detectNetwork: [Function: bound detectNetwork] AsyncFunction,
+    setNetwork: [Function: bound setNetwork],
+    setNetworkType: [Function: bound setNetworkType],
+    setWallet: [Function: bound setWallet],
+    resetAddress: [Function: bound resetAddress],
+    link: [Function: bound link],
+    clone: [Function: bound clone],
+    addProp: [Function: bound addProp],
+    toJSON: [Function: bound toJSON],
+    decodeLogs: [Function: bound decodeLogs],
+    enums: {},
+    class_defaults: { from: '0x4bD09a1BF418b9dAd360601F46cD5f6563E6BE05' },
+    interfaceAdapter: Web3InterfaceAdapter { web3: [Web3Shim] },
+    web3: Web3Shim {
+      currentProvider: [Getter/Setter],
+      _requestManager: [RequestManager],
+      givenProvider: null,
+      providers: [Object],
+      _provider: [HttpProvider],
+      setProvider: [Function],
+      setRequestManager: [Function],
+      BatchRequest: [Function: bound Batch],
+      extend: [Function],
+      version: '1.7.4',
+      utils: [Object],
+      eth: [Eth],
+      shh: [Shh],
+      bzz: [Bzz],
+      networkType: 'ethereum'
+    },
+    currentProvider: HttpProvider {
+      withCredentials: false,
+      timeout: 0,
+      headers: undefined,
+      agent: undefined,
+      connected: true,
+      host: 'http://127.0.0.1:7545',
+      httpAgent: [Agent],
+      send: [Function],
+      _alreadyWrapped: true
+    },
+    network_id: '5777',
+    disableConfirmationListener: undefined,
+    ens: { enabled: false, registryAddress: null }
+  },
+  methods: {
+    'getHelloMessage()': [Function] {
+      call: [Function],
+      sendTransaction: [Function],
+      estimateGas: [Function],
+      request: [Function]
+    }
+  },
+  abi: [
+    {
+      constant: true,
+      inputs: [],
+      name: 'getHelloMessage',
+      outputs: [Array],
+      payable: false,
+      stateMutability: 'view',
+      type: 'function',
+      signature: '0x3493b37c'
+    }
+  ],
+  address: '0x038f147d266c256bA7707eCfD54AD8d48366c0Fc',
+  transactionHash: undefined,
+  contract: Contract {
+    setProvider: [Function],
+    currentProvider: [Getter/Setter],
+    _requestManager: RequestManager {
+      provider: [HttpProvider],
+      providers: [Object],
+      subscriptions: Map {}
+    },
+    givenProvider: null,
+    providers: {
+      WebsocketProvider: [Function: WebsocketProvider],
+      HttpProvider: [Function: HttpProvider],
+      IpcProvider: [Function: IpcProvider]
+    },
+    _provider: HttpProvider {
+      withCredentials: false,
+      timeout: 0,
+      headers: undefined,
+      agent: undefined,
+      connected: true,
+      host: 'http://127.0.0.1:7545',
+      httpAgent: [Agent],
+      send: [Function],
+      _alreadyWrapped: true
+    },
+    setRequestManager: [Function],
+    BatchRequest: [Function: bound Batch],
+    extend: [Function: ex] {
+      formatters: [Object],
+      utils: [Object],
+      Method: [Function: Method]
+    },
+    clearSubscriptions: [Function],
+    options: { address: [Getter/Setter], jsonInterface: [Getter/Setter] },
+    handleRevert: [Getter/Setter],
+    defaultCommon: [Getter/Setter],
+    defaultHardfork: [Getter/Setter],
+    defaultChain: [Getter/Setter],
+    transactionPollingTimeout: [Getter/Setter],
+    transactionPollingInterval: [Getter/Setter],
+    transactionConfirmationBlocks: [Getter/Setter],
+    transactionBlockTimeout: [Getter/Setter],
+    blockHeaderTimeout: [Getter/Setter],
+    defaultAccount: [Getter/Setter],
+    defaultBlock: [Getter/Setter],
+    methods: {
+      getHelloMessage: [Function: bound _createTxObject],
+      '0x3493b37c': [Function: bound _createTxObject],
+      'getHelloMessage()': [Function: bound _createTxObject]
+    },
+    events: { allEvents: [Function: bound ] },
+    _address: '0x038f147d266c256bA7707eCfD54AD8d48366c0Fc',
+    _jsonInterface: [ [Object] ]
+  },
+  getHelloMessage: [Function] {
+    call: [Function],
+    sendTransaction: [Function],
+    estimateGas: [Function],
+    request: [Function]
+  },
+  sendTransaction: [Function],
+  send: [Function],
+  allEvents: [Function],
+  getPastEvents: [Function]
+}
+```
+  - we have the bytecode in these returned jsons, this is actual compiled code:
+```bash
+    bytecode: '0x60806040526040518060400160405280600b81526020017f48656c6c6f20776f726c640000000000000000000000000000000000000000008152506000908051906020019061004f929190610062565b5034801561005c57600080fd5b50610107565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106100a357805160ff19168380011785556100d1565b828001600101855582156100d1579182015b828111156100d05782518255916020019190600101906100b5565b5b5090506100de91906100e2565b5090565b61010491905b808211156101005760008160009055506001016100e8565b5090565b90565b61018a806101166000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c80633493b37c14610030575b600080fd5b6100386100b3565b6040518080602001828103825283818151815260200191508051906020019080838360005b8381101561007857808201518184015260208101905061005d565b50505050905090810190601f1680156100a55780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b606060008054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561014b5780601f106101205761010080835404028352916020019161014b565b820191906000526020600020905b81548152906001019060200180831161012e57829003601f168201915b505050505090509056fea265627a7a7231582082604d9e32c6931c6e68243393e5271cc12abdf5aa68d05610e978a36b163f2064736f6c63430005100032',
+```
+  - Now we have this pointer to our actual code, next what I want to do is **invoke the actual function**. So as our function is called: ```getHelloMessage``` so we do want to invoke the function. We use this command:
+```bash
+HelloWorld.deployed().then(function(instance) {return instance.getHelloMessage() })
+```
+  - As I type this ```HelloWorld.deployed()```, if I find that, then I want to get an instance and return an instance not of the actual method, but or rather the object, but an instance of ```getHelloMessage```. See the result:
+```bash
+truffle(development)> HelloWorld.deployed().then(function(instance) {return instance.getHelloMessage() })
+'Hello world'
+```
+  - We will going beyond these steps to invoke the function and make the process easier later. But we have done so far is amazing:
+    - We've built an entire development toolbox and now we've put it together.
+    - We've configured it.
+    - We've written an actual smart contract.
+    - We've deployed it to the blockchain.
+    - We've instantiated it and we've actually run blockchain code.
+  - Please check Ganache for the changes. Remember, **We only touched the blockchain when we deployed our code. You remember that the actual smart contract code doesn't really touch anything except memory, and that's the beauty of it**. In fact, the only time we went to the blockchain was to fetch the code to run, and that's free running. The code is free as long as you don't touch the blockchain for data.
+  - Reminder: The Truffle framework makes it easy to create and manage Ethereum smart contract development projects. Geth provides the EVM and Ethereum node software, Ganache implements a local test blockchain, and Metamask is a desktop wallet.
+  - Reminder: Deploying a smart contract to the blockchain copies the bytecode for the smart contract to a block and adds that block to the blockchain.
+  - Remainder: Terms: The proper term for running a function’s code is to ```invoke``` the function. ```Deploying``` smart contract code places the code into a block on the blockchain, ```consuming``` generally refers to invoking functionality exposed as a service, and ```publish``` is a term most commonly related to emitting an event.
+
+
 # Notes and Descriptions*
 
 ## What is peg? 
