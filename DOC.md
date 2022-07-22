@@ -2350,13 +2350,19 @@ Web3.js v1.7.4
     - So this function has a name get hello message.
     - The two parentheses here say that I don't pass him any message. We can pass input parameters to a function. 
     - It's **public**, meaning that ```anybody outside this contract can call get hello message```. 
-    - **View** basically means that i```t only deals with local values```, it doesn't touch the blockchain and 
+    - **View** basically means that ```it only deals with local values```, it doesn't touch the blockchain and 
     - when I call it, I'm going to return a string that comes from ```my local memory```.
   - And if we go inside the body, which is inside the brackets with curly braces, it does one thing, it simply returns the value of hello message.
   - **Second Step - Compiling written code**: Just simply press **F5** key in the visual studio to do so. You will receive such a message after compiling: ```Compilation completed successfully!, with 1 warnings```
     - NOTE: To download different versions of the Solidity compiler, go to: https://github.com/ethereum/solc-bin/tree/gh-pages/bin, This is necessary when there is an un-match between your solidity version and the compiler version.
     - NOTE 2: There are tones of works you can done to somehow make a adaptation between the solidity version of your compiler by the truffle vsolidity version. I will post here some of these steps. 
-      - As I promised I am noe explaining how to match the truffle version of the solidity with the solidity compiler extension we added in the 
+      - As I promised I am noe explaining how to match the truffle version of the solidity with the solidity compiler extension we added in the extension added for solidity in visual studio. Check the version that matches the truffle solidity version from this repository page: ````https://github.com/ethereum/solc-bin/tree/gh-pages/bin``` and make sure you find the ```+commit``` version. Add the version to the extension settings --> edit in settings.json section and add the new line there like this:
+```
+"workbench.colorTheme": "Visual Studio Light",
+"solidity.compileUsingRemoteVersion": "v0.5.16+commit.9c3226ce",
+```
+      This will resolve any uncompatibility issue.
+
   - **Third Step - Deploy translated source code**: Deploying the Smart Contract: To deploy the smart cntract on the ```Ganache``` network, you can use this command: 
 ```bash
 truffle deploy --reset
@@ -2649,6 +2655,565 @@ truffle(development)> HelloWorld.deployed().then(function(instance) {return inst
   - Reminder: The Truffle framework makes it easy to create and manage Ethereum smart contract development projects. Geth provides the EVM and Ethereum node software, Ganache implements a local test blockchain, and Metamask is a desktop wallet.
   - Reminder: Deploying a smart contract to the blockchain copies the bytecode for the smart contract to a block and adds that block to the blockchain.
   - Remainder: Terms: The proper term for running a function’s code is to ```invoke``` the function. ```Deploying``` smart contract code places the code into a block on the blockchain, ```consuming``` generally refers to invoking functionality exposed as a service, and ```publish``` is a term most commonly related to emitting an event.
+
+
+# Smart Contracts in Real Life Use Cases 
+## Refresher on Blockchain and Smart Contracts
+- ```Blockchain Review```
+  - Consensus controls adding blocks
+    - Trust the process
+  - Data stays forever
+    - Great for auditing
+  - Actions on the data limited by smart contracts
+- ```Smart Contract Design```
+  - Helps solve real-world problems on the blockchain
+    - Ex: supply chain
+  - Prevents rogue additions
+    - All smart contracts must execute the same way on all nodes
+    - That includes identical output
+
+## Supply Chain
+### What is supply chain?
+- The path products and services take from producer to consumer
+  - One organization rarely owns all the pieces
+  - Examples
+- Premium olive oil: https://www.certifiedorigins.com/
+- Immediate disaster relief: https://www.kuebix.com/hurricane-dorian-threatens-supply-chains-needed-for-recovery/
+
+### Challenges with Supply Chain
+- Lack of transparency
+  - Self-managed, data kept internally
+- Lack of traceability
+  - Hard to trace products since data is kept internally
+- Transfer time lag
+  - Batch transfers cause delays
+- Translation data loss
+  - Some data gets lost, subject to human error when retyped, etc
+- Nonstandard/unavailable status tracking
+  - Different standards for each participant, including status updates
+
+### Blockchain Solutions to Supply Chain Challenges
+- ```Lack of transparency – solved```
+  - All transactions shared and verified on the blockchain
+- ```Lack of traceability – solved```
+  - No central authority
+  - All nodes can access transactions
+  - Transactions are linked
+- ```Transfer time lag – solved```
+  - Smart contracts can make on-demand decisions
+  - Limits human interactions, errors, and work schedules
+- ```Translation data loss – solved```
+  - Smart contracts define standard data input from each participant
+- ```Nonstandard/unavailable status tracking – solved```
+  - All information is available on the blockchain to authorized participants
+- Some examples:
+  - [Extra Virgin Olive Oil (EVOO) proven by Oracle Blockchain](https://www.enterprisetimes.co.uk/2019/04/01/extra-virgin-olive-oil-evoo-proven-by-oracle-blockchain/)
+  - [Bahama Blockchain Company Raises Crypto for Hurricane Dorian Relief](https://cointelegraph.com/news/bahama-blockchain-company-raises-crypto-for-hurricane-dorian-relief)
+
+### Reminder: Ethereum ERC-20 Token Standard
+- Like a coin standard (U.S. quarter)
+- Vending machines can accept any coin that meets the standard
+- The standard (for coins) defines diameter, thickness, weight, composition, etc.
+- Coin standards ensure that all U.S. quarters are the same
+
+- **Ethereum Token**
+  - ERC-20 token standard (most popular)
+  - Tokens are just smart contracts that manage cryptocurrency
+  - **The ERC-20 standard**
+    - Smart contract
+    - Contains variables to store the value and owner of the token
+    - Minimum 6 functions that a token must support
+  - Ethereum wallets are compatible with specific tokens types
+    - An ERC-20 compatible token can only be stored in an ERC-20 compatible wallet
+
+### Our Supply Chain Solution
+- Implement a real supply chain solution
+- ```2 smart contracts```
+  - **Define token for payments**
+  - **Asset tracking and management**
+
+#### Paying for Services
+- Each supply chain link provides a service
+  - Shipping, storing in warehouses, shelving at retailers, etc
+- Supply chain participants want to make money
+  - Payment expected every time a product moves
+- Ethereum for payments
+  - Define a token
+
+#### Managing Assets
+- Ethereum can’t manage physical assets, only digital
+- Data on the blockchain is being managed, not the physical item
+- **Associating Physical Assets with Digital Mirror**
+  - Engrave an ID
+  - Attach printed label
+  - Attach printed label to box of products
+  - Manufacturer-generated ID
+  - Attach RFID tag
+
+#### Our Smart Contract Functions
+- **Creating a new supply chain participant**
+- **Adding a new product to the supply chain**
+- **Transferring ownership of a product to another participant**
+- **Tracking a product**
+
+### Reminder: What is Solidity?
+- Programming language for writing Ethereum smart contracts
+- Most popular
+- Like JavaScript
+
+#### Reminder: Solidity Smart Contracts
+- Run on all nodes (EVMs)
+  - Solidity code is deterministic
+  - Runs the same way everywhere, every time
+- Govern how you access the blockchain
+- Code is stored on the blockchain
+  - Just like data
+- Source code must be compiled into bytecode for the EVM to run it
+- ```Syntax Rules```:
+  - Define how you write valid smart contracts
+  - Every language has different syntax rules
+  - Bad syntax won’t compile
+  - Syntax defines what word and symbols are valid
+- ```Basic Solidity Smart Contract Components```:
+  - **Valid compiler version(s)**:
+    - ```Scoping and Commenting```: Specifying valid compiler version(s)
+      - Solidity is still a young language
+      - Some smart contracts may depend on specific compiler versions
+      - pragma – directive that defines which Solidity compiler version(s) will compile this smart contract 
+  - **Comments**: 
+    - Single Line Comments: using ```//```
+    - Multiple Lines: ```/*      */``` 
+  - **Importing external files**
+  - **Define the actual contract(s)**
+- Solidity is still a young language
+- Some smart contracts may depend on specific compiler versions
+- pragma – directive that defines which Solidity compiler version(s) will compile this smart contract
+
+
+### Refresher: Data Types on Solidity - Handling Data in Solidity
+- Handling blockchain data is different from traditional databases
+- **No delete or direct update**
+- **Only add or read**
+
+- **Two Types of Data**
+  - **Local variable**
+    - Not stored between smart contract executions
+  - **State variables**
+    - ```Stored in blockchain``` data
+    - ```Have to pay for that persistence```
+
+- **Types of Memory**
+  - **Stack**
+    - Simple variables (like an integer)
+    - Lives in local memory in the EVM
+  - **Memory**
+    - More complex
+    - Lives in other local (EVM) memory (not the stack)
+  - **Storage**
+    - Blockchain data
+    - Must pay money to store on the blockchain
+
+#### Data Types on Solidity - New Simple Project
+Follow these steps:
+```bash
+(base) MGDB@pop-os:~/MAngrovesDB/developments$ cd workspace/
+(base) MGDB@pop-os:~/MAngrovesDB/developments/workspace$ ls
+first_solidity_project
+(base) MGDB@pop-os:~/MAngrovesDB/developments/workspace$ mkdir second_solidity_project/
+(base) MGDB@pop-os:~/MAngrovesDB/developments/workspace$ cd second_solidity_project/
+(base) MGDB@pop-os:~/MAngrovesDB/developments/workspace/second_solidity_project$ truffle init
+
+Starting init...
+================
+
+> Copying project files to /home/MGDB/MAngrovesDB/developments/workspace/second_solidity_project
+
+Init successful, sweet!
+
+Try our scaffold commands to get started:
+  $ truffle create contract YourContractName # scaffold a contract
+  $ truffle create test YourTestName         # scaffold a test
+
+http://trufflesuite.com/docs
+
+(base) MGDB@pop-os:~/MAngrovesDB/developments/workspace/second_solidity_project$ ls
+contracts  migrations  test  truffle-config.js
+(base) MGDB@pop-os:~/MAngrovesDB/developments/workspace/second_solidity_project
+```
+create ```DataTypes.sol``` project file and copy this code:
+```solidity
+pragma solidity ^0.5.0;  // ^0.4.24; 
+
+/*
+* @title Solidity data types
+* @author ...
+* @notice A simply smart contract to demonstrate simple data types available in Solidity
+* 
+*/
+
+contract DataTypes {
+
+    uint x = 9;
+    int i = -68; 
+    uint8 j = 17;
+    bool isEthereumCool = true; 
+    address owner = msg.sender; // msg.sender is the Ethereum address of the account that sent this transaction
+    bytes32 bMsg = "hello";
+    string sMsg = "hello"; 
+
+    function getStateVariables() public view returns (uint, int, uint, bool, address, bytes32, string memory) {
+        return (x, i, j, isEthereumCool, owner, bMsg, sMsg); 
+    }
+
+}
+```
+- Types of Data --> **uint**
+  - Stores **non-negative integers**
+  - Good for counting
+  - “uint” by itself is automatically a 256-bit integer
+  - If this is a state variable, you have to pay for all that space on the blockchain
+  - Can define a smaller size integer
+  - Ex: “uint8” only stores up to 8 bits
+  - Can’t store any integer larger than what’s defined
+  - NOTE: X is the name of the variable and it is of data type unit. So you end is a type of data that stores a positive integer or actually a non negative integer. That means zero or greater units are great for anything you want to count.  Like if you have the product quantity, you want to count that. I want 12 of this one product. That would be a unit. That's what we would store there. Notice the next one here is a unit8. It's a unit, but there's a little eight stuck next to it. So basically, if I create a unit variable that actually is the same as you went to fifty six. So that gives me a unit with two hundred and fifty six bits that can store a pretty big number. That's great for storing any numbers that you want, a very large sizes. But the problem with that is remember these variables, these variables might be state variables. That means we have to store it in the block chain. If I store a big value in the blockchain, I have to pay for the size of the data I'm storing in the blockchain. So if I need an unsigned integer and I'm only going to store maybe a value of seventeen one hundred, three hundred, something pretty small, I don't want to pay for a huge value. I want to shrink that down and say, you know, I'm only going to store this much data, so I'm only going to pay for that much data in the blockchain. The way we do that is we tell solidity, don't give me a ont two fifty six by default, but make it smaller. That's what a **unit8** would be. It's just a smaller integer that's unsigned. Now the caveat means that if you try to store a number that's too big, you get an error and that's a problem. So you want to make sure you define your variables as small as you need to not waste block change space.
+
+- Types of Data --> **int**
+  - Integer
+  - Unsigned – 0 or greater
+  - Int – can store negatives
+  - Use anytime you need to store negative numbers
+
+- Types of Data --> **uint** --> Unsigned integers
+  - An unsigned integer, declared with the uint keyword, is a value data type that must be non-negative; that is, its value is greater than or equal to zero.
+
+
+
+- Types of Data --> **bool**
+  - Boolean
+  - Yes/no
+  - True/false
+  - Solidity supports all standard Boolean operators, such as:
+    - != (inequality)
+    - == (equality)
+    - ! (logical negation)
+    - && (logical conjunction, “AND”)
+    - || (logical disjunction, “OR”)
+
+- Types of Data  --> **Address**
+  - address
+  - Ethereum account address
+  - msg.sender is the owner of the smart contract
+
+- Types of Data  --> **string**
+  - Array of charecters
+
+- Types of Data --> **Enums**
+  - Enums, or enumeration, values in Solidity consist of user-defined data types. This data type is used explicitly for constant values, such as the names of integral constants, making a smart contract easier to read and maintain. Enums can help reduce the incidence of bugs in your code. Enums limit a variable to a few predefined values and each copy maintains its value.
+  - Here’s an example declaring an enum named food_classes consisting of six constant values: carb, protein, fats-oils, water, vitamin, and minerals:
+
+```solidity
+pragma solidity ^0.5.10
+// example of an enum value type in solidity
+Contract  SampleEnum   } 
+
+ enum  < food_classes >  }
+          carb, protein, fats-oils, water, vitamin, and minerals;
+}
+```
+- Types of Data --> **Bytes**
+  - In Solidity, byte refers to ```8-bit signed integers```. Everything in memory is stored in bits with binary values 0 and 1. The bytes value type in Solidity is a dynamically sized byte array. It is provided for storing information in binary format. Since the array is dynamic, its length can grow or shrink. To reflect this, Solidity provides a wide range — from ```bytes1``` to ```bytes32```. The data type ```bytes1``` represents one byte, while ```bytes32``` represents ```32B```. ```0 x 00``` is the default value for byte. This value is used to prepare the default value. Here are some examples of the bytes data type in Solidity:
+
+```solidity
+pragma solidity ^0.5.10
+
+// example of a byte data type in hexadecimal format in solidity
+
+Contract  SampleByte   }
+
+   bytes1 uu = 0 x 45;
+
+}
+```
+```solidity
+pragma solidity ^0.5.10
+
+// example of a byte data type in integer values decimal format in solidity
+
+Contract  SampleByte   } 
+
+    bytes1 pp = 12;
+
+}
+```
+```solidity
+pragma solidity ^0.5.10
+
+// example of a byte data type in -ve int values in decimal format in solidity
+
+Contract  SampleByte   } 
+
+    bytes1 ff = -62;
+}
+```
+```solidity
+pragma solidity ^0.5.10
+
+// example of a byte data type in character values in solidity
+
+Contract  SampleByte   } 
+
+    bytes1 ee = 'd'
+}
+```
+
+- Types of Data --> **Solidity reference types**
+  - There are also Solidity reference data types. Solidity reference types differ from value types in that they do not store values directly on their own. Instead, reference types store (or “reference”) the address of the data’s location and do not directly share the data. Reference data types must be handled cautiously since they deal with storage locations. Data location affects the amount of gas used in a transaction and therefore can negatively impact smart contract development performance.When using reference types, reference variables point a user to the location of value storage, and these can take up more than 32B of memory in size. Two separate variables can refer to the exact location, and any change in one variable can affect the other. Several variables that point to the same address can be used to effect a change in a reference data type. There are several reference data types in Solidity: fixed-sized arrays, dynamic-sized arrays, array members, byte arrays, string arrays, structs, and mapping.
+  - These are Solidity reference types: **Arrays, Fixed-size arrays, Dynamic-size arrays, Byte arrays, String arrays, Structs and Mapping functions**. Find the whole description of them [here](https://blog.logrocket.com/ultimate-guide-data-types-solidity/#:~:text=There%20are%20several%20value%20types,addresses%2C%20enums%2C%20and%20bytes.)
+
+
+### Refresher: Solidity Data Modifier
+One major topic in ethereum is the ```visibility of both variables and functions inside solidity```. We can specify how visible both functions and variables are now. **Visibility just defines where you can invoke a function or where you can access a variable**.
+Now, remember, variables are actual data locations. It's a bucket that lives somewhere. Typically, it's going to live in memory. It's just a bucket. So we give the bucket a name and we can reach in and grab a value out or we can throw a value in there.
+- But who can do that?
+- Can everybody grab values out?
+- And when we define functions, can anybody invoke a function?
+- What if you have a third party API that's running on a mobile app with is that mobile app able to reach into your smart contract and run a function invoker function?
+Maybe, or maybe not, but ```you have control over what happens```. So there are ```four main visibility modifiers```. These are called modifiers because they're added on to the syntax. There's **public, external, internal and private**.
+
+- **Public**
+  - ```Public function``` – anyone can call
+  - ```Public variable``` – any app can read from or write to
+- **External**
+  - ```Only external entities can invoke a function or access a variable```
+  - ```Intended for the “outside world”```
+- **Internal**
+  - Only functions in ```current smart contract (or any contract derived from it)``` can invoke an internal function
+  - Internal variables are only accessible in current smart contract (or any contract derived from it)
+  - ```Smart Contract Derivations```
+    - You can write a smart contract as a ```template```
+      - Called an ```“interface”```
+    - Can write smart contracts based on the template (interface)
+      - Derivation of original template smart contract
+- **private**
+  - ```Only functions within current smart contract can invoke a private function```
+  - Private variables can only be accessed by functions within current smart contract
+  - Nothing external can access
+  - No derived smart contracts can access
+
+- In our previous solidity code example we had this contract:
+```solidity
+pragma solidity ^0.5.0;  // ^0.4.24; 
+
+/*
+* @title Solidity data types
+* @author ...
+* @notice A simply smart contract to demonstrate simple data types available in Solidity
+* 
+*/
+
+contract DataTypes {
+
+    uint x = 9;
+    int i = -68; 
+    uint8 j = 17;
+    bool isEthereumCool = true; 
+    address owner = msg.sender; // msg.sender is the Ethereum address of the account that sent this transaction
+    bytes32 bMsg = "hello";
+    string sMsg = "hello"; 
+
+    function getStateVariables() public view returns (uint, int, uint, bool, address, bytes32, string memory) {
+        return (x, i, j, isEthereumCool, owner, bMsg, sMsg); 
+    }
+    function setbMsg(bytes32 newValue) private returns (bytes32) {
+        bMsg = newValue; 
+    }
+
+}
+```
+- **view** --> in getStateVariables()
+  - Tells the compiler that the **function will only reference local variables**
+  - In other words: “I’m not touching the blockchain!”
+  - Saves gas --> save cost
+- We see that ```getStateVariables()``` function is a public function. That means that anyone can invoke it and that's OK because it's a ```GETER``` function. We call these getters because it fetches the value of that one or more values or variables and then it returns them. In this case, we see an interesting feature of ```solidity in that we can return multiple values```. Some languages allow functions to only return one value at a time.
+- So let's look at our new ```setbMsg(bytes32 newValue)``` function here called Set the Message, and this is sometimes called a ```SETTER``` function. A setter function is one in which you give it an input value and it does something with it. So in this case, the input to the function setbMsg is going to be a bytes32 variable with parameter named newValue and notice that this function is private.
+- So now we have a public function and a private function. The public function is one that can be invoked anywhere, and in fact, what I could go to truffle console, and invoke the function. I can invoke getStateVariables. However, I cannot invoke setbMsg because setbMsg is a private function and I cannot reach in from the outside world to invoke it.
+- So how in the world can I invoke it then? Well, the **function getStateVariables can call or invoke setbMsg because it's local, it's inside the same smart contract**.
+- **How to use these features for Supply Chain?** Well, it's important to understand how to create various functions for your supply chain, smart contract or really for any type of smart contract. For example, the things that we want our smart contract to be able to do are things such as create a new product or transfer the ownership of a product from one owner to another. That's a supply chain thing. However, internally we may need to mess around with data to construct the right standard format of our data structure, and we have these utility functions. They really shouldn't be exposed to the outside world because it exposes a lot of internal details. So utility functions such as build product structure, that might be a function that we only want to be private because we don't want external entities running, that we just need it to be there locally to kind of grease the wheels internally. So there's lots of reasons we may want to use private functions, but there are typically utility value or maybe security related functions and the public functions or external functions or the ones that we expose to the outside world that allow us to actually pick that product up and move it along the supply chain.
+
+
+
+### Refresher --> GAS Issue
+- **Gas price**
+  - Highest price per unit transaction creator is willing to pay
+  - Miners (usually) choose most lucrative transactions
+  - Higher gas prices usually mean more complex and longer to mine
+- **Gas limit**
+  - Total number of gas units a transaction creator is willing to pay
+  - Depends on complexity of algorithm
+- **Gas cost**
+  - Every operation in Solidity has a cost
+  - Ex: add operation costs 3 gas units
+- **Transaction fee**
+  - Fee to access the blockchain
+  - Total cost for computations in a transaction
+  - Transaction fee = total gas cost X gas price
+  - ```Unused gas = gas budget – gas us```
+  - Goes back to transaction originator
+
+
+
+### Refresher --> Solidity Conditions and Iterations
+- Smart contracts are programs made up of functions and data
+  - Functions are a series of steps (instructions for the computer)
+  - In any step, based on the conditions, may want to go several directions
+  - Conditional expression
+  - May want to repeat steps
+  - Iterations
+  - **do‐while**
+    - Iteration structure
+    - Runs the body 1 or more times
+    - Always run through the body before testing the condition
+  - **while**
+    - Iteration structure
+    - Runs the body 0 or more times
+
+- See these examples:
+```solidity
+pragma solidity >=0.4.22 <0.9.0;
+
+contract FlowControl {
+
+  function calcDozenDiscountIf(uint purchasedQty) private pure returns (bool) {
+    bool giveDozenPrice = false;
+
+    if(purchasedQty >= 12){
+      giveDozenPrice = true;
+    } else {
+      giveDozenPrice = false;
+    }
+    return (giveDozenPrice);
+  }
+
+  function calcDozenDiscountWhile(uint purchasedQty) private pure returns (bool) {
+    bool giveDozenPrice = false;
+    uint numDonuts = 1;
+
+    while (numDonuts < purchasedQty) {
+      numDonuts++;
+      if (numDonuts >= 12) {
+        giveDozenPrice = true;
+        break;
+      }
+    }
+    return (giveDozenPrice);
+  }
+
+  function calcDozenDiscountDo(uint purchasedQty) private pure returns (bool) {
+    bool giveDozenPrice = false;
+    uint numDonuts = 1;
+
+    do{
+      numDonuts ++;
+      if(numDonuts >= 12) {
+        giveDozenPrice = true;
+        break;
+      }
+    } while(numDonuts < purchasedQty);
+    return (giveDozenPrice);
+  }
+
+  function calcDozenDiscountFor(uint purchasedQty) private pure returns (bool) {
+    bool giveDozenPrice = false;
+    uint numDonuts = 1;
+
+    for(numDonuts = 1; numDonuts <= purchasedQty; numDonuts++){
+      if(numDonuts >= 12){
+        giveDozenPrice = true;
+        break;
+      }
+    }
+    return(giveDozenPrice);
+  }
+}
+```
+- NOTE: It's very important whenever you define variables, whether they're global, which means they're at the contract level or they're local, which means they're inside, functions **always initialize variables**. Initializing a variable means as soon as you define it puts some value in their own initialized. Variables are the bane of program development. What happens is if you define a variable and you forget to put something there, you get busy, you go along, you start using the variable, and all of a sudden you realize I'm using this and I'm getting weird output because you forgot to give it a starting value and you never know what's actually being stored in there until you initialize it.
+- NOTE: **check if/else condition**:
+```solidity
+if(purchasedQty >= 12){
+      giveDozenPrice = true;
+    } else {
+      giveDozenPrice = false;
+    }
+```
+or 
+```solidity
+if (numDonuts >= 12) {
+  giveDozenPrice = true;
+  break;
+}
+```
+- NOTE: **while Loop** and **do-while**:
+```solidity
+while (numDonuts < purchasedQty) {
+  numDonuts++;
+  if (numDonuts >= 12) {
+    giveDozenPrice = true;
+    break;
+  }
+```
+or 
+```solidity
+do{
+  numDonuts ++;
+  if(numDonuts >= 12) {
+    giveDozenPrice = true;
+    break;
+  }
+} while(numDonuts < purchasedQty);
+```
+- NOTE: **for Loop**:
+```solidity
+for(numDonuts = 1; numDonuts <= purchasedQty; numDonuts++){
+  if(numDonuts >= 12){
+    giveDozenPrice = true;
+    break;
+  }
+}
+```
+### Refresher --> Solidity Error Handling Functions
+There are three main abilities or statements that allow us to handle errors, to help us respond to errors, and one helps us avoid the errors in the first place.
+- **revert()**
+  - something unexpected but possible. In other words, it's something you say you had. This could possibly happen. I should say it's normal, but not unexpected. Then the r```evert will undo all state changes```. Gives you the ability to send a return value back to the calling context, which is really helpfull, so it can do these tasks:
+  - Undoes all state changes
+  - Can send return value to caller
+    - Informs caller of the function why it failed
+  - Refunds remaining gas to the caller: So what that means is that if you use up some gas, but you get into a function and there's a problem, you can actually revert the whole thing and you undo it. So it's as if nothing ever happened.
+  - Indicates a transaction should be terminated before it’s completed
+
+
+- **assert()**
+  - Assert is a command that you should never, ever, ever, ever encounter.
+  - Something bad has happened
+  - Undoes all state changes
+  - Uses all remaining gas
+  - So, again, a search should only be the worst case solution whenever the bad stuff happens.
+
+- **require()**
+  - So what you would do is you say require a message. Sender is equal to owner if you're not the owner, I'm not even going to try this function. And so it's a very easy way to just simply return back to you. It undoes any state changes, sends a return value and refunds all the remaining gas.
+  - Checks for requirements before invoking function
+  - Undoes state changes
+  - Sends return value
+  - Refunds all remaining gas
+
+- **IMPORTANT NOTE**: I would recommend the way that you approach this:
+  - 1. Use **require** everywhere you can to avoid any errors. 
+  - 2. If you do encounter errors, use the **revert** to gracefully exit. 
+  - 3. And then if you realize that if everything goes wrong in a horrible situation occurs, that's the only place that you should use the **assert** function.
+
+
+
+
+
 
 
 # Notes and Descriptions*
