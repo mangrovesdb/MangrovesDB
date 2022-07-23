@@ -2999,6 +2999,7 @@ Maybe, or maybe not, but ```you have control over what happens```. So there are 
   - Private variables can only be accessed by functions within current smart contract
   - Nothing external can access
   - No derived smart contracts can access
+- SUM UP: The internal visibility modifier only allows functions in the current contract or those in derived contracts to access the modified variable’s contents. Public variables can be accessed in any smart contract, external variables are not accessible to local or derived functions, and private variables can only be accessed by functions in this contract.
 
 - In our previous solidity code example we had this contract:
 ```solidity
@@ -3059,7 +3060,7 @@ contract DataTypes {
   - Transaction fee = total gas cost X gas price
   - ```Unused gas = gas budget – gas us```
   - Goes back to transaction originator
-
+- SUM UP: Gas cost is the cost of a single operation. Gas price is the highest price per gas unit a transaction originator is willing to pay, gas limit is the total number of gas units a transition originator is willing to pay, and the transaction fee is the total gas cost of all operations in a transaction.
 
 
 ### Refresher --> Solidity Conditions and Iterations
@@ -3210,6 +3211,7 @@ There are three main abilities or statements that allow us to handle errors, to 
   - 2. If you do encounter errors, use the **revert** to gracefully exit. 
   - 3. And then if you realize that if everything goes wrong in a horrible situation occurs, that's the only place that you should use the **assert** function.
 
+- SUM UP: The ```assert()``` function should only be encountered is something has gone very badly wrong. The assert() guard function is punitive in that it does not refund any unused gas. The ```require()``` and ```revert()``` guard functions are proactive and reactive functions that both refund unused gas, and the throw() function is a legacy error-handling method that should not be used.
 
 
 
