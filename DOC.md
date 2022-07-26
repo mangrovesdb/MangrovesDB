@@ -3213,9 +3213,20 @@ There are three main abilities or statements that allow us to handle errors, to 
 
 - SUM UP: The ```assert()``` function should only be encountered is something has gone very badly wrong. The assert() guard function is punitive in that it does not refund any unused gas. The ```require()``` and ```revert()``` guard functions are proactive and reactive functions that both refund unused gas, and the throw() function is a legacy error-handling method that should not be used.
 
+### Refresher --> Supply Chain Review
+- Supply chain app
+  - Framework that connects producers to consumers
+  - Manages products and services along that journey
+- Blockchain advantages
+  - Reduce costs
+  - Offer transparency
 
-
-
+### Supply Chain Design – Process Needs
+- Assets
+  - The product to be bought by the consumer
+- Participants
+  - All supply chain participants
+  - Manufacturers, suppliers, shippers, consumers
 
 
 # Notes and Descriptions*
