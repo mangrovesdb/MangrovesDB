@@ -3222,11 +3222,163 @@ There are three main abilities or statements that allow us to handle errors, to 
   - Offer transparency
 
 ### Supply Chain Design – Process Needs
-- Assets
+- **Assets**
   - The product to be bought by the consumer
-- Participants
+- **Participants**
   - All supply chain participants
   - Manufacturers, suppliers, shippers, consumers
+- **Ownership structure**
+  - Which participant currently owns the product
+  - Tracks the product
+- **Payment token**
+  - Participants pay each other with tokens as ownership changes
+
+### Supply Chain Design - Capabilities
+- **Initialize tokens**
+  - Establish initial pool of payment tokens
+- **Transfer tokens**
+  - Move tokens between accounts as payment
+- **Authorize token payments**
+  - Allow token transfers on behalf on another
+- **Add and update participants**
+- **Move products along the supply chain**
+  - Transfer product ownership
+- **Add and update products**
+- **Track an asset**
+  - Where a product is today
+  - Find product provenance (ownership)
+
+### Developing dApps
+- Advantages to decentralized apps (dApps)
+  - Automatic history tracking
+  - Built-in fault tolerance
+  - Trusted data
+- Before developing
+  - Know what your dApp does
+  - Know your goals and how you plan to achieve them
+  - Understand why the Ethereum blockchain environment is best
+- Allow users to access data stored on the blockchain
+  - Unlike “normal” applications, you can’t bypass integrity protections
+- Understand cost of interacting with the blockchain
+- Smart contracts provide the interface between users and the blockchain
+  - Making dApps possible
+
+###  Payment Token Smart Contract Data Items
+- NOTE 1: **Why need Token?** By creating token, we want to restrict the participants to authorize supply chain participants. In other words, you can't pay for anything on the supply chain unless you own some of the tokens, and we only sell these tokens to people that we allow into the supply chain. So since we're dealing with a public Blockchain, we don't have as much capability to limit participation.
+- NOTE 2: **ERC-20**: Now we've chosen to use the ERC-20 standard because that is the most common standard. It's easy to find a wallet that is compatible with 20 standards, and so we're going to implement the most commonly used Ethereum token. 
+- **ERC-20 data items**: Let's take a look at the ```ERC-20 data items``` or rather the data items we have to define for an ERC-20 compliant token. There are 6 important items:
+  - **totSupply**
+    - Total number of tokens in circulation
+  - **name**
+    - Descriptive token name
+  - **decimals**
+    - Number of decimals to use when displaying token amounts
+  - **symbol**
+    - Short identifier
+  - **balances**
+    - Current balance of each participating account, mapped to the account’s address
+  - **allowed**
+    - Number of tokens authorized to transfer between accounts, mapped to sender’s address
+
+### Payment Token Smart Contract Functions
+In the body of the contract, we're going to define six functions and the functions are mandatory for an ERC-20 Token. So if you look at any other ERC-20 Tolkan out there, they'll all have these six basic functions and they had the same name, and that is how you can interact with other tokens.
+- **totalSupply()**
+  - Returns current total number of tokens
+- **balanceOf()**
+  - Returns current balance of specified account
+- **allowance()**
+  - Returns remaining number of tokens allowed to be
+transferred from one specific acc
+- **transfer()**
+  - Transfers tokens from the owner to specified target account
+- **transferFrom()**
+  - Transfers tokens from one specific account to another specific account
+- **approve()**
+  - Maximum allowed tokens that can be transferred from one specific account to another specific account
+
+### Supply Chain Smart Contract
+Let's take a look at what's inside our supply chain smart contract, it contains basically the data and the functionality to manage all the products, the participants and all ownership transfers, because if you think about a supply chain, it's basically a collection of products that are owned by specific participants at a certain point in time. So in order to track and to trace the change in ownership, we need that third structure. So we need three structures, basically. In other words, it's everything that's not payment related because we already talked about the payment in the token smart contract.
+Supply chain has a bunch of lists.
+- We're going to have a list of products.
+- We're going to have a list of participants and 
+- a list of ownerships.
+And each one of those has their own attributes.
+- Data and functionality to manage products, participants, ownership transfer data
+- Everything else except payment
+
+#### Supply Chain Smart Contract Data
+Structures
+- **Product structure**
+  - Ex: model number, part number, cost, etc.
+  - Data that defines a unique product
+- **Participant structure**
+  - Data that defines a unique participant
+  - Ex: username, password, Ethereum address, etc.
+- **Ownership structure**
+  - Data that records product ownership transfer information
+  - Ex: product ID, owner ID, transaction time, etc.
+
+
+#### Supply Chain Smart Contract Data Variables
+- **product_id**
+  - Unique product ID, mapped to product structure
+- **participant_id**
+  - Unique participant ID, mapped to participant structure
+- **owner_id**
+  - Unique owner, mapped to registration structure
+
+#### Supply Chain Smart Contract Functions
+- **addParticipant()**
+  - Create new participant
+- **getParticipant()**
+  - Fetch information about a participant
+- **addProduct()**
+  - Create new product
+- **getProduct()**
+  - Fetch information about a particular product
+- **newOwner()**
+  - Transfer of ownership
+- **getProvenance()**
+  - Record of ownership
+- **getOwnership()**
+  - Owner of a product in a specific point in time
+- **authenticateParticipant()**
+  - Confirms participant is allowed to access certain data
+
+### Our Smart Contract Road Map
+
+- **Payment Token Smart Contract**
+  - Data Items:
+    - totSupply
+    - name
+    - decimals
+    - symbol
+    - balances
+    - allowed
+  - Functions:
+    - totalSupply()
+    - balanceOf()
+    - allowance()
+    - transfer()
+    - transferFrom()
+    - approve()
+- **Supply Chain Smart Contract**
+  - Data Items:
+    - Product structure
+      - product_id
+    - Participant structure
+      - participant_id
+    - Ownership structure
+      - owner_id 
+  - Functions:
+    - addParticipant()
+    - getParticipant()
+    - addProduct()
+    - getProduct()
+    - newOwner()
+    - getProvenance()
+    - getOwnership()
+    - authenticateParticipant()
 
 
 # Notes and Descriptions*
