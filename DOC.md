@@ -3380,6 +3380,8 @@ Structures
     - getOwnership()
     - authenticateParticipant()
 
+### Start the Supply Chain Application
+
 
 # Notes and Descriptions*
 
