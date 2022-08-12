@@ -67,9 +67,27 @@ platform.
 
 Sample Block Table Queries
 ----------------------------
-
+In order to read data from the ethereum public blockchain, as stated before simply run the MangrovesDB cli as shown below:
 
 .. image:: /images/MGDB_CLI_Start.png
+
+Then you can query against the data realted to the blocks on the public blockchain.
+
+.. image:: /images/read_first_blocks.png
+
+Feel free to try other queries as well:
+
+.. image:: /images/read_less_than_10_blocks.png
+
+
+.. code-block:: sql
+
+   mangroves> SELECT nonce, size, gas_limit, min_gas_price, gas_used, difficulty, timestamp 
+   FROM blocks WHERE number=15329147;
+
+
+.. image:: /images/read_last_blocks_data.png
+
 
 
 

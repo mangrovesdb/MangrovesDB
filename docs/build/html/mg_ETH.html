@@ -52,6 +52,7 @@
 <li class="toctree-l2 current"><a class="reference internal" href="MGDB_System_Catalogs.html">MGDB System Catalogs</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Ethereum Catalog</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#block-table">Block Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-block-table-queries">Sample Block Table Queries</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#contracts-table">Contracts Table</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#logs-table">Logs Table</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#token-transfers-table">Token Transfers Table</a></li>
@@ -205,6 +206,20 @@ platform.</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="section" id="sample-block-table-queries">
+<h2>Sample Block Table Queries<a class="headerlink" href="#sample-block-table-queries" title="Permalink to this headline"></a></h2>
+<p>In order to read data from the ethereum public blockchain, as stated before simply run the MangrovesDB cli as shown below:</p>
+<img alt="_images/MGDB_CLI_Start.png" src="_images/MGDB_CLI_Start.png" />
+<p>Then you can query against the data realted to the blocks on the public blockchain.</p>
+<img alt="_images/read_first_blocks.png" src="_images/read_first_blocks.png" />
+<p>Feel free to try other queries as well:</p>
+<img alt="_images/read_less_than_10_blocks.png" src="_images/read_less_than_10_blocks.png" />
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="n">mangroves</span><span class="o">&gt;</span> <span class="k">SELECT</span> <span class="n">nonce</span><span class="p">,</span> <span class="k">size</span><span class="p">,</span> <span class="n">gas_limit</span><span class="p">,</span> <span class="n">min_gas_price</span><span class="p">,</span> <span class="n">gas_used</span><span class="p">,</span> <span class="n">difficulty</span><span class="p">,</span> <span class="k">timestamp</span>
+<span class="k">FROM</span> <span class="n">blocks</span> <span class="k">WHERE</span> <span class="nb">number</span><span class="o">=</span><span class="mi">15329147</span><span class="p">;</span>
+</pre></div>
+</div>
+<img alt="_images/read_last_blocks_data.png" src="_images/read_last_blocks_data.png" />
 </div>
 <div class="section" id="contracts-table">
 <span id="contracts"></span><h2>Contracts Table<a class="headerlink" href="#contracts-table" title="Permalink to this headline"></a></h2>
