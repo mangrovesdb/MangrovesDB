@@ -65,6 +65,12 @@ platform.
 |   base_fee_per_gas     |   bigint   |
 +------------------------+------------+ 
 
+Sample Block Table Queries
+----------------------------
+
+
+.. image:: /images/MGDB_CLI_Start.png
+
 
 
 .. _contracts:
