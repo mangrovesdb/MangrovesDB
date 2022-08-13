@@ -22,3 +22,6 @@ $ make html
 ```
 grip your_markdown.md
 ```
+
+## Need Help
+check this out: https://chiplicity.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html
