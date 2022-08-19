@@ -25,3 +25,16 @@ grip your_markdown.md
 
 ## Need Help
 check this out: https://chiplicity.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html
+
+
+
+## Cuation and Dangers
+```
+.. admonition:: Caution
+
+    Please first *install* the **pre-requierments**...
+```
+```
+.. DANGER::
+   Beware killer rabbits!
+```

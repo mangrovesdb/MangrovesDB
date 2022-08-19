@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Installation &mdash; MangrovesDB 0.0 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/installer_widget.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+        <script src="../_static/tabs.js"></script>
+        <script src="../_static/js/installer_widget.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="MGDB Project" href="../fundamentals/fundamentals.html" />
+    <link rel="prev" title="Welcome to MangrovesDB’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> MangrovesDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart-tutorial">Quickstart Tutorial</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mangrovesdb-cli">MangrovesDB CLI</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mangrovesdb-sqlite-library">MangrovesDB sqlite library</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../fundamentals/fundamentals.html">MGDB Project</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../documentation/documentation.html">MangrovesDB Documentations</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Queries on MangrovesDB</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../queries_on_mgdb/queries_on_mgdb.html">Sample Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../queries_on_mgdb/queries_on_mgdb.html#real-world-queries">Real World Queries</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../basic_usage/basic_usage.html">Where to Use MangrovesDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../basic_usage/basic_usage.html#basic-use-cases">Basic Use-Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other_pages/FAQ.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Live Demo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../other_pages/live_demo.html">Test a Live Demo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">MangrovesDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Installation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/getting_started/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation">
+<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<p>Using this guidance you can simply install mangroves CLI and mangroves compatible version with sqlite SDK on your system. You can then use the quick start tutorial to test the mangroves immediately.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#prerequisites"><span class="std std-ref">Prerequisites</span></a></p></li>
+<li><p><a class="reference internal" href="#id2"><span class="std std-ref">Installation</span></a></p></li>
+<li><p><a class="reference internal" href="#qutut"><span class="std std-ref">Quickstart Tutorial</span></a></p></li>
+</ul>
+<section id="prerequisites">
+<span id="id1"></span><h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>2 CPUs or more</p></li>
+<li><p>2GB of free memory</p></li>
+<li><p>20GB of free disk space</p></li>
+<li><p>Internet connection</p></li>
+</ul>
+</section>
+<section id="id2">
+<span id="id3"></span><h2>Installation<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<p>There are some requirements before installing MGDB.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-0-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-0-0-0" name="0-0" role="tab" tabindex="0">Linux</button><button aria-controls="panel-0-0-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-1" name="0-1" role="tab" tabindex="-1">macOS</button><button aria-controls="panel-0-0-2" aria-selected="false" class="sphinx-tabs-tab" id="tab-0-0-2" name="0-2" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-0-0-0" class="sphinx-tabs-panel" id="panel-0-0-0" name="0-0" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-1-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-1-1-0" name="1-0" role="tab" tabindex="0">x86-64</button><button aria-controls="panel-1-1-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-1-1-1" name="1-1" role="tab" tabindex="-1">ARM64</button></div><div aria-labelledby="tab-1-1-0" class="sphinx-tabs-panel" id="panel-1-1-0" name="1-0" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-2-2-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-2-2-0" name="2-0" role="tab" tabindex="0">Binary download</button><button aria-controls="panel-2-2-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-2-2-1" name="2-1" role="tab" tabindex="-1">sqlite SDK</button></div><div aria-labelledby="tab-2-2-0" class="sphinx-tabs-panel" id="panel-2-2-0" name="2-0" role="tabpanel" tabindex="0"><p>To install the latest mangroves stable release on x86-64 Linux using binary download:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+sudo install minikube-linux-amd64 /usr/local/bin/minikube
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-2-2-1" class="sphinx-tabs-panel" hidden="true" id="panel-2-2-1" name="2-1" role="tabpanel" tabindex="0"><p>To install the latest mangroves stable release on x86-64 Linux for sqlite compatible sdk:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+sudo dpkg -i minikube_latest_amd64.deb
+</pre></div>
+</div>
+</div></div>
+</div><div aria-labelledby="tab-1-1-1" class="sphinx-tabs-panel" hidden="true" id="panel-1-1-1" name="1-1" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-3-3-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-3-3-0" name="3-0" role="tab" tabindex="0">Binary download</button><button aria-controls="panel-3-3-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-3-3-1" name="3-1" role="tab" tabindex="-1">sqlite SDK</button></div><div aria-labelledby="tab-3-3-0" class="sphinx-tabs-panel" id="panel-3-3-0" name="3-0" role="tabpanel" tabindex="0"><p>To install the latest minikube stable release on ARM64 Linux using binary download:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-arm64
+sudo install minikube-linux-arm64 /usr/local/bin/minikube
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-3-3-1" class="sphinx-tabs-panel" hidden="true" id="panel-3-3-1" name="3-1" role="tabpanel" tabindex="0"><p>To install the latest mangroves stable release on ARM64 Linux for sqlite compatible sdk:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_arm64.deb
+sudo dpkg -i minikube_latest_arm64.deb
+</pre></div>
+</div>
+</div></div>
+</div></div>
+</div><div aria-labelledby="tab-0-0-1" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-1" name="0-1" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-4-4-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-4-4-0" name="4-0" role="tab" tabindex="0">x86-64</button><button aria-controls="panel-4-4-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-4-4-1" name="4-1" role="tab" tabindex="-1">ARM64</button></div><div aria-labelledby="tab-4-4-0" class="sphinx-tabs-panel" id="panel-4-4-0" name="4-0" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-5-5-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-5-5-0" name="5-0" role="tab" tabindex="0">Binary download</button><button aria-controls="panel-5-5-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-5-5-1" name="5-1" role="tab" tabindex="-1">sqlite SDK</button></div><div aria-labelledby="tab-5-5-0" class="sphinx-tabs-panel" id="panel-5-5-0" name="5-0" role="tabpanel" tabindex="0"><p>To install the latest mangroves stable release on x86-64 macOS using binary download:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-5-5-1" class="sphinx-tabs-panel" hidden="true" id="panel-5-5-1" name="5-1" role="tabpanel" tabindex="0"><p>To install the latest mangroves stable release on x86-64 macOS for sqlite compatible sdk:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
+sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+</pre></div>
+</div>
+</div></div>
+</div><div aria-labelledby="tab-4-4-1" class="sphinx-tabs-panel" hidden="true" id="panel-4-4-1" name="4-1" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-6-6-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-6-6-0" name="6-0" role="tab" tabindex="0">Binary download</button><button aria-controls="panel-6-6-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-6-6-1" name="6-1" role="tab" tabindex="-1">sqlite SDK</button></div><div aria-labelledby="tab-6-6-0" class="sphinx-tabs-panel" id="panel-6-6-0" name="6-0" role="tabpanel" tabindex="0"><p>To install the latest mangroves stable release on ARM64 macOS using binary download:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-arm64
+sudo install minikube-darwin-arm64 /usr/local/bin/minikube
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-6-6-1" class="sphinx-tabs-panel" hidden="true" id="panel-6-6-1" name="6-1" role="tabpanel" tabindex="0"><p>To install the latest mangroves stable release on ARM64 macOS for sqlite compatible sdk:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-arm64
+sudo install minikube-darwin-arm64 /usr/local/bin/minikube
+</pre></div>
+</div>
+</div></div>
+</div></div>
+</div><div aria-labelledby="tab-0-0-2" class="sphinx-tabs-panel" hidden="true" id="panel-0-0-2" name="0-2" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-7-7-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-7-7-0" name="7-0" role="tab" tabindex="0">x86-64</button></div><div aria-labelledby="tab-7-7-0" class="sphinx-tabs-panel" id="panel-7-7-0" name="7-0" role="tabpanel" tabindex="0"><div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-8-8-0" aria-selected="true" class="sphinx-tabs-tab" id="tab-8-8-0" name="8-0" role="tab" tabindex="0">.exe download</button><button aria-controls="panel-8-8-1" aria-selected="false" class="sphinx-tabs-tab" id="tab-8-8-1" name="8-1" role="tab" tabindex="-1">sqlite SDK</button></div><div aria-labelledby="tab-8-8-0" class="sphinx-tabs-panel" id="panel-8-8-0" name="8-0" role="tabpanel" tabindex="0"><p>Download and run the installer for the latest release. Or if using PowerShell, use this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>New-Item -Path <span class="s1">&#39;c:\&#39;</span> -Name <span class="s1">&#39;minikube&#39;</span> -ItemType Directory -Force
+Invoke-WebRequest -OutFile <span class="s1">&#39;c:\minikube\minikube.exe&#39;</span> -Uri <span class="s1">&#39;https://github.com/kubernetes/minikube/releases/latest/download/minikube-windows-amd64.exe&#39;</span> -UseBasicParsing
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-8-8-1" class="sphinx-tabs-panel" hidden="true" id="panel-8-8-1" name="8-1" role="tabpanel" tabindex="0"><p>Download and run the installer for the latest release sqlite compatible sdk. Or if using PowerShell, use this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>New-Item -Path <span class="s1">&#39;c:\&#39;</span> -Name <span class="s1">&#39;minikube&#39;</span> -ItemType Directory -Force
+Invoke-WebRequest -OutFile <span class="s1">&#39;c:\minikube\minikube.exe&#39;</span> -Uri <span class="s1">&#39;https://github.com/kubernetes/minikube/releases/latest/download/minikube-windows-amd64.exe&#39;</span> -UseBasicParsing
+</pre></div>
+</div>
+</div></div>
+</div></div>
+</div></div>
+</section>
+<section id="quickstart-tutorial">
+<span id="qutut"></span><h2>Quickstart Tutorial<a class="headerlink" href="#quickstart-tutorial" title="Permalink to this heading"></a></h2>
+<p>You can simply use mangroves CLI to query dat on the public blockchain, e.g., Ethereum. You can also test the mangroves compatible library with sqlite SDK. In what follows there are some examples of how to test each of these services:</p>
+<section id="mangrovesdb-cli">
+<h3>MangrovesDB CLI<a class="headerlink" href="#mangrovesdb-cli" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>1. Running mangroves CLI</strong></p></li>
+</ul>
+<p>From a terminal, run:</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-9-TGludXg=" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-9-TGludXg=" name="TGludXg=" role="tab" tabindex="0">Linux</button><button aria-controls="panel-9-TWFjIE9TWA==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-9-TWFjIE9TWA==" name="TWFjIE9TWA==" role="tab" tabindex="-1">Mac OSX</button><button aria-controls="panel-9-V2luZG93cw==" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-9-V2luZG93cw==" name="V2luZG93cw==" role="tab" tabindex="-1">Windows</button></div><div aria-labelledby="tab-9-TGludXg=" class="sphinx-tabs-panel group-tab" id="panel-9-TGludXg=" name="TGludXg=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://cloudflare-eth.com/
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-9-TWFjIE9TWA==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-9-TWFjIE9TWA==" name="TWFjIE9TWA==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://cloudflare-eth.com/
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-9-V2luZG93cw==" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-9-V2luZG93cw==" name="V2luZG93cw==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://cloudflare-eth.com/
+</pre></div>
+</div>
+</div></div>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>The url can be any available Ethereum gateway. Mangroves can handle all nodes, in different netowrk layers.</p>
+</div></blockquote>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-10-UG9seWdvbg==" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-10-UG9seWdvbg==" name="UG9seWdvbg==" role="tab" tabindex="0">Polygon</button><button aria-controls="panel-10-RmFudG9t" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-10-RmFudG9t" name="RmFudG9t" role="tab" tabindex="-1">Fantom</button><button aria-controls="panel-10-YXJiaXRydW0=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-10-YXJiaXRydW0=" name="YXJiaXRydW0=" role="tab" tabindex="-1">arbitrum</button></div><div aria-labelledby="tab-10-UG9seWdvbg==" class="sphinx-tabs-panel group-tab" id="panel-10-UG9seWdvbg==" name="UG9seWdvbg==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://polygon-rpc.com
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-10-RmFudG9t" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-10-RmFudG9t" name="RmFudG9t" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://rpc.ftm.tools
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-10-YXJiaXRydW0=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-10-YXJiaXRydW0=" name="YXJiaXRydW0=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://arb1.arbitrum.io/rpc
+</pre></div>
+</div>
+</div></div>
+</div>
+<ul class="simple">
+<li><p><strong>2. Querying the Blockchain</strong></p></li>
+</ul>
+<p>You can now run your queries in the mangroves CLI. Please see the following examples:</p>
+<blockquote>
+<div><ul>
+<li><p>Query the <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#blocksref"><span class="std std-ref">Block Table</span></a>:</p>
+<blockquote>
+<div><div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="nb">number</span><span class="p">,</span> <span class="n">hash</span><span class="p">,</span> <span class="n">parent_hash</span> <span class="k">from</span> <span class="n">blocks</span> <span class="k">where</span> <span class="nb">number</span><span class="o">=</span><span class="mi">15368213</span><span class="p">;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</div></blockquote>
+</section>
+<section id="mangrovesdb-sqlite-library">
+<h3>MangrovesDB sqlite library<a class="headerlink" href="#mangrovesdb-sqlite-library" title="Permalink to this heading"></a></h3>
+<p>Leveraging MangrovesDb Library you can use the sqlite powerful tools and write simple queries in any programming langiages of your choice in any platform.
+You can see some examples about how mangroves in intergradted with sqlite SDK to perform queries.</p>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-11-Qw==" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-Qw==" name="Qw==" role="tab" tabindex="0">C</button><button aria-controls="panel-11-Qysr" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-Qysr" name="Qysr" role="tab" tabindex="-1">C++</button><button aria-controls="panel-11-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button><button aria-controls="panel-11-SmF2YQ==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-SmF2YQ==" name="SmF2YQ==" role="tab" tabindex="-1">Java</button><button aria-controls="panel-11-SnVsaWE=" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-SnVsaWE=" name="SnVsaWE=" role="tab" tabindex="-1">Julia</button><button aria-controls="panel-11-Rm9ydHJhbg==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-Rm9ydHJhbg==" name="Rm9ydHJhbg==" role="tab" tabindex="-1">Fortran</button><button aria-controls="panel-11-Ug==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-Ug==" name="Ug==" role="tab" tabindex="-1">R</button></div><div aria-labelledby="tab-11-Qw==" class="sphinx-tabs-panel code-tab group-tab" id="panel-11-Qw==" name="Qw==" role="tabpanel" tabindex="0"><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-11-Qysr" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-Qysr" name="Qysr" role="tabpanel" tabindex="0"><div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="k">const</span> <span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-11-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+   <span class="k">return</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-11-SmF2YQ==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-SmF2YQ==" name="SmF2YQ==" role="tabpanel" tabindex="0"><div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+   <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+   <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-11-SnVsaWE=" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-SnVsaWE=" name="SnVsaWE=" role="tabpanel" tabindex="0"><div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">main</span><span class="p">()</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-11-Rm9ydHJhbg==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-Rm9ydHJhbg==" name="Rm9ydHJhbg==" role="tabpanel" tabindex="0"><div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">PROGRAM </span><span class="n">main</span>
+<span class="k">END PROGRAM </span><span class="n">main</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-11-Ug==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-Ug==" name="Ug==" role="tabpanel" tabindex="0"><div class="highlight-r notranslate"><div class="highlight"><pre><span></span><span class="n">main</span> <span class="o">&lt;-</span> <span class="nf">function</span><span class="p">()</span> <span class="p">{</span>
+   <span class="nf">return</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to MangrovesDB’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../fundamentals/fundamentals.html" class="btn btn-neutral float-right" title="MGDB Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Mangroves Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

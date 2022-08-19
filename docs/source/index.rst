@@ -3,6 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. _settingup:
+.. image:: /images/mgdbLogo.png
 Welcome to MangrovesDB's documentation!
 =======================================
 Let's :ref:`Install Mangroves First <settingup>`.
@@ -14,43 +16,44 @@ Let's :ref:`Install Mangroves First <settingup>`.
    :maxdepth: 2
    :caption: Getting Started
 
-   installation
+   getting_started/installation
+
 
 .. toctree::
    :maxdepth: 3
    :caption: Fundamentals
    
-   fundamentals
+   fundamentals/fundamentals
 
 .. toctree::
    :maxdepth: 4
    :caption: Documentation
    
-   documentation
+   documentation/documentation
 
 .. toctree::
    :maxdepth: 3
    :caption: Queries on MangrovesDB
    
-   queries_on_mgdb
+   queries_on_mgdb/queries_on_mgdb
 
 .. toctree::
    :maxdepth: 3
    :caption: Basic usage
    
-   basic_usage
+   basic_usage/basic_usage
 
 .. toctree::
    :maxdepth: 3
    :caption: FAQ
    
-   FAQ
+   other_pages/FAQ
 
 .. toctree::
    :maxdepth: 3
    :caption: Live Demo
    
-   live_demo
+   other_pages/live_demo
 
 
 Indices and tables

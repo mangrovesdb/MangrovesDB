@@ -6,6 +6,7 @@
   <title>Ethereum Catalog &mdash; MangrovesDB 0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/code-tabs.css" type="text/css" />
       <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
@@ -15,6 +16,7 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/code-tabs.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -39,7 +41,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started/installation.html">Installation</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
 <ul>
@@ -220,7 +222,31 @@ platform.</p>
 </pre></div>
 </div>
 <img alt="_images/read_last_blocks_data.png" src="_images/read_last_blocks_data.png" />
+<div class="tabs docutils container" data-tabgroup="lang">
+<ul class="tabbar">
+<li class="tabbutton selected" data-id="0" onclick="sphinx_code_tabs_onclick(this)">
+bash</li><li class="tabbutton" data-id="1" onclick="sphinx_code_tabs_onclick(this)">
+python</li></ul><div class="tab codetab selected" data-id="0">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Hello, group!&quot;</span>
+</pre></div>
 </div>
+</div><div class="tab codetab" data-id="1">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, group!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div><div class="tabs docutils container" data-tabgroup="lang">
+<ul class="tabbar">
+<li class="tabbutton selected" data-id="0" onclick="sphinx_code_tabs_onclick(this)">
+bash</li><li class="tabbutton" data-id="1" onclick="sphinx_code_tabs_onclick(this)">
+python</li></ul><div class="tab codetab selected" data-id="0">
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Goodbye, group!&quot;</span>
+</pre></div>
+</div>
+</div><div class="tab codetab" data-id="1">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goodbye, group!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div></div>
 <div class="section" id="contracts-table">
 <span id="contracts"></span><h2>Contracts Table<a class="headerlink" href="#contracts-table" title="Permalink to this headline"></a></h2>
 <p>The smart contracts data related to the Ethereum public network will be saved in this tabele. This table can be a good resource for the smart contracts data defined
@@ -547,7 +573,7 @@ in your platform.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2022, MSBeni.</p>
+    <p>&#169; Copyright 2022, Mangroves Labs.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

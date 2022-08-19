@@ -6,10 +6,15 @@ Installation
 
 This is a guide to halp you find out how to install MangrovesDB.
 * Install on Ubuntu
-* Install on Mac-Windows
+* Install on Mac-Windows (To be added)
 
 Please follow the next steps to install MGDb on your system.
 
+* Binary form GitHub 
+* Commands from here (Builds from source): 
+
+mangrovesDB CLI installation,
+sqlite SDK compatile library ---> 
 
 .. toctree::
    :maxdepth: 3

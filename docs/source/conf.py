@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'MangrovesDB'
-copyright = '2022, MSBeni'
-author = 'MSBeni'
+copyright = '2022, Mangroves Labs'
+author = 'Mohammad SBeni, Navid Haghighat'
 
 # The full version, including alpha/beta/rc tags
 release = '0.0'
@@ -31,6 +31,10 @@ release = '0.0'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    # 'sphinx_code_tabs',
+    'myst_parser',
+    'sphinx_copybutton',
+    'sphinx_tabs.tabs',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -41,18 +45,28 @@ templates_path = ['_templates']
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
-
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# html_theme = 'alabaster'
+# html_theme = 'sphinx_material'  # furo
 html_theme = "sphinx_rtd_theme"
 # html_theme = "press"
+# html_theme_options = {
+#     "external_links": [
+#         ("Website", "https://mgdb.io"),
+#         #("Github", "https://github.com/mangrovesDB/mangroves"),
+#     ]
+# }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
-html_css_files = ['custom.css']
+html_static_path = ["_static"]
+
+html_css_files = [
+    "css/installer_widget.css",
+]
+
+html_js_files = ["js/installer_widget.js"]

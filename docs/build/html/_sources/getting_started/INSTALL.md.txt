@@ -1,0 +1,20 @@
+# Installation
+
+HERE IS A SIMPLE TEST FOR INSTALLATION
+
+## Installing MangrovesDB
+
+You can easily launch and use the mangroves CLI in you OS by following the below steps.
+The supported operating systems are:
+
+- Linux (`x86_64`)
+- Windows
+- macOS
+
+```{raw} html
+:file: install_widget.html
+```
+
+This is how it works now now
+
+
