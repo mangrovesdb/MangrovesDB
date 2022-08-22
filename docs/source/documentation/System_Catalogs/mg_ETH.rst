@@ -1,17 +1,17 @@
 .. _mgeth:
 
-Ethereum Catalog
+Ethereum Tables
 ======================
 There are Seven main catalog tables for the Ethereum-based blockchain networks. The main resource for these tables is this `library <https://pypi.org/project/ethereum-etl/1.0.0/>`_. 
 These pre-defined tables are:
 
 * :ref:`Block Table <blocks>`
+* :ref:`Transactions Table <transactions>`
 * :ref:`Contracts Table <contracts>`
 * :ref:`Logs Table <logs>`
 * :ref:`Token Transfers Table <token_transfers>`
 * :ref:`Tokens Table <tokens>`
 * :ref:`Traces Table <traces>`
-* :ref:`Transactions Table <transactions>`
 
 
 .. _blocksRef:
@@ -112,166 +112,7 @@ Feel free to try other queries as well:
         print("Goodbye, group!")
 
 
-.. _contracts:
-
-Contracts Table
------------------
-
-The smart contracts data related to the Ethereum public network will be saved in this tabele. This table can be a good resource for the smart contracts data defined
-in your platform.
-
-
-+------------------------+------------+
-|      Column Name       |   Type     |
-|                        |            |
-+========================+============+
-|        address         | varchar(42)|
-+------------------------+------------+
-|        bytecode        |    text    | 
-+------------------------+------------+
-|   function_sighashes   |    text    |
-+------------------------+------------+
-
-
-.. _logs:
-
-Logs Table
------------------
-The logs related to the Ethereum network are stored in this table. The index of the log, transaction hash and index, adress and other related are inserted to this table. 
-
-+------------------------+------------+
-|      Column Name       |   Type     |
-|                        |            |
-+========================+============+
-|        log_index       |   bigint   | 
-+------------------------+------------+
-|    transaction_hash    | varchar(66)|
-+------------------------+------------+
-|    transaction_index   |   bigint   | 
-+------------------------+------------+
-|        address         | varchar(42)|
-+------------------------+------------+
-|         data           |   text     |
-+------------------------+------------+
-|        topic0          | varchar(66)| 
-+------------------------+------------+
-|        topic1          | varchar(66)| 
-+------------------------+------------+
-|        topic2          | varchar(66)| 
-+------------------------+------------+
-|        topic3          | varchar(66)| 
-+------------------------+------------+
-|    block_timestamp     |  timestamp | 
-+------------------------+------------+
-|      block_number      |   bigint   | 
-+------------------------+------------+
-|      block_hash        | varchar(66)|
-+------------------------+------------+
-
-
-.. _token_transfers:
-
-Token Transfers Table
-------------------------
-The tokens transferring data, including the address that the transfer originates from and the address receiving the data is added to this table.
-
-+------------------------+------------+
-|      Column Name       |   Type     |
-|                        |            |
-+========================+============+
-|     token_address      | varchar(42)| 
-+------------------------+------------+
-|     from_address       | varchar(42)| 
-+------------------------+------------+
-|      to_address        | varchar(42)| 
-+------------------------+------------+
-|        value           | numeric(78)| 
-+------------------------+------------+
-|    transaction_hash    | varchar(66)| 
-+------------------------+------------+
-|       log_index        |   bigint   | 
-+------------------------+------------+
-|    block_timestamp     |  timestamp |
-+------------------------+------------+
-|      block_number      |   bigint   | 
-+------------------------+------------+
-|       block_hash       | varchar(66)| 
-+------------------------+------------+
-
-
-.. _tokens:
-
-Tokens Table
-------------------------
-This table stores the tokens data. Address, name, symbol and other necessary data related to the Ethereum network tokens are stored in this table.
-
-+------------------------+------------+
-|      Column Name       |   Type     |
-|                        |            |
-+========================+============+
-|        address         | varchar(42)| 
-+------------------------+------------+
-|         name           |    text    | 
-+------------------------+------------+
-|        symbol          |    text    | 
-+------------------------+------------+
-|      decimals          |   int(11)  | 
-+------------------------+------------+
-|    function_sighashes  |   string   | 
-+------------------------+------------+
-
-
-.. _traces:
-
-Traces Table
-------------------------
-The traces of the Ethereum public blockchain are stored in this table. 
-
-+------------------------+-------------+
-|      Column Name       |   Type      |
-|                        |             |
-+========================+=============+
-|    transaction_hash    | varchar(66) |
-+------------------------+-------------+
-|   transaction_index    |   bigint    | 
-+------------------------+-------------+
-|      from_address      | varchar(42) |
-+------------------------+-------------+
-|      to_address        | varchar(42) | 
-+------------------------+-------------+
-|        vlaue           | numeric(38) |
-+------------------------+-------------+
-|        input           |    text     |
-+------------------------+-------------+
-|        output          |    text     |
-+------------------------+-------------+
-|      trace_type        | varchar(16) | 
-+------------------------+-------------+
-|      call_type         | varchar(16) |
-+------------------------+-------------+
-|     reward_type        | varchar(16) | 
-+------------------------+-------------+
-|        gas             |   bigint    |
-+------------------------+-------------+  
-|      gas_used          |   bigint    |
-+------------------------+-------------+ 
-|      subtraces         |   bigint    |
-+------------------------+-------------+ 
-|    trace_address       |varchar(8192)|
-+------------------------+-------------+ 
-|        error           |    text     |
-+------------------------+-------------+
-|        status          |    int      |
-+------------------------+-------------+
-|   block_timestamp      |  timestamp  |
-+------------------------+-------------+
-|      block_number      |   bigint    |
-+------------------------+-------------+ 
-|      block_hash        | varchar(66) |
-+------------------------+-------------+ 
-|       trace_id         |    text     |
-+------------------------+-------------+
-
+.. _transactionsRef:
 .. _transactions:
 
 Transactions Table
@@ -325,4 +166,169 @@ This table is designed to store the data related to the transactions of the Ethe
 |receipt_effective_gas_price|   bigint    | 
 +---------------------------+-------------+
 
+
+.. _contractsRef:
+.. _contracts:
+
+Contracts Table
+-----------------
+
+The smart contracts data related to the Ethereum public network will be saved in this tabele. This table can be a good resource for the smart contracts data defined
+in your platform.
+
+
++------------------------+------------+
+|      Column Name       |   Type     |
+|                        |            |
++========================+============+
+|        address         | varchar(42)|
++------------------------+------------+
+|        bytecode        |    text    | 
++------------------------+------------+
+|   function_sighashes   |    text    |
++------------------------+------------+
+
+
+.. _logsRef:
+.. _logs:
+
+Logs Table
+-----------------
+The logs related to the Ethereum network are stored in this table. The index of the log, transaction hash and index, adress and other related are inserted to this table. 
+
++------------------------+------------+
+|      Column Name       |   Type     |
+|                        |            |
++========================+============+
+|        log_index       |   bigint   | 
++------------------------+------------+
+|    transaction_hash    | varchar(66)|
++------------------------+------------+
+|    transaction_index   |   bigint   | 
++------------------------+------------+
+|        address         | varchar(42)|
++------------------------+------------+
+|         data           |   text     |
++------------------------+------------+
+|        topic0          | varchar(66)| 
++------------------------+------------+
+|        topic1          | varchar(66)| 
++------------------------+------------+
+|        topic2          | varchar(66)| 
++------------------------+------------+
+|        topic3          | varchar(66)| 
++------------------------+------------+
+|    block_timestamp     |  timestamp | 
++------------------------+------------+
+|      block_number      |   bigint   | 
++------------------------+------------+
+|      block_hash        | varchar(66)|
++------------------------+------------+
+
+
+.. _token_transfersRef:
+.. _token_transfers:
+
+Token Transfers Table
+------------------------
+The tokens transferring data, including the address that the transfer originates from and the address receiving the data is added to this table.
+
++------------------------+------------+
+|      Column Name       |   Type     |
+|                        |            |
++========================+============+
+|     token_address      | varchar(42)| 
++------------------------+------------+
+|     from_address       | varchar(42)| 
++------------------------+------------+
+|      to_address        | varchar(42)| 
++------------------------+------------+
+|        value           | numeric(78)| 
++------------------------+------------+
+|    transaction_hash    | varchar(66)| 
++------------------------+------------+
+|       log_index        |   bigint   | 
++------------------------+------------+
+|    block_timestamp     |  timestamp |
++------------------------+------------+
+|      block_number      |   bigint   | 
++------------------------+------------+
+|       block_hash       | varchar(66)| 
++------------------------+------------+
+
+
+.. _tokensRef:
+.. _tokens:
+
+Tokens Table
+------------------------
+This table stores the tokens data. Address, name, symbol and other necessary data related to the Ethereum network tokens are stored in this table.
+
++------------------------+------------+
+|      Column Name       |   Type     |
+|                        |            |
++========================+============+
+|        address         | varchar(42)| 
++------------------------+------------+
+|         name           |    text    | 
++------------------------+------------+
+|        symbol          |    text    | 
++------------------------+------------+
+|      decimals          |   int(11)  | 
++------------------------+------------+
+|    function_sighashes  |   string   | 
++------------------------+------------+
+
+
+.. _tracesRef:
+.. _traces:
+
+Traces Table
+------------------------
+The traces of the Ethereum public blockchain are stored in this table. 
+
++------------------------+-------------+
+|      Column Name       |   Type      |
+|                        |             |
++========================+=============+
+|    transaction_hash    | varchar(66) |
++------------------------+-------------+
+|   transaction_index    |   bigint    | 
++------------------------+-------------+
+|      from_address      | varchar(42) |
++------------------------+-------------+
+|      to_address        | varchar(42) | 
++------------------------+-------------+
+|        vlaue           | numeric(38) |
++------------------------+-------------+
+|        input           |    text     |
++------------------------+-------------+
+|        output          |    text     |
++------------------------+-------------+
+|      trace_type        | varchar(16) | 
++------------------------+-------------+
+|      call_type         | varchar(16) |
++------------------------+-------------+
+|     reward_type        | varchar(16) | 
++------------------------+-------------+
+|        gas             |   bigint    |
++------------------------+-------------+  
+|      gas_used          |   bigint    |
++------------------------+-------------+ 
+|      subtraces         |   bigint    |
++------------------------+-------------+ 
+|    trace_address       |varchar(8192)|
++------------------------+-------------+ 
+|        error           |    text     |
++------------------------+-------------+
+|        status          |    int      |
++------------------------+-------------+
+|   block_timestamp      |  timestamp  |
++------------------------+-------------+
+|      block_number      |   bigint    |
++------------------------+-------------+ 
+|      block_hash        | varchar(66) |
++------------------------+-------------+ 
+|       trace_id         |    text     |
++------------------------+-------------+
 

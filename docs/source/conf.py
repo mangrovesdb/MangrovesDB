@@ -65,8 +65,8 @@ html_theme = "sphinx_rtd_theme"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
-html_css_files = [
-    "css/installer_widget.css",
-]
+# html_css_files = [
+#     "css/installer_widget.css",
+# ]
 
-html_js_files = ["js/installer_widget.js"]
+# html_js_files = ["js/installer_widget.js"]

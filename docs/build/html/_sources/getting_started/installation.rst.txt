@@ -160,6 +160,7 @@ There are some requirements before installing MGDB.
 
 Quickstart Tutorial
 ----------------------
+
 You can simply use mangroves CLI to query dat on the public blockchain, e.g., Ethereum. You can also test the mangroves compatible library with sqlite SDK. In what follows there are some examples of how to test each of these services:
 
 
@@ -192,9 +193,9 @@ From a terminal, run:
           ./mangroves-cli --url https://cloudflare-eth.com/
 
 
-.. admonition:: Note
+.. Note:: 
 
-    The url can be any available Ethereum gateway. Mangroves can handle all nodes, in different netowrk layers.
+    The url can be any available Ethereum gateway. Mangroves can handle all nodes, in different netowrk layers. You can also try yur custome full node.
 
    .. tabs::
 
@@ -228,6 +229,36 @@ You can now run your queries in the mangroves CLI. Please see the following exam
 
             select number, hash, parent_hash from blocks where number=15368213;
 
+
+   - You can expect a result like this:
+
+   .. image:: /images/sampQueBlocks1.png
+
+
+Verify the results in underlying blockchain networks and available blockchain explorer platforms. For the abovve query you can chack this `page <https://etherscan.io/block/15368213>`_.
+
+.. Note:: 
+
+    You can run other queries and extract other data related to :ref:`Block Table <blocksRef>`, :ref:`Transactions Table <transactionsRef>`, :ref:`Contracts Table <contractsRef>`, :ref:`Logs Table <logsRef>`, :ref:`Token Transfers Table <token_transfersRef>`, :ref:`Tokens Table <tokensRef>`. Here are some samples: 
+         
+    .. code-block:: SQL
+
+       select number, hash, nonce, gas_limit, min_gas_price, gas_used from blocks where number<20 order by number desc limit 5;
+
+
+
+.. admonition:: Caution
+
+    Do not forget to add **;** at the end of your query. This will enable the Mangroves CLI that your query statement is finished.
+
+.. Attention::
+
+    Find what you can query from the :ref:`Block Table <blocksRef>`.
+
+
+.. DANGER::
+
+    If you are using public Ethereum gateways, please do not use the mangroves CLI to extract huge portion of data from blockchain. Such queries will last too long or failed. 
 
 
 MangrovesDB sqlite library

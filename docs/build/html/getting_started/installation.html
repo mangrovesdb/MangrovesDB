@@ -9,7 +9,6 @@
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
       <link rel="stylesheet" href="../_static/tabs.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/installer_widget.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -22,11 +21,10 @@
         <script src="../_static/clipboard.min.js"></script>
         <script src="../_static/copybutton.js"></script>
         <script src="../_static/tabs.js"></script>
-        <script src="../_static/js/installer_widget.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="MGDB Project" href="../fundamentals/fundamentals.html" />
+    <link rel="next" title="MangrovesDB Documentations" href="../documentation/documentation.html" />
     <link rel="prev" title="Welcome to MangrovesDB’s documentation!" href="../index.html" /> 
 </head>
 
@@ -57,10 +55,6 @@
 </li>
 </ul>
 </li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">Fundamentals</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../fundamentals/fundamentals.html">MGDB Project</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
 <ul>
@@ -218,10 +212,10 @@ Invoke-WebRequest -OutFile <span class="s1">&#39;c:\minikube\minikube.exe&#39;</
 </pre></div>
 </div>
 </div></div>
-<div class="admonition-note admonition">
+<div class="admonition note">
 <p class="admonition-title">Note</p>
 <blockquote>
-<div><p>The url can be any available Ethereum gateway. Mangroves can handle all nodes, in different netowrk layers.</p>
+<div><p>The url can be any available Ethereum gateway. Mangroves can handle all nodes, in different netowrk layers. You can also try yur custome full node.</p>
 </div></blockquote>
 <div class="sphinx-tabs docutils container">
 <div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-10-UG9seWdvbg==" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-10-UG9seWdvbg==" name="UG9seWdvbg==" role="tab" tabindex="0">Polygon</button><button aria-controls="panel-10-RmFudG9t" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-10-RmFudG9t" name="RmFudG9t" role="tab" tabindex="-1">Fantom</button><button aria-controls="panel-10-YXJiaXRydW0=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-10-YXJiaXRydW0=" name="YXJiaXRydW0=" role="tab" tabindex="-1">arbitrum</button></div><div aria-labelledby="tab-10-UG9seWdvbg==" class="sphinx-tabs-panel group-tab" id="panel-10-UG9seWdvbg==" name="UG9seWdvbg==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://polygon-rpc.com
@@ -248,8 +242,30 @@ Invoke-WebRequest -OutFile <span class="s1">&#39;c:\minikube\minikube.exe&#39;</
 </div>
 </div></blockquote>
 </li>
+<li><p>You can expect a result like this:</p></li>
 </ul>
+<img alt="../_images/sampQueBlocks1.png" src="../_images/sampQueBlocks1.png" />
 </div></blockquote>
+<p>Verify the results in underlying blockchain networks and available blockchain explorer platforms. For the abovve query you can chack this <a class="reference external" href="https://etherscan.io/block/15368213">page</a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can run other queries and extract other data related to <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#blocksref"><span class="std std-ref">Block Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#transactionsref"><span class="std std-ref">Transactions Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#contractsref"><span class="std std-ref">Contracts Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#logsref"><span class="std std-ref">Logs Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#token-transfersref"><span class="std std-ref">Token Transfers Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#tokensref"><span class="std std-ref">Tokens Table</span></a>. Here are some samples:</p>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="nb">number</span><span class="p">,</span> <span class="n">hash</span><span class="p">,</span> <span class="n">nonce</span><span class="p">,</span> <span class="n">gas_limit</span><span class="p">,</span> <span class="n">min_gas_price</span><span class="p">,</span> <span class="n">gas_used</span> <span class="k">from</span> <span class="n">blocks</span> <span class="k">where</span> <span class="nb">number</span><span class="o">&lt;</span><span class="mi">20</span> <span class="k">order</span> <span class="k">by</span> <span class="nb">number</span> <span class="k">desc</span> <span class="k">limit</span> <span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="admonition-caution admonition">
+<p class="admonition-title">Caution</p>
+<p>Do not forget to add <strong>;</strong> at the end of your query. This will enable the Mangroves CLI that your query statement is finished.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Find what you can query from the <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#blocksref"><span class="std std-ref">Block Table</span></a>.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>If you are using public Ethereum gateways, please do not use the mangroves CLI to extract huge portion of data from blockchain. Such queries will last too long or failed.</p>
+</div>
 </section>
 <section id="mangrovesdb-sqlite-library">
 <h3>MangrovesDB sqlite library<a class="headerlink" href="#mangrovesdb-sqlite-library" title="Permalink to this heading"></a></h3>
@@ -299,7 +315,7 @@ You can see some examples about how mangroves in intergradted with sqlite SDK to
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to MangrovesDB’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../fundamentals/fundamentals.html" class="btn btn-neutral float-right" title="MGDB Project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../documentation/documentation.html" class="btn btn-neutral float-right" title="MangrovesDB Documentations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

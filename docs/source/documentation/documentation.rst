@@ -5,14 +5,7 @@ These topics are discussed in the documentation section:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Connect or Create a Database
-   :hidden:
-
-   Connect_or_Create_a_Database
-
-.. toctree::
-   :maxdepth: 2
-   :caption: MGDB System Catalogs
+   :caption: MGDB Tables
    :hidden:
    
    System_Catalogs/MGDB_System_Catalogs

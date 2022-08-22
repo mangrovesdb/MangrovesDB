@@ -18,13 +18,6 @@ Let's :ref:`Install Mangroves First <settingup>`.
 
    getting_started/installation
 
-
-.. toctree::
-   :maxdepth: 3
-   :caption: Fundamentals
-   
-   fundamentals/fundamentals
-
 .. toctree::
    :maxdepth: 4
    :caption: Documentation
