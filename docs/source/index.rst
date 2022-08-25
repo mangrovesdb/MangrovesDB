@@ -11,7 +11,7 @@
 Welcome!
 =======================================
 
-Mangroves is a **SQL layer over any blockchain network**. We proudly focus on helping blockchain developers and new blockchain users. You can simply read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2, NFT, Defi``).*escape* ``with`` "\"
+Mangroves is a **SQL layer over any blockchain network**. We proudly focus on helping blockchain developers and new blockchain users. You can simply read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2, NFT, Defi``).
 
 
 .. image:: /images/mangrovesCLI.svg
@@ -20,7 +20,7 @@ Mangroves is a **SQL layer over any blockchain network**. We proudly focus on he
 
 - Highlights
    - Supports the on-chain Ethereum data
-   - We are about to add NFt data reader
+   - We are about to add NFT data reader
    - Defi main projects tables are added will be publickly availbale soon.
    - If you like sqlite sdk, mangroves comaptible library is now finished and is supporting all programming languages.
    - Simply call importamt libraries such as pandas to do the rest processing 
