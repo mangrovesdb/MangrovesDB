@@ -2,7 +2,7 @@
 
 Ethereum Tables
 ======================
-There are Seven main catalog tables for the Ethereum-based blockchain networks. The main resource for these tables is this `library <https://pypi.org/project/ethereum-etl/1.0.0/>`_. 
+There are Seven main Table tables for the Ethereum-based blockchain networks. The main resource for these tables is this `library <https://pypi.org/project/ethereum-etl/1.0.0/>`_. 
 These pre-defined tables are:
 
 * :ref:`Block Table <blocks>`

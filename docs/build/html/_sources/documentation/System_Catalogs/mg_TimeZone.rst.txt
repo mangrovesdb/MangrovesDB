@@ -1,4 +1,4 @@
 .. _mgtz:
 
-Time-Zone Catalog
+Time-Zone Table
 ======================

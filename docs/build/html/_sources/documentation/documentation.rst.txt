@@ -5,10 +5,10 @@ These topics are discussed in the documentation section:
 
 .. toctree::
    :maxdepth: 2
-   :caption: MGDB Tables
+   :caption: MangrovesDB Tables
    :hidden:
    
-   System_Catalogs/MGDB_System_Catalogs
+   Mangroves_tables/MGDB_System_Tables
 
 .. toctree::
    :maxdepth: 2
@@ -20,10 +20,10 @@ These topics are discussed in the documentation section:
 
 .. toctree::
    :maxdepth: 2
-   :caption: PostgreSQL Supported Statements
+   :caption: SQL Supported Statements
    :hidden:
    
-   PostgreSQL_Supported_Statements/PostgreSQL_Supported_Statements
+   SQL_Supported_Statements/SQL_Supported_Statements
 
 .. toctree::
    :maxdepth: 2

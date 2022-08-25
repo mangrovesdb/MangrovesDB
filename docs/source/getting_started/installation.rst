@@ -1,3 +1,4 @@
+.. _settingup:
 
 Installation
 ===============
@@ -223,7 +224,7 @@ From a terminal, run:
 You can now run your queries in the mangroves CLI. Please see the following examples:
 
 
-   - Query the :ref:`Block Table <blocksRef>`:
+   - Query the :ref:`Block Table <blocks>`:
 
       .. code-block:: SQL
 
@@ -239,7 +240,7 @@ Verify the results in underlying blockchain networks and available blockchain ex
 
 .. Note:: 
 
-    You can run other queries and extract other data related to :ref:`Block Table <blocksRef>`, :ref:`Transactions Table <transactionsRef>`, :ref:`Contracts Table <contractsRef>`, :ref:`Logs Table <logsRef>`, :ref:`Token Transfers Table <token_transfersRef>`, :ref:`Tokens Table <tokensRef>`. Here are some samples: 
+    You can run other queries and extract other data related to :ref:`Block Table <blocks>`, :ref:`Transactions Table <transactions>`, :ref:`Contracts Table <contracts>`, :ref:`Logs Table <logs>`, :ref:`Token Transfers Table <token_transfers>`, :ref:`Tokens Table <tokens>`. Here are some samples: 
          
     .. code-block:: SQL
 
@@ -258,7 +259,7 @@ Verify the results in underlying blockchain networks and available blockchain ex
 
 .. DANGER::
 
-    If you are using public Ethereum gateways, please do not use the mangroves CLI to extract huge portion of data from blockchain. Such queries will last too long or failed. 
+    If you are using public Ethereum gateways, please do not use the mangroves CLI to extract huge portion of data from blockchain |:stop_sign:|. Such queries will last too long or failed. You can try mangroves sqlite sdk comaptible.
 
 
 MangrovesDB sqlite library

@@ -1,4 +1,4 @@
 .. _mgdb:
 
-Database Catalog
+Database Table
 ======================

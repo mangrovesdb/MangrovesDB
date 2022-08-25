@@ -1,4 +1,4 @@
 .. _mgty:
 
-Type Catalog
+Type Table
 ======================

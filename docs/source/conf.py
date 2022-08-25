@@ -17,6 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
+# import sphinx_redactor_theme
 project = 'MangrovesDB'
 copyright = '2022, Mangroves Labs'
 author = 'Mohammad SBeni, Navid Haghighat'
@@ -35,6 +36,7 @@ extensions = [
     'myst_parser',
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
+    'sphinxemoji.sphinxemoji',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -50,9 +52,23 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# html_theme = 'sphinx_material'  # furo
+# html_theme = 'sphinx_redactor_theme'
+# html_theme_path = [sphinx_redactor_theme.get_html_theme_path()]
+# html_theme = 'groundwork'  # furo
 html_theme = "sphinx_rtd_theme"
 # html_theme = "press"
+# html_theme_options = {
+#     "external_links": [
+#         {"url": "https://mgdb.io", "name": "Website"},
+#     ],
+#     "navbar_align": "left",
+#     "page_sidebar_items": ["page-toc", "edit-this-page", "sourcelink"],
+#     "navbar_center": ["navbar-nav"],
+#     "navbar_end": ["theme-switcher", "navbar-icon-links.html", "search-field.html"],
+#     "show_toc_level": 1,
+#     "github_url": "https://github.com/mangrovesDB/mangroves",
+#     "twitter_url": "https://twitter.com/MangrovesDB",
+# }
 # html_theme_options = {
 #     "external_links": [
 #         ("Website", "https://mgdb.io"),
@@ -65,6 +81,12 @@ html_theme = "sphinx_rtd_theme"
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ["_static"]
 
+# Logo
+# html_logo = "logo_colorless.png"
+# html_theme_options = {
+#     'logo_only': True,
+#     'display_version': False,
+# }
 # html_css_files = [
 #     "css/installer_widget.css",
 # ]

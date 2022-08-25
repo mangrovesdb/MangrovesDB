@@ -12,10 +12,10 @@ These topics are discussed in the documentation section:
 
 .. toctree::
    :maxdepth: 2
-   :caption: MGDB System Catalogs
+   :caption: MGDB System Tables
    :hidden:
    
-   MGDB_System_Catalogs
+   MGDB_System_Tables
 
 .. toctree::
    :maxdepth: 2

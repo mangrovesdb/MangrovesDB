@@ -1,9 +1,8 @@
 Test a Live Demo
 -----------------
 
-Query away on a Hyperledger with MGDB
-++++++++++++++++++++++++++++++++++++++++++
+|:no_entry:| **Coming Soon** |:slight_smile:|
 
-This demo allows queries on a open Hyperledger project. You can see the project description and data schema here.
+.. admonition:: Note
 
-Hint: Use Ctrl-Space to autocomplete keywords, table and column names. Use Ctrl-Enter to execute the query.
+    The live demo on Mangroves blockchain gateways will be accessible soon |:hourglass:|. 

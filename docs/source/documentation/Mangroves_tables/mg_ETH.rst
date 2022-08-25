@@ -2,7 +2,7 @@
 
 Ethereum Tables
 ======================
-There are Seven main catalog tables for the Ethereum-based blockchain networks. The main resource for these tables is this `library <https://pypi.org/project/ethereum-etl/1.0.0/>`_. 
+There are Seven main Table tables for the Ethereum-based blockchain networks. The main resource for these tables is this `library <https://pypi.org/project/ethereum-etl/1.0.0/>`_. 
 These pre-defined tables are:
 
 * :ref:`Block Table <blocks>`
@@ -15,6 +15,7 @@ These pre-defined tables are:
 
 
 .. _blocksRef:
+
 .. _blocks:
 
 Block Table
@@ -113,6 +114,7 @@ Feel free to try other queries as well:
 
 
 .. _transactionsRef:
+
 .. _transactions:
 
 Transactions Table
@@ -168,6 +170,7 @@ This table is designed to store the data related to the transactions of the Ethe
 
 
 .. _contractsRef:
+
 .. _contracts:
 
 Contracts Table
@@ -190,6 +193,7 @@ in your platform.
 
 
 .. _logsRef:
+
 .. _logs:
 
 Logs Table
@@ -227,6 +231,7 @@ The logs related to the Ethereum network are stored in this table. The index of 
 
 
 .. _token_transfersRef:
+
 .. _token_transfers:
 
 Token Transfers Table
@@ -258,6 +263,7 @@ The tokens transferring data, including the address that the transfer originates
 
 
 .. _tokensRef:
+
 .. _tokens:
 
 Tokens Table
@@ -281,6 +287,7 @@ This table stores the tokens data. Address, name, symbol and other necessary dat
 
 
 .. _tracesRef:
+
 .. _traces:
 
 Traces Table

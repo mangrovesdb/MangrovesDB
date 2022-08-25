@@ -1,4 +1,4 @@
 .. _mgagg:
 
-Aggregate Catalog
+Aggregate Table
 ======================

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethereum Tables &mdash; MangrovesDB 0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+        <script src="../../_static/tabs.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="HyperLedger Table" href="mg_HyperLedger.html" />
+    <link rel="prev" title="MangrovesDB Tables" href="MGDB_System_Tables.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MangrovesDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">MangrovesDB Documentations</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="MGDB_System_Tables.html">MangrovesDB Tables</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Ethereum Tables</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#block-table">Block Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sample-block-table-queries">Sample Block Table Queries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#transactions-table">Transactions Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#contracts-table">Contracts Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#logs-table">Logs Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#token-transfers-table">Token Transfers Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tokens-table">Tokens Table</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#traces-table">Traces Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="mg_HyperLedger.html">HyperLedger Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_TimeZone.html">Time-Zone Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_database.html">Database Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_agg.html">Aggregate Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mg_type.html">Type Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../SQL_Queries_Over_Blockchain.html">SQL Queries over Blockchain</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SQL_Supported_Statements/SQL_Supported_Statements.html">SQL Supported Statements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../Blockchain_Netwroks_on_MGDB/Blockchain_Netwroks_on_MGDB.html">Blockchain Netwroks on MGDB</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Queries on MangrovesDB</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../queries_on_mgdb/queries_on_mgdb.html">Sample Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../queries_on_mgdb/queries_on_mgdb.html#real-world-queries">Real World Queries</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic_usage/basic_usage.html">Where to Use MangrovesDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic_usage/basic_usage.html#basic-use-cases">Basic Use-Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../other_pages/FAQ.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Live Demo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../other_pages/live_demo.html">Test a Live Demo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MangrovesDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../documentation.html">MangrovesDB Documentations</a> &raquo;</li>
+          <li><a href="MGDB_System_Tables.html">MangrovesDB Tables</a> &raquo;</li>
+      <li>Ethereum Tables</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/documentation/Mangroves_tables/mg_ETH.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ethereum-tables">
+<span id="mgeth"></span><h1>Ethereum Tables<a class="headerlink" href="#ethereum-tables" title="Permalink to this heading"></a></h1>
+<p>There are Seven main Table tables for the Ethereum-based blockchain networks. The main resource for these tables is this <a class="reference external" href="https://pypi.org/project/ethereum-etl/1.0.0/">library</a>.
+These pre-defined tables are:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#blocks"><span class="std std-ref">Block Table</span></a></p></li>
+<li><p><a class="reference internal" href="#transactions"><span class="std std-ref">Transactions Table</span></a></p></li>
+<li><p><a class="reference internal" href="#contracts"><span class="std std-ref">Contracts Table</span></a></p></li>
+<li><p><a class="reference internal" href="#logs"><span class="std std-ref">Logs Table</span></a></p></li>
+<li><p><a class="reference internal" href="#token-transfers"><span class="std std-ref">Token Transfers Table</span></a></p></li>
+<li><p><a class="reference internal" href="#tokens"><span class="std std-ref">Tokens Table</span></a></p></li>
+<li><p><a class="reference internal" href="#traces"><span class="std std-ref">Traces Table</span></a></p></li>
+</ul>
+<section id="block-table">
+<span id="blocks"></span><span id="blocksref"></span><h2>Block Table<a class="headerlink" href="#block-table" title="Permalink to this heading"></a></h2>
+<p>The data related to the blocks of the Ethereum public network will be saved here. This base table can be used for any further design of a customized Ethereum-based
+platform.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>timestamp</p></td>
+<td><p>timestamp</p></td>
+</tr>
+<tr class="row-odd"><td><p>number</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>parent_hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-even"><td><p>sha3_uncles</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>nonce</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-even"><td><p>logs_bloom</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>transactions_root</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-even"><td><p>state_root</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>receipts_root</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-even"><td><p>miner</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-odd"><td><p>difficulty</p></td>
+<td><p>numeric(38)</p></td>
+</tr>
+<tr class="row-even"><td><p>total_difficulty</p></td>
+<td><p>numeric(38)</p></td>
+</tr>
+<tr class="row-odd"><td><p>extra_data</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-even"><td><p>size</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>gas_limit</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>gas_used</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>transaction_count</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>base_fee_per_gas</p></td>
+<td><p>bigint</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="sample-block-table-queries">
+<h2>Sample Block Table Queries<a class="headerlink" href="#sample-block-table-queries" title="Permalink to this heading"></a></h2>
+<p>In order to read data from the ethereum public blockchain, as stated before simply run the MangrovesDB cli as shown below:</p>
+<img alt="../../_images/MGDB_CLI_Start.png" src="../../_images/MGDB_CLI_Start.png" />
+<p>Then you can query against the data realted to the blocks on the public blockchain.</p>
+<img alt="../../_images/read_first_blocks.png" src="../../_images/read_first_blocks.png" />
+<p>Feel free to try other queries as well:</p>
+<img alt="../../_images/read_less_than_10_blocks.png" src="../../_images/read_less_than_10_blocks.png" />
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">nonce</span><span class="p">,</span> <span class="k">size</span><span class="p">,</span> <span class="n">gas_limit</span><span class="p">,</span> <span class="n">min_gas_price</span><span class="p">,</span> <span class="n">gas_used</span><span class="p">,</span> <span class="n">difficulty</span><span class="p">,</span> <span class="k">timestamp</span>
+<span class="k">FROM</span> <span class="n">blocks</span> <span class="k">WHERE</span> <span class="nb">number</span><span class="o">=</span><span class="mi">15329147</span><span class="p">;</span>
+</pre></div>
+</div>
+<img alt="../../_images/read_last_blocks_data.png" src="../../_images/read_last_blocks_data.png" />
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-QmFzaA==" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-QmFzaA==" name="QmFzaA==" role="tab" tabindex="0">Bash</button><button aria-controls="panel-0-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-0-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><p>lang</p>
+<div aria-labelledby="tab-0-QmFzaA==" class="sphinx-tabs-panel code-tab group-tab" id="panel-0-QmFzaA==" name="QmFzaA==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Hello, group!&quot;</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-0-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, group!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-1-QmFzaA==" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-QmFzaA==" name="QmFzaA==" role="tab" tabindex="0">Bash</button><button aria-controls="panel-1-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-1-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button></div><p>lang</p>
+<div aria-labelledby="tab-1-QmFzaA==" class="sphinx-tabs-panel code-tab group-tab" id="panel-1-QmFzaA==" name="QmFzaA==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;Goodbye, group!&quot;</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-1-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-1-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Goodbye, group!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div></div>
+</section>
+<section id="transactions-table">
+<span id="transactions"></span><span id="transactionsref"></span><h2>Transactions Table<a class="headerlink" href="#transactions-table" title="Permalink to this heading"></a></h2>
+<p>This table is designed to store the data related to the transactions of the Ethereum network.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>nonce</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>transaction_index</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>from_address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-even"><td><p>to_address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-odd"><td><p>value</p></td>
+<td><p>numeric(66)</p></td>
+</tr>
+<tr class="row-even"><td><p>gas</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>gas_price</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>input</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>receipt_cumulative_gas_used</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>receipt_gas_used</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>receipt_contract_address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-even"><td><p>receipt_root</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>receipt_status</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>block_timestamp</p></td>
+<td><p>timestamp</p></td>
+</tr>
+<tr class="row-odd"><td><p>block_number</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>block_hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>max_fee_per_gas</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>max_priority_fee_per_gas</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>transaction_type</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>receipt_effective_gas_price</p></td>
+<td><p>bigint</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="contracts-table">
+<span id="contracts"></span><span id="contractsref"></span><h2>Contracts Table<a class="headerlink" href="#contracts-table" title="Permalink to this heading"></a></h2>
+<p>The smart contracts data related to the Ethereum public network will be saved in this tabele. This table can be a good resource for the smart contracts data defined
+in your platform.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-odd"><td><p>bytecode</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-even"><td><p>function_sighashes</p></td>
+<td><p>text</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="logs-table">
+<span id="logs"></span><span id="logsref"></span><h2>Logs Table<a class="headerlink" href="#logs-table" title="Permalink to this heading"></a></h2>
+<p>The logs related to the Ethereum network are stored in this table. The index of the log, transaction hash and index, adress and other related are inserted to this table.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>log_index</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>transaction_hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-even"><td><p>transaction_index</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-even"><td><p>data</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>topic0</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-even"><td><p>topic1</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>topic2</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-even"><td><p>topic3</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>block_timestamp</p></td>
+<td><p>timestamp</p></td>
+</tr>
+<tr class="row-even"><td><p>block_number</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>block_hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="token-transfers-table">
+<span id="token-transfers"></span><span id="token-transfersref"></span><h2>Token Transfers Table<a class="headerlink" href="#token-transfers-table" title="Permalink to this heading"></a></h2>
+<p>The tokens transferring data, including the address that the transfer originates from and the address receiving the data is added to this table.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>token_address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-odd"><td><p>from_address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-even"><td><p>to_address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-odd"><td><p>value</p></td>
+<td><p>numeric(78)</p></td>
+</tr>
+<tr class="row-even"><td><p>transaction_hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>log_index</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>block_timestamp</p></td>
+<td><p>timestamp</p></td>
+</tr>
+<tr class="row-odd"><td><p>block_number</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>block_hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="tokens-table">
+<span id="tokens"></span><span id="tokensref"></span><h2>Tokens Table<a class="headerlink" href="#tokens-table" title="Permalink to this heading"></a></h2>
+<p>This table stores the tokens data. Address, name, symbol and other necessary data related to the Ethereum network tokens are stored in this table.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-odd"><td><p>name</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-even"><td><p>symbol</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>decimals</p></td>
+<td><p>int(11)</p></td>
+</tr>
+<tr class="row-even"><td><p>function_sighashes</p></td>
+<td><p>string</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="traces-table">
+<span id="traces"></span><span id="tracesref"></span><h2>Traces Table<a class="headerlink" href="#traces-table" title="Permalink to this heading"></a></h2>
+<p>The traces of the Ethereum public blockchain are stored in this table.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Column Name</p></th>
+<th class="head"><p>Type</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>transaction_hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>transaction_index</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>from_address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-odd"><td><p>to_address</p></td>
+<td><p>varchar(42)</p></td>
+</tr>
+<tr class="row-even"><td><p>vlaue</p></td>
+<td><p>numeric(38)</p></td>
+</tr>
+<tr class="row-odd"><td><p>input</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-even"><td><p>output</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>trace_type</p></td>
+<td><p>varchar(16)</p></td>
+</tr>
+<tr class="row-even"><td><p>call_type</p></td>
+<td><p>varchar(16)</p></td>
+</tr>
+<tr class="row-odd"><td><p>reward_type</p></td>
+<td><p>varchar(16)</p></td>
+</tr>
+<tr class="row-even"><td><p>gas</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>gas_used</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>subtraces</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-odd"><td><p>trace_address</p></td>
+<td><p>varchar(8192)</p></td>
+</tr>
+<tr class="row-even"><td><p>error</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>status</p></td>
+<td><p>int</p></td>
+</tr>
+<tr class="row-even"><td><p>block_timestamp</p></td>
+<td><p>timestamp</p></td>
+</tr>
+<tr class="row-odd"><td><p>block_number</p></td>
+<td><p>bigint</p></td>
+</tr>
+<tr class="row-even"><td><p>block_hash</p></td>
+<td><p>varchar(66)</p></td>
+</tr>
+<tr class="row-odd"><td><p>trace_id</p></td>
+<td><p>text</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="MGDB_System_Tables.html" class="btn btn-neutral float-left" title="MangrovesDB Tables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mg_HyperLedger.html" class="btn btn-neutral float-right" title="HyperLedger Table" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Mangroves Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

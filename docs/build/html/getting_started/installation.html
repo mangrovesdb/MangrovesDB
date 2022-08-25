@@ -25,7 +25,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="MangrovesDB Documentations" href="../documentation/documentation.html" />
-    <link rel="prev" title="Welcome to MangrovesDB’s documentation!" href="../index.html" /> 
+    <link rel="prev" title="Welcome!" href="../index.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -104,7 +104,7 @@
            <div itemprop="articleBody">
              
   <section id="installation">
-<h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
+<span id="settingup"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h1>
 <p>Using this guidance you can simply install mangroves CLI and mangroves compatible version with sqlite SDK on your system. You can then use the quick start tutorial to test the mangroves immediately.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#prerequisites"><span class="std std-ref">Prerequisites</span></a></p></li>
@@ -235,7 +235,7 @@ Invoke-WebRequest -OutFile <span class="s1">&#39;c:\minikube\minikube.exe&#39;</
 <p>You can now run your queries in the mangroves CLI. Please see the following examples:</p>
 <blockquote>
 <div><ul>
-<li><p>Query the <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#blocksref"><span class="std std-ref">Block Table</span></a>:</p>
+<li><p>Query the <a class="reference internal" href="../documentation/Mangroves_tables/mg_ETH.html#blocks"><span class="std std-ref">Block Table</span></a>:</p>
 <blockquote>
 <div><div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="nb">number</span><span class="p">,</span> <span class="n">hash</span><span class="p">,</span> <span class="n">parent_hash</span> <span class="k">from</span> <span class="n">blocks</span> <span class="k">where</span> <span class="nb">number</span><span class="o">=</span><span class="mi">15368213</span><span class="p">;</span>
 </pre></div>
@@ -249,7 +249,7 @@ Invoke-WebRequest -OutFile <span class="s1">&#39;c:\minikube\minikube.exe&#39;</
 <p>Verify the results in underlying blockchain networks and available blockchain explorer platforms. For the abovve query you can chack this <a class="reference external" href="https://etherscan.io/block/15368213">page</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can run other queries and extract other data related to <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#blocksref"><span class="std std-ref">Block Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#transactionsref"><span class="std std-ref">Transactions Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#contractsref"><span class="std std-ref">Contracts Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#logsref"><span class="std std-ref">Logs Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#token-transfersref"><span class="std std-ref">Token Transfers Table</span></a>, <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#tokensref"><span class="std std-ref">Tokens Table</span></a>. Here are some samples:</p>
+<p>You can run other queries and extract other data related to <a class="reference internal" href="../documentation/Mangroves_tables/mg_ETH.html#blocks"><span class="std std-ref">Block Table</span></a>, <a class="reference internal" href="../documentation/Mangroves_tables/mg_ETH.html#transactions"><span class="std std-ref">Transactions Table</span></a>, <a class="reference internal" href="../documentation/Mangroves_tables/mg_ETH.html#contracts"><span class="std std-ref">Contracts Table</span></a>, <a class="reference internal" href="../documentation/Mangroves_tables/mg_ETH.html#logs"><span class="std std-ref">Logs Table</span></a>, <a class="reference internal" href="../documentation/Mangroves_tables/mg_ETH.html#token-transfers"><span class="std std-ref">Token Transfers Table</span></a>, <a class="reference internal" href="../documentation/Mangroves_tables/mg_ETH.html#tokens"><span class="std std-ref">Tokens Table</span></a>. Here are some samples:</p>
 <div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="nb">number</span><span class="p">,</span> <span class="n">hash</span><span class="p">,</span> <span class="n">nonce</span><span class="p">,</span> <span class="n">gas_limit</span><span class="p">,</span> <span class="n">min_gas_price</span><span class="p">,</span> <span class="n">gas_used</span> <span class="k">from</span> <span class="n">blocks</span> <span class="k">where</span> <span class="nb">number</span><span class="o">&lt;</span><span class="mi">20</span> <span class="k">order</span> <span class="k">by</span> <span class="nb">number</span> <span class="k">desc</span> <span class="k">limit</span> <span class="mi">5</span><span class="p">;</span>
 </pre></div>
 </div>
@@ -260,11 +260,11 @@ Invoke-WebRequest -OutFile <span class="s1">&#39;c:\minikube\minikube.exe&#39;</
 </div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>Find what you can query from the <a class="reference internal" href="../documentation/System_Catalogs/mg_ETH.html#blocksref"><span class="std std-ref">Block Table</span></a>.</p>
+<p>Find what you can query from the <a class="reference internal" href="../documentation/Mangroves_tables/mg_ETH.html#blocksref"><span class="std std-ref">Block Table</span></a>.</p>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>If you are using public Ethereum gateways, please do not use the mangroves CLI to extract huge portion of data from blockchain. Such queries will last too long or failed.</p>
+<p>If you are using public Ethereum gateways, please do not use the mangroves CLI to extract huge portion of data from blockchain 🛑. Such queries will last too long or failed. You can try mangroves sqlite sdk comaptible.</p>
 </div>
 </section>
 <section id="mangrovesdb-sqlite-library">
@@ -314,7 +314,7 @@ You can see some examples about how mangroves in intergradted with sqlite SDK to
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to MangrovesDB’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../documentation/documentation.html" class="btn btn-neutral float-right" title="MangrovesDB Documentations" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

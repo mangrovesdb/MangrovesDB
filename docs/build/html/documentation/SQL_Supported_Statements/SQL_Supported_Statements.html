@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SQL Supported Statements &mdash; MangrovesDB 0.0 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/copybutton.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/tabs.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/clipboard.min.js"></script>
+        <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Blockchain Netwroks on MGDB" href="../Blockchain_Netwroks_on_MGDB/Blockchain_Netwroks_on_MGDB.html" />
+    <link rel="prev" title="SQL Queries over Blockchain" href="../SQL_Queries_Over_Blockchain.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> MangrovesDB
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Getting Started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installation.html">Installation</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../documentation.html">MangrovesDB Documentations</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Mangroves_tables/MGDB_System_Tables.html">MangrovesDB Tables</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../SQL_Queries_Over_Blockchain.html">SQL Queries over Blockchain</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">SQL Supported Statements</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sql-statements">SQL Statements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select">SELECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#insert">Insert</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete">Delete</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#update">Update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-table">Create Table</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-view">Create View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#drop">Drop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#alter-table">Alter Table</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../Blockchain_Netwroks_on_MGDB/Blockchain_Netwroks_on_MGDB.html">Blockchain Netwroks on MGDB</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Queries on MangrovesDB</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../queries_on_mgdb/queries_on_mgdb.html">Sample Queries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../queries_on_mgdb/queries_on_mgdb.html#real-world-queries">Real World Queries</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Basic usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../basic_usage/basic_usage.html">Where to Use MangrovesDB</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../basic_usage/basic_usage.html#basic-use-cases">Basic Use-Cases</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">FAQ</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../other_pages/FAQ.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Live Demo</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../other_pages/live_demo.html">Test a Live Demo</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">MangrovesDB</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../documentation.html">MangrovesDB Documentations</a> &raquo;</li>
+      <li>SQL Supported Statements</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/documentation/SQL_Supported_Statements/SQL_Supported_Statements.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sql-supported-statements">
+<h1>SQL Supported Statements<a class="headerlink" href="#sql-supported-statements" title="Permalink to this heading"></a></h1>
+<p>MangrovesDB support sqlite sql statements. It is also designed based on PostgreSQL and the features of this open source object-relational database system will be added to future cersion of MGDB. PostgreSQL with over 30 years of active development has earned a strong reputation for reliability, feature robustness, and performance.</p>
+<section id="sql-statements">
+<h2>SQL Statements<a class="headerlink" href="#sql-statements" title="Permalink to this heading"></a></h2>
+<p>Almost all the statements on PostgreSQL are supported in MGDB as well.</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#select"><span class="std std-ref">Select</span></a></p></li>
+<li><p><a class="reference internal" href="#insert"><span class="std std-ref">Insert</span></a></p></li>
+<li><p><a class="reference internal" href="#delete"><span class="std std-ref">Delete</span></a></p></li>
+<li><p><a class="reference internal" href="#update"><span class="std std-ref">Update</span></a></p></li>
+<li><p><a class="reference internal" href="#create-table"><span class="std std-ref">Create Table</span></a></p></li>
+<li><p><a class="reference internal" href="#create-view"><span class="std std-ref">Create View</span></a></p></li>
+<li><p><a class="reference internal" href="#drop"><span class="std std-ref">Drop</span></a></p></li>
+<li><p><a class="reference internal" href="#alter-table"><span class="std std-ref">Alter Table</span></a></p></li>
+</ul>
+</section>
+<section id="select">
+<span id="id1"></span><h2>SELECT<a class="headerlink" href="#select" title="Permalink to this heading"></a></h2>
+<p>The SELECT statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain.</p>
+</section>
+<section id="insert">
+<span id="id2"></span><h2>Insert<a class="headerlink" href="#insert" title="Permalink to this heading"></a></h2>
+<p>The INSERT statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain.</p>
+</section>
+<section id="delete">
+<span id="id3"></span><h2>Delete<a class="headerlink" href="#delete" title="Permalink to this heading"></a></h2>
+<p>Using this statement you can delete a row from a table identified by its name.</p>
+</section>
+<section id="update">
+<span id="id4"></span><h2>Update<a class="headerlink" href="#update" title="Permalink to this heading"></a></h2>
+<p>The <strong>UPDATE</strong> statement is used to modify the values in a table.</p>
+</section>
+<section id="create-table">
+<span id="id5"></span><h2>Create Table<a class="headerlink" href="#create-table" title="Permalink to this heading"></a></h2>
+<p>The <strong>CREATE TABLE</strong> statement creates a table in the database.</p>
+</section>
+<section id="create-view">
+<span id="id6"></span><h2>Create View<a class="headerlink" href="#create-view" title="Permalink to this heading"></a></h2>
+<p>The <strong>CREATE VIEW</strong> statement defines a new view in the database.</p>
+</section>
+<section id="drop">
+<span id="id7"></span><h2>Drop<a class="headerlink" href="#drop" title="Permalink to this heading"></a></h2>
+<p>The <strong>DROP</strong> statement removes a database entry added previously with the CREATE command.</p>
+</section>
+<section id="alter-table">
+<span id="id8"></span><h2>Alter Table<a class="headerlink" href="#alter-table" title="Permalink to this heading"></a></h2>
+<p>Changes in the schema, adding and dropping columns can be handled using <strong>ALTER TABLE</strong> statement. This statement would be applied on a currrently available table.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../SQL_Queries_Over_Blockchain.html" class="btn btn-neutral float-left" title="SQL Queries over Blockchain" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../Blockchain_Netwroks_on_MGDB/Blockchain_Netwroks_on_MGDB.html" class="btn btn-neutral float-right" title="Blockchain Netwroks on MGDB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Mangroves Labs.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
