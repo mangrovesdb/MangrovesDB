@@ -38,7 +38,7 @@ Let's :ref:`Getting Started <settingup>`.
    :hidden:
    :caption: Getting Started
 
-   getting_started/installation
+   installation
 
 .. toctree::
    :maxdepth: 4
