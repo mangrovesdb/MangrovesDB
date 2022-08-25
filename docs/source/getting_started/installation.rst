@@ -234,6 +234,7 @@ You can now run your queries in the mangroves CLI. Please see the following exam
    - You can expect a result like this:
 
    .. image:: /images/sampQueBlocks1.png
+     :width: 600
 
 
 Verify the results in underlying blockchain networks and available blockchain explorer platforms. For the abovve query you can chack this `page <https://etherscan.io/block/15368213>`_.

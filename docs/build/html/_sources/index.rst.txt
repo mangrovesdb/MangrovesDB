@@ -5,12 +5,14 @@
 
 .. image:: /images/mgdb_logo.svg
    :width: 150
-   :align: right
    :target: http://mgdb.io
+   :align: right
 
 Welcome!
 =======================================
-Mangroves is a **SQL layer over any blockchain network**. We proudly focus on helping blockchain developers and new blockchain users. You can simply read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2, NFT, Defi``).
+
+Mangroves is a **SQL layer over any blockchain network**. We proudly focus on helping blockchain developers and new blockchain users. You can simply read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2, NFT, Defi``).*escape* ``with`` "\"
+
 
 .. image:: /images/mangrovesCLI.svg
    :width: 600

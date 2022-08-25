@@ -17,7 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-# import sphinx_redactor_theme
+import sphinx_redactor_theme
+
 project = 'MangrovesDB'
 copyright = '2022, Mangroves Labs'
 author = 'Mohammad SBeni, Navid Haghighat'
@@ -52,11 +53,12 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-# html_theme = 'sphinx_redactor_theme'
-# html_theme_path = [sphinx_redactor_theme.get_html_theme_path()]
-# html_theme = 'groundwork'  # furo
-html_theme = "sphinx_rtd_theme"
-# html_theme = "press"
+html_theme = 'sphinx_redactor_theme'
+html_theme_path = [sphinx_redactor_theme.get_html_theme_path()]
+
+# html_theme = 'groundwork'
+# html_theme = "sphinx_rtd_theme"
+
 # html_theme_options = {
 #     "external_links": [
 #         {"url": "https://mgdb.io", "name": "Website"},
@@ -82,7 +84,7 @@ html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
 
 # Logo
-# html_logo = "logo_colorless.png"
+# html_logo = "logo3.png"
 # html_theme_options = {
 #     'logo_only': True,
 #     'display_version': False,
