@@ -3,7 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: /images/mgdb_logo.svg
+.. image:: /images/mangroves17.svg
    :width: 150
    :target: http://mgdb.io
    :align: right
@@ -38,14 +38,18 @@ Let's :ref:`Getting Started <settingup>`.
    :hidden:
    :caption: Getting Started
 
-   installation
+   installation/installation
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
    :hidden:
    :caption: Documentation
    
-   documentation/documentation
+   documentation/mg_ETH
+   documentation/mg_HyperLedger
+   documentation/SQL_Supported_Statements
+   documentation/Blockchain_Netwroks_on_MGDB
+   documentation/SQL_Queries_Over_Blockchain
 
 .. toctree::
    :maxdepth: 3
@@ -81,4 +85,4 @@ Quick Links
 
 * :ref:`Installation <Installation>`
 * :ref:`Quickstart Tutorial <QuTut>`
-* :ref:`Mangroves Tables <mgTables>`
+* :ref:`Mangroves Ethereum Tables <mgeth>`

@@ -44,6 +44,15 @@ extensions = [
     'sphinx_copybutton',
     'sphinx_tabs.tabs',
     'sphinxemoji.sphinxemoji',
+    "sphinx.ext.autodoc",
+    "numpydoc",
+    "sphinx.ext.doctest",
+    "sphinx.ext.extlinks",
+    "sphinx.ext.intersphinx",
+    "sphinx.ext.todo",
+    "sphinx.ext.mathjax",
+    "sphinx.ext.viewcode",
+    "sphinx_copybutton",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -64,7 +73,7 @@ exclude_patterns = []
 html_theme = 'sphinx_material'
 
 # Set link name generated in the top bar.
-html_title = 'Mangroves Documents'
+html_title = 'mangroves Docs'
 
 # html_theme = 'sphinx_redactor_theme'
 # html_theme_path = [sphinx_redactor_theme.get_html_theme_path()]
@@ -126,15 +135,18 @@ html_theme_options = {
     'base_url': 'https://github.com/mangrovesdb/MangrovesDB/tree/sphinx_material/docs',
 
     # Set the color and the accent color
-    'color_primary': 'blue',
-    'color_accent': 'cyan',
+    'color_primary': 'green',
+    'color_accent': 'light-green',
+
+    # "logo_icon": "&#xeaf4",
+    # "touch_icon": "images/favicon2.png",
 
     # Set the repo location to get a badge with stats
     'repo_url': 'https://github.com/mangrovesDB/mangroves',
-    'repo_name': 'mangroves',
+    'repo_name': 'github',
 
     # Visible levels of the global TOC; -1 means unlimited
-    'globaltoc_depth': 3,
+    'globaltoc_depth': 2,
     # If False, expand all TOC entries
     'globaltoc_collapse': True,
     # If True, show hidden TOC entries
