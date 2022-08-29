@@ -68,7 +68,7 @@ platform.
 +------------------------+------------+ 
 
 Sample Block Table Queries
-----------------------------
++++++++++++++++++++++++++++++++++++
 
 In order to read data from the ethereum public blockchain, as stated before simply run the MangrovesDB cli as shown below:
 

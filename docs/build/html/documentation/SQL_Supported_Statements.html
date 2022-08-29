@@ -272,8 +272,6 @@
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#documentation-sql-supported-statements--page-root" class="md-nav__link">SQL Supported Statements</a><nav class="md-nav">
               <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#sql-statements" class="md-nav__link">SQL Statements</a>
-        </li>
         <li class="md-nav__item"><a href="#select" class="md-nav__link">SELECT</a>
         </li>
         <li class="md-nav__item"><a href="#insert" class="md-nav__link">Insert</a>
@@ -298,13 +296,6 @@
   </ul>
 </nav>
       <ul class="md-nav__list"> 
-    <li class="md-nav__item">
-    
-    
-      <a href="#sql-statements" class="md-nav__link">SQL Statements</a>
-      
-    
-    </li>
     <li class="md-nav__item">
     
     
@@ -367,13 +358,6 @@
     
     
       <a href="Blockchain_Netwroks_on_MGDB.html" class="md-nav__link">Blockchain Netwroks on MGDB</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="SQL_Queries_Over_Blockchain.html" class="md-nav__link">SQL Queries over Blockchain</a>
       
     
     </li>
@@ -455,8 +439,6 @@
   <ul class="md-nav__list" data-md-scrollfix="">
         <li class="md-nav__item"><a href="#documentation-sql-supported-statements--page-root" class="md-nav__link">SQL Supported Statements</a><nav class="md-nav">
               <ul class="md-nav__list">
-        <li class="md-nav__item"><a href="#sql-statements" class="md-nav__link">SQL Statements</a>
-        </li>
         <li class="md-nav__item"><a href="#select" class="md-nav__link">SELECT</a>
         </li>
         <li class="md-nav__item"><a href="#insert" class="md-nav__link">Insert</a>
@@ -492,8 +474,6 @@
   <section id="sql-supported-statements">
 <h1 id="documentation-sql-supported-statements--page-root">SQL Supported Statements<a class="headerlink" href="#documentation-sql-supported-statements--page-root" title="Permalink to this heading">¶</a></h1>
 <p>MangrovesDB support sqlite sql statements. It is also designed based on PostgreSQL and the features of this open source object-relational database system will be added to future cersion of MGDB. PostgreSQL with over 30 years of active development has earned a strong reputation for reliability, feature robustness, and performance.</p>
-<section id="sql-statements">
-<h2 id="sql-statements">SQL Statements<a class="headerlink" href="#sql-statements" title="Permalink to this heading">¶</a></h2>
 <p>Almost all the statements on PostgreSQL are supported in MGDB as well.</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#select"><span class="std std-ref">Select</span></a></p></li>
@@ -505,18 +485,21 @@
 <li><p><a class="reference internal" href="#drop"><span class="std std-ref">Drop</span></a></p></li>
 <li><p><a class="reference internal" href="#alter-table"><span class="std std-ref">Alter Table</span></a></p></li>
 </ul>
-</section>
 <section id="select">
 <span id="id1"></span><h2 id="select">SELECT<a class="headerlink" href="#select" title="Permalink to this heading">¶</a></h2>
-<p>The SELECT statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain.</p>
+<p>The <strong>SELECT</strong> statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain. You can use this statement in mangroves to simply read data from the blockchain considering mangroves supported tables.
+Here is a sample query using this statement:</p>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="nb">number</span><span class="p">,</span> <span class="n">gas_limit</span><span class="p">,</span> <span class="k">timestamp</span> <span class="k">from</span> <span class="n">blocks</span> <span class="k">where</span> <span class="nb">number</span><span class="o">=</span><span class="mi">15415600</span><span class="p">;</span>
+</pre></div>
+</div>
 </section>
 <section id="insert">
 <span id="id2"></span><h2 id="insert">Insert<a class="headerlink" href="#insert" title="Permalink to this heading">¶</a></h2>
-<p>The INSERT statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain.</p>
+<p>The <strong>INSERT</strong> statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain.</p>
 </section>
 <section id="delete">
 <span id="id3"></span><h2 id="delete">Delete<a class="headerlink" href="#delete" title="Permalink to this heading">¶</a></h2>
-<p>Using this statement you can delete a row from a table identified by its name.</p>
+<p>Using <strong>Delete</strong> statement you can delete a row from a table identified by its name.</p>
 </section>
 <section id="update">
 <span id="id4"></span><h2 id="update">Update<a class="headerlink" href="#update" title="Permalink to this heading">¶</a></h2>

@@ -3,8 +3,6 @@ SQL Supported Statements
 
 MangrovesDB support sqlite sql statements. It is also designed based on PostgreSQL and the features of this open source object-relational database system will be added to future cersion of MGDB. PostgreSQL with over 30 years of active development has earned a strong reputation for reliability, feature robustness, and performance.
 
-SQL Statements 
---------------------
 Almost all the statements on PostgreSQL are supported in MGDB as well. 
 
 * :ref:`Select <Select>`
@@ -20,14 +18,19 @@ Almost all the statements on PostgreSQL are supported in MGDB as well.
 
 SELECT
 --------------------
-The SELECT statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain.
+The **SELECT** statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain. You can use this statement in mangroves to simply read data from the blockchain considering mangroves supported tables.
+Here is a sample query using this statement:
+
+.. code-block:: SQL
+    
+     select number, gas_limit, timestamp from blocks where number=15415600;
 
 
 .. _Insert:
 
 Insert
 --------------------
-The INSERT statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain.
+The **INSERT** statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain.
 
 
 .. _Delete:
@@ -35,7 +38,7 @@ The INSERT statement retrieves data from the blockchain. Technically the rows re
 Delete
 --------------------
 
-Using this statement you can delete a row from a table identified by its name.
+Using **Delete** statement you can delete a row from a table identified by its name.
 
 
 .. _Update:

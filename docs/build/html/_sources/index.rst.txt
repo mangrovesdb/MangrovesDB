@@ -49,7 +49,6 @@ Let's :ref:`Getting Started <settingup>`.
    documentation/mg_HyperLedger
    documentation/SQL_Supported_Statements
    documentation/Blockchain_Netwroks_on_MGDB
-   documentation/SQL_Queries_Over_Blockchain
 
 .. toctree::
    :maxdepth: 3
