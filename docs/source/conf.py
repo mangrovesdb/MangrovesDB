@@ -55,13 +55,16 @@ extensions = [
     "sphinx_copybutton",
 ]
 
+autosummary_generate = True
+autoclass_content = "class"
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = []
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -75,30 +78,6 @@ html_theme = 'sphinx_material'
 # Set link name generated in the top bar.
 html_title = 'mangroves Docs'
 
-# html_theme = 'sphinx_redactor_theme'
-# html_theme_path = [sphinx_redactor_theme.get_html_theme_path()]
-
-# html_theme = 'groundwork'
-# html_theme = "sphinx_rtd_theme"
-
-# html_theme_options = {
-#     "external_links": [
-#         {"url": "https://mgdb.io", "name": "Website"},
-#     ],
-#     "navbar_align": "left",
-#     "page_sidebar_items": ["page-toc", "edit-this-page", "sourcelink"],
-#     "navbar_center": ["navbar-nav"],
-#     "navbar_end": ["theme-switcher", "navbar-icon-links.html", "search-field.html"],
-#     "show_toc_level": 1,
-#     "github_url": "https://github.com/mangrovesDB/mangroves",
-#     "twitter_url": "https://twitter.com/MangrovesDB",
-# }
-# html_theme_options = {
-#     "external_links": [
-#         ("Website", "https://mgdb.io"),
-#         #("Github", "https://github.com/mangrovesDB/mangroves"),
-#     ]
-# }
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -137,9 +116,24 @@ html_theme_options = {
     # Set the color and the accent color
     'color_primary': 'green',
     'color_accent': 'light-green',
+    "html_minify": True,
+    "html_prettify": True,
+    "css_minify": True,
 
     # "logo_icon": "&#xeaf4",
-    # "touch_icon": "images/favicon2.png",
+    # "touch_icon": "images/logo_n.png",
+
+    # versioning
+    # ######################## versioning ###############################
+    "version_dropdown": True,
+    "version_json": "_static/versions.json",
+    "version_info": {
+        "Release": "https://github.com/mangrovesDB/mangroves",
+        "Development": "https://github.com/mangrovesDB/mangroves",
+        # "Release (rel)": "/sphinx-material/",
+        # "Development (rel)": "/sphinx-material/devel/",
+    },
+    # ######################## versioning ###############################
 
     # Set the repo location to get a badge with stats
     'repo_url': 'https://github.com/mangrovesDB/mangroves',
@@ -164,7 +158,11 @@ html_theme_options = {
             "title": "Community",
         },
     ],
+    "table_classes": ["plain"]
 }
+
+todo_include_todos = True
+html_favicon = "images/favicon.png"
 
 # Logo
 # html_logo = "logo3.png"

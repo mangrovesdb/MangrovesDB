@@ -71,6 +71,7 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Blockchain Netwroks on MGDB" href="Blockchain_Netwroks_on_MGDB.html" />
@@ -163,13 +164,15 @@
       
       
   
-  <script src="../_static/javascripts/version_dropdown.js"></script>
-  <script>
-    var json_loc = "../"versions.json"",
-        target_loc = "../../",
-        text = "Versions";
-    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
-  </script>
+  <div class="md-flex__cell md-flex__cell--shrink dropdown">
+    <button class="dropdownbutton">Versions</button>
+    <div class="dropdown-content md-hero">
+          <a title="Release" href="https://github.com/mangrovesDB/mangroves">Release</a>
+      
+          <a title="Development" href="https://github.com/mangrovesDB/mangroves">Development</a>
+      
+    </div>
+  </div>
   
 
     </div>
@@ -492,6 +495,7 @@ Here is a sample query using this statement:</p>
 <div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="nb">number</span><span class="p">,</span> <span class="n">gas_limit</span><span class="p">,</span> <span class="k">timestamp</span> <span class="k">from</span> <span class="n">blocks</span> <span class="k">where</span> <span class="nb">number</span><span class="o">=</span><span class="mi">15415600</span><span class="p">;</span>
 </pre></div>
 </div>
+<p>Feel free to check the timestamp using this page.</p>
 </section>
 <section id="insert">
 <span id="id2"></span><h2 id="insert">Insert<a class="headerlink" href="#insert" title="Permalink to this heading">¶</a></h2>

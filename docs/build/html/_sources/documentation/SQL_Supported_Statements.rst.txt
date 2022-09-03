@@ -22,8 +22,10 @@ The **SELECT** statement retrieves data from the blockchain. Technically the row
 Here is a sample query using this statement:
 
 .. code-block:: SQL
-    
+
      select number, gas_limit, timestamp from blocks where number=15415600;
+
+Feel free to check the timestamp using this page. 
 
 
 .. _Insert:
