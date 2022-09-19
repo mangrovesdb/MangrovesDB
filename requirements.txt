@@ -1,1 +1,6 @@
+sphinx
+myst-parser
+docutils>=0.18.1
+sphinx-design
+sphinx-version-warning
 sphinx_material
