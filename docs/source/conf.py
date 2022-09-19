@@ -17,8 +17,6 @@ import os
 
 # -- Project information -----------------------------------------------------
 
-import sphinx_redactor_theme
-
 import sphinx_material
 
 
