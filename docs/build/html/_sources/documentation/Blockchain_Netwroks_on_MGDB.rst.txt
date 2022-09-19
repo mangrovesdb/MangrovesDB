@@ -6,12 +6,14 @@ In this section we cover the important blockchain networks which are supported i
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Ethereum
 
    Ethereum
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :caption: Hyperledger
 
    Hyperledger

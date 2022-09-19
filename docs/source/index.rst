@@ -3,25 +3,27 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. image:: /images/mgdb_logo.svg
+.. image:: /images/mangroves17.svg
    :width: 150
-   :align: right
    :target: http://mgdb.io
+   :align: right
 
 Welcome!
 =======================================
-Mangroves is a **SQL layer over any blockchain network**. We proudly focus on helping blockchain developers and new blockchain users. You can simply read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2, NFT, Defi``).
+
+Mangroves is a **SQL layer over any blockchain network**. We proudly focus on simplifying Blockchain development for data analysts, BI, and blockchain developers by leveraging SQL. You can easily read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2, NFT``).
+
 
 .. image:: /images/mangrovesCLI.svg
    :width: 600
    :align: center
 
 - Highlights
-   - Supports the on-chain Ethereum data
-   - We are about to add NFt data reader
-   - Defi main projects tables are added will be publickly availbale soon.
-   - If you like sqlite sdk, mangroves comaptible library is now finished and is supporting all programming languages.
-   - Simply call importamt libraries such as pandas to do the rest processing 
+   - If you like sqlite sdk, mangroves comaptible API is supporting all programming languages and any 3rd party dashboard/analytical services
+   - Mangroves CLI to perform queries on real-time blockchain data
+   - Mangroves as a gateway to all public/private blockchain networks, such as Ethereum, Polygon, Hyperledger Fabric
+   - MGDB is Self-deployable and can connect to clients' private blockchain nodes
+   - Develop Smart Contract leveraging relational database features​ 
    - We added one click step to dashboard generation and will be publicly available soon.
 
 Let's :ref:`Getting Started <settingup>`.
@@ -36,14 +38,17 @@ Let's :ref:`Getting Started <settingup>`.
    :hidden:
    :caption: Getting Started
 
-   getting_started/installation
+   installation/installation
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 1
    :hidden:
    :caption: Documentation
    
-   documentation/documentation
+   documentation/mg_ETH
+   documentation/mg_HyperLedger
+   documentation/SQL_Supported_Statements
+   documentation/Blockchain_Netwroks_on_MGDB
 
 .. toctree::
    :maxdepth: 3
@@ -79,4 +84,4 @@ Quick Links
 
 * :ref:`Installation <Installation>`
 * :ref:`Quickstart Tutorial <QuTut>`
-* :ref:`Mangroves Tables <mgTables>`
+* :ref:`Mangroves Ethereum Tables <mgeth>`
