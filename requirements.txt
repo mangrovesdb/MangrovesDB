@@ -8,3 +8,4 @@ sphinx_copybutton
 sphinx_tabs
 sphinxemoji
 sphinx_copybutton
+numpydoc
