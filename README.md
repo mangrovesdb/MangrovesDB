@@ -2,7 +2,7 @@
 
 ## Sphinx Quick Start
 
-<code> $ sphinx-quichstart </code>
+<code> $ sphinx-quickstart </code>
 
 
 ## Make HTML

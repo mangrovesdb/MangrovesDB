@@ -2,7 +2,7 @@
 
 Ethereum Tables
 ======================
-There are Seven main Table tables for the Ethereum-based blockchain networks. The main resource for these tables is this `library <https://pypi.org/project/ethereum-etl/1.0.0/>`_. 
+There are Seven main Table tables for the Ethereum-based blockchain networks. You can find the column names and data types using this reference. 
 These pre-defined tables are:
 
 * :ref:`Block Table <blocks>`
@@ -28,44 +28,45 @@ platform.
 |      Column Name       |   Type     |
 |                        |            |
 +========================+============+
-|      timestamp         | timestamp  |
+|      timestamp         | Timestamp  |
 +------------------------+------------+
-|        number          |   bigint   | 
+|        number          |    Int     | 
 +------------------------+------------+
-|        hash            | varchar(66)|
+|        hash            |    text    |
 +------------------------+------------+
-|      parent_hash       | varchar(66)| 
+|      parent_hash       |    text    | 
 +------------------------+------------+
-|      sha3_uncles       | varchar(66)|
+|       mix_hash         |    text    |
 +------------------------+------------+
-|        nonce           | varchar(42)| 
+|      sha3_uncles       |    text    |
 +------------------------+------------+
-|      logs_bloom        |   text     |
+|        nonce           |    Int     | 
 +------------------------+------------+
-|   transactions_root    | varchar(66)| 
+|      logs_bloom        |    text    |
 +------------------------+------------+
-|      state_root        | varchar(66)|
+|   transactions_root    |    text    | 
 +------------------------+------------+
-|     receipts_root      | varchar(66)| 
+|      state_root        |    text    |
 +------------------------+------------+
-|         miner          | varchar(42)| 
+|     receipts_root      |    text    | 
 +------------------------+------------+
-|      difficulty        | numeric(38)| 
+|         miner          |    text    | 
 +------------------------+------------+
-|   total_difficulty     | numeric(38)| 
+|      difficulty        |    text    | 
 +------------------------+------------+
-|      extra_data        |   text     |
+|   total_difficulty     |    text    | 
 +------------------------+------------+
-|        size            |   bigint   |
+|      extra_data        |    text    |
++------------------------+------------+
+|        size            |    Int     |
 +------------------------+------------+ 
-|      gas_limit         |   bigint   |
+|      gas_limit         |    Int     |
 +------------------------+------------+ 
-|      gas_used          |   bigint   |
+|    min_gas_price       |    Int     |
 +------------------------+------------+ 
-|  transaction_count     |   bigint   |
+|      gas_used          |    Int     |
 +------------------------+------------+ 
-|   base_fee_per_gas     |   bigint   |
-+------------------------+------------+ 
+
 
 Sample Block Table Queries
 +++++++++++++++++++++++++++++++++++
@@ -128,47 +129,27 @@ This table is designed to store the data related to the transactions of the Ethe
 |         Column Name       |     Type    |
 |                           |             |
 +===========================+=============+
-|             hash          | varchar(66) |
+|             hash          |    text     |
 +---------------------------+-------------+
-|             nonce         |   bigint    | 
+|             nonce         |     Int     | 
 +---------------------------+-------------+
-|      transaction_index    |   bigint    |
+|      transaction_index    |     Int     |
 +---------------------------+-------------+
-|         from_address      | varchar(42) | 
+|         from_address      |    text     | 
 +---------------------------+-------------+
-|         to_address        | varchar(42) | 
+|         to_address        |    text     | 
 +---------------------------+-------------+
-|             value         | numeric(66) |
+|             value         |    text     |
 +---------------------------+-------------+
-|              gas          |   bigint    | 
+|              gas          |     Int     | 
 +---------------------------+-------------+
-|           gas_price       |   bigint    |
+|           gas_price       |     Int     |
 +---------------------------+-------------+
 |            input          |    text     | 
 +---------------------------+-------------+
-|receipt_cumulative_gas_used|   bigint    |
+|        block_number       |     Int     | 
 +---------------------------+-------------+
-|      receipt_gas_used     |   bigint    | 
-+---------------------------+-------------+
-| receipt_contract_address  | varchar(42) |
-+---------------------------+-------------+
-|        receipt_root       | varchar(66) |
-+---------------------------+-------------+
-|      receipt_status       |   bigint    | 
-+---------------------------+-------------+
-|      block_timestamp      |  timestamp  |
-+---------------------------+-------------+
-|        block_number       |   bigint    | 
-+---------------------------+-------------+
-|         block_hash        | varchar(66) |
-+---------------------------+-------------+
-|      max_fee_per_gas      |   bigint    | 
-+---------------------------+-------------+
-| max_priority_fee_per_gas  |   bigint    | 
-+---------------------------+-------------+
-|      transaction_type     |   bigint    | 
-+---------------------------+-------------+
-|receipt_effective_gas_price|   bigint    | 
+|         block_hash        |    text     |
 +---------------------------+-------------+
 
 

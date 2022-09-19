@@ -162,8 +162,7 @@ There are some requirements before installing MGDB.
 Quickstart Tutorial
 ----------------------
 
-You can simply use mangroves CLI to query dat on the public blockchain, e.g., Ethereum. You can also test the mangroves compatible library with sqlite SDK. In what follows there are some examples of how to test each of these services:
-
+You can simply use mangroves CLI to query data on the public blockchain, e.g., Ethereum. You can also test the mangroves compatible library with SQLite SDK. In what follows, there are some examples of how to test each of these services:
 
 MangrovesDB CLI
 +++++++++++++++++
@@ -196,8 +195,8 @@ From a terminal, run:
 
 .. Note:: 
 
-    The url can be any available Ethereum gateway. Mangroves can handle all nodes, in different netowrk layers. You can also try yur custome full node.
-
+    The URL can be any available Ethereum gateway. Mangroves can handle all nodes in different network layers. You can also try your custom full node.
+   
    .. tabs::
 
       .. group-tab:: Polygon
@@ -266,8 +265,7 @@ Verify the results in underlying blockchain networks and available blockchain ex
 MangrovesDB sqlite library
 ++++++++++++++++++++++++++++
 
-Leveraging MangrovesDb Library you can use the sqlite powerful tools and write simple queries in any programming langiages of your choice in any platform. 
-You can see some examples about how mangroves in intergradted with sqlite SDK to perform queries.
+**Mangroves SQLite compatible API** is our powerful tool that can be used to write queries in any programming language of your choice on any platform. You can see some examples of how mangroves in integrated with SQLite SDK to perform queries.
 
 .. tabs::
 
@@ -285,8 +283,22 @@ You can see some examples about how mangroves in intergradted with sqlite SDK to
 
    .. code-tab:: py
 
-         def main():
-            return
+         import sqlite3
+         import pandas as pd
+
+         from sqlite3 import Error
+         try:
+             url = 'https://cloudflare-eth.com/'
+             con = sqlite3.connect(url)
+
+             print(f"Connection is established: Mangroves connected to {url}")
+
+             df = pd.read_sql_query("select * from blocks where number<20;", con)
+
+             df.to_csv("blocks.csv")
+
+         except Error:
+            print(Error)
 
    .. code-tab:: java
 
@@ -294,16 +306,6 @@ You can see some examples about how mangroves in intergradted with sqlite SDK to
             public static void main(String[] args) {
             }
          }
-
-   .. code-tab:: julia
-
-         function main()
-         end
-
-   .. code-tab:: fortran
-
-         PROGRAM main
-         END PROGRAM main
 
    .. code-tab:: r R
 

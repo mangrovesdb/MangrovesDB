@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -76,6 +77,9 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Blockchain Netwroks on MGDB" href="Blockchain_Netwroks_on_MGDB.html" />
     <link rel="prev" title="HyperLedger Table" href="mg_HyperLedger.html" />
+
+
+
   
    
 
@@ -492,7 +496,7 @@
 <span id="id1"></span><h2 id="select">SELECT<a class="headerlink" href="#select" title="Permalink to this heading">¶</a></h2>
 <p>The <strong>SELECT</strong> statement retrieves data from the blockchain. Technically the rows returned by performing SELECT operation, are the data written on blockchain. You can use this statement in mangroves to simply read data from the blockchain considering mangroves supported tables.
 Here is a sample query using this statement:</p>
-<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">select</span> <span class="nb">number</span><span class="p">,</span> <span class="n">gas_limit</span><span class="p">,</span> <span class="k">timestamp</span> <span class="k">from</span> <span class="n">blocks</span> <span class="k">where</span> <span class="nb">number</span><span class="o">=</span><span class="mi">15415600</span><span class="p">;</span>
+<div class="highlight-SQL notranslate"><div class="highlight"><pre><span></span><span class="k">select</span><span class="w"> </span><span class="nb">number</span><span class="p">,</span><span class="w"> </span><span class="n">gas_limit</span><span class="p">,</span><span class="w"> </span><span class="k">timestamp</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">blocks</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="nb">number</span><span class="o">=</span><span class="mi">15415600</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Feel free to check the timestamp using this page.</p>

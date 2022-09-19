@@ -53,6 +53,7 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.viewcode",
     "sphinx_copybutton",
+    "sphinx_markdown_tables",
 ]
 
 autosummary_generate = True
@@ -119,6 +120,7 @@ html_theme_options = {
     "html_minify": True,
     "html_prettify": True,
     "css_minify": True,
+    # "body_max_width": "50%",
 
     # "logo_icon": "&#xeaf4",
     # "touch_icon": "images/logo_n.png",

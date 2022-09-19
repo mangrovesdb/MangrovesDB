@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -77,6 +78,9 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="HyperLedger Table" href="mg_HyperLedger.html" />
     <link rel="prev" title="Installation" href="../installation/installation.html" />
+
+
+
   
    
 
@@ -474,7 +478,7 @@
             
   <section id="ethereum-tables">
 <span id="mgeth"></span><h1 id="documentation-mg-eth--page-root">Ethereum Tables<a class="headerlink" href="#documentation-mg-eth--page-root" title="Permalink to this heading">¶</a></h1>
-<p>There are Seven main Table tables for the Ethereum-based blockchain networks. The main resource for these tables is this <a class="reference external" href="https://pypi.org/project/ethereum-etl/1.0.0/">library</a>.
+<p>There are Seven main Table tables for the Ethereum-based blockchain networks. You can find the column names and data types using this reference.
 These pre-defined tables are:</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#blocks"><span class="std std-ref">Block Table</span></a></p></li>
@@ -497,61 +501,61 @@ platform.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>timestamp</p></td>
-<td><p>timestamp</p></td>
+<td><p>Timestamp</p></td>
 </tr>
 <tr class="row-odd"><td><p>number</p></td>
-<td><p>bigint</p></td>
+<td><p>Int</p></td>
 </tr>
 <tr class="row-even"><td><p>hash</p></td>
-<td><p>varchar(66)</p></td>
+<td><p>text</p></td>
 </tr>
 <tr class="row-odd"><td><p>parent_hash</p></td>
-<td><p>varchar(66)</p></td>
-</tr>
-<tr class="row-even"><td><p>sha3_uncles</p></td>
-<td><p>varchar(66)</p></td>
-</tr>
-<tr class="row-odd"><td><p>nonce</p></td>
-<td><p>varchar(42)</p></td>
-</tr>
-<tr class="row-even"><td><p>logs_bloom</p></td>
 <td><p>text</p></td>
 </tr>
-<tr class="row-odd"><td><p>transactions_root</p></td>
-<td><p>varchar(66)</p></td>
-</tr>
-<tr class="row-even"><td><p>state_root</p></td>
-<td><p>varchar(66)</p></td>
-</tr>
-<tr class="row-odd"><td><p>receipts_root</p></td>
-<td><p>varchar(66)</p></td>
-</tr>
-<tr class="row-even"><td><p>miner</p></td>
-<td><p>varchar(42)</p></td>
-</tr>
-<tr class="row-odd"><td><p>difficulty</p></td>
-<td><p>numeric(38)</p></td>
-</tr>
-<tr class="row-even"><td><p>total_difficulty</p></td>
-<td><p>numeric(38)</p></td>
-</tr>
-<tr class="row-odd"><td><p>extra_data</p></td>
+<tr class="row-even"><td><p>mix_hash</p></td>
 <td><p>text</p></td>
 </tr>
-<tr class="row-even"><td><p>size</p></td>
-<td><p>bigint</p></td>
+<tr class="row-odd"><td><p>sha3_uncles</p></td>
+<td><p>text</p></td>
 </tr>
-<tr class="row-odd"><td><p>gas_limit</p></td>
-<td><p>bigint</p></td>
+<tr class="row-even"><td><p>nonce</p></td>
+<td><p>Int</p></td>
+</tr>
+<tr class="row-odd"><td><p>logs_bloom</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-even"><td><p>transactions_root</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>state_root</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-even"><td><p>receipts_root</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>miner</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-even"><td><p>difficulty</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>total_difficulty</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-even"><td><p>extra_data</p></td>
+<td><p>text</p></td>
+</tr>
+<tr class="row-odd"><td><p>size</p></td>
+<td><p>Int</p></td>
+</tr>
+<tr class="row-even"><td><p>gas_limit</p></td>
+<td><p>Int</p></td>
+</tr>
+<tr class="row-odd"><td><p>min_gas_price</p></td>
+<td><p>Int</p></td>
 </tr>
 <tr class="row-even"><td><p>gas_used</p></td>
-<td><p>bigint</p></td>
-</tr>
-<tr class="row-odd"><td><p>transaction_count</p></td>
-<td><p>bigint</p></td>
-</tr>
-<tr class="row-even"><td><p>base_fee_per_gas</p></td>
-<td><p>bigint</p></td>
+<td><p>Int</p></td>
 </tr>
 </tbody>
 </table>
@@ -563,8 +567,8 @@ platform.</p>
 <a class="reference internal image-reference" href="../_images/read_first_blocks.png"><img alt="../_images/read_first_blocks.png" src="../_images/read_first_blocks.png" style="width: 600px;"/></a>
 <p>Feel free to try other queries as well:</p>
 <a class="reference internal image-reference" href="../_images/read_less_than_10_blocks.png"><img alt="../_images/read_less_than_10_blocks.png" src="../_images/read_less_than_10_blocks.png" style="width: 600px;"/></a>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span> <span class="n">nonce</span><span class="p">,</span> <span class="k">size</span><span class="p">,</span> <span class="n">gas_limit</span><span class="p">,</span> <span class="n">min_gas_price</span><span class="p">,</span> <span class="n">gas_used</span><span class="p">,</span> <span class="n">difficulty</span><span class="p">,</span> <span class="k">timestamp</span>
-<span class="k">FROM</span> <span class="n">blocks</span> <span class="k">WHERE</span> <span class="nb">number</span><span class="o">=</span><span class="mi">15329147</span><span class="p">;</span>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">SELECT</span><span class="w"> </span><span class="n">nonce</span><span class="p">,</span><span class="w"> </span><span class="k">size</span><span class="p">,</span><span class="w"> </span><span class="n">gas_limit</span><span class="p">,</span><span class="w"> </span><span class="n">min_gas_price</span><span class="p">,</span><span class="w"> </span><span class="n">gas_used</span><span class="p">,</span><span class="w"> </span><span class="n">difficulty</span><span class="p">,</span><span class="w"> </span><span class="k">timestamp</span><span class="w"></span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">blocks</span><span class="w"> </span><span class="k">WHERE</span><span class="w"> </span><span class="nb">number</span><span class="o">=</span><span class="mi">15329147</span><span class="p">;</span><span class="w"></span>
 </pre></div>
 </div>
 <a class="reference internal image-reference" href="../_images/read_last_blocks_data.png"><img alt="../_images/read_last_blocks_data.png" src="../_images/read_last_blocks_data.png" style="width: 600px;"/></a>
@@ -599,67 +603,37 @@ platform.</p>
 </thead>
 <tbody>
 <tr class="row-even"><td><p>hash</p></td>
-<td><p>varchar(66)</p></td>
+<td><p>text</p></td>
 </tr>
 <tr class="row-odd"><td><p>nonce</p></td>
-<td><p>bigint</p></td>
+<td><p>Int</p></td>
 </tr>
 <tr class="row-even"><td><p>transaction_index</p></td>
-<td><p>bigint</p></td>
+<td><p>Int</p></td>
 </tr>
 <tr class="row-odd"><td><p>from_address</p></td>
-<td><p>varchar(42)</p></td>
+<td><p>text</p></td>
 </tr>
 <tr class="row-even"><td><p>to_address</p></td>
-<td><p>varchar(42)</p></td>
+<td><p>text</p></td>
 </tr>
 <tr class="row-odd"><td><p>value</p></td>
-<td><p>numeric(66)</p></td>
+<td><p>text</p></td>
 </tr>
 <tr class="row-even"><td><p>gas</p></td>
-<td><p>bigint</p></td>
+<td><p>Int</p></td>
 </tr>
 <tr class="row-odd"><td><p>gas_price</p></td>
-<td><p>bigint</p></td>
+<td><p>Int</p></td>
 </tr>
 <tr class="row-even"><td><p>input</p></td>
 <td><p>text</p></td>
 </tr>
-<tr class="row-odd"><td><p>receipt_cumulative_gas_used</p></td>
-<td><p>bigint</p></td>
-</tr>
-<tr class="row-even"><td><p>receipt_gas_used</p></td>
-<td><p>bigint</p></td>
-</tr>
-<tr class="row-odd"><td><p>receipt_contract_address</p></td>
-<td><p>varchar(42)</p></td>
-</tr>
-<tr class="row-even"><td><p>receipt_root</p></td>
-<td><p>varchar(66)</p></td>
-</tr>
-<tr class="row-odd"><td><p>receipt_status</p></td>
-<td><p>bigint</p></td>
-</tr>
-<tr class="row-even"><td><p>block_timestamp</p></td>
-<td><p>timestamp</p></td>
-</tr>
 <tr class="row-odd"><td><p>block_number</p></td>
-<td><p>bigint</p></td>
+<td><p>Int</p></td>
 </tr>
 <tr class="row-even"><td><p>block_hash</p></td>
-<td><p>varchar(66)</p></td>
-</tr>
-<tr class="row-odd"><td><p>max_fee_per_gas</p></td>
-<td><p>bigint</p></td>
-</tr>
-<tr class="row-even"><td><p>max_priority_fee_per_gas</p></td>
-<td><p>bigint</p></td>
-</tr>
-<tr class="row-odd"><td><p>transaction_type</p></td>
-<td><p>bigint</p></td>
-</tr>
-<tr class="row-even"><td><p>receipt_effective_gas_price</p></td>
-<td><p>bigint</p></td>
+<td><p>text</p></td>
 </tr>
 </tbody>
 </table>
