@@ -5,3 +5,6 @@ sphinx-design
 sphinx-version-warning
 sphinx_material
 sphinx_copybutton
+sphinx_tabs
+sphinxemoji
+sphinx_copybutton
