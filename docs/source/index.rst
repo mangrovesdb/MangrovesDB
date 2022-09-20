@@ -14,9 +14,10 @@ Welcome!
 Mangroves is a **SQL layer over any blockchain network**. We proudly focus on simplifying Blockchain development for data analysts, BI, and blockchain developers by leveraging SQL. You can easily read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2, NFT``).
 
 
-.. image:: /images/mangrovesCLI.svg
-   :width: 600
-   :align: center
+.. Note:: 
+
+    You can try mangroves-cli and mangroves SQLite compatible API for free `here <https://killercoda.com/mangroves>`_.
+         
 
 - Highlights
    - If you like sqlite sdk, mangroves comaptible API is supporting all programming languages and any 3rd party dashboard/analytical services
