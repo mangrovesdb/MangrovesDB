@@ -11,7 +11,7 @@
 Welcome!
 =======================================
 
-Mangroves is a **SQL layer over any blockchain network**. We proudly focus on simplifying Blockchain development for data analysts, BI, and blockchain developers by leveraging SQL. You can easily read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2, NFT``).
+Mangroves is a **SQL layer over any blockchain network**. We proudly focus on simplifying Blockchain development for data analysts, BI, and blockchain developers by leveraging SQL. You can easily read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2``).
 
 
 .. Note:: 
@@ -20,12 +20,12 @@ Mangroves is a **SQL layer over any blockchain network**. We proudly focus on si
          
 
 - Highlights
-   - If you like sqlite sdk, mangroves comaptible API is supporting all programming languages and any 3rd party dashboard/analytical services
+   - If you like SQLite SDK, mangroves compatible API supports all programming languages and any 3rd party dashboard/analytical services
    - Mangroves CLI to perform queries on real-time blockchain data
    - Mangroves as a gateway to all public/private blockchain networks, such as Ethereum, Polygon, Hyperledger Fabric
    - MGDB is Self-deployable and can connect to clients' private blockchain nodes
-   - Develop Smart Contract leveraging relational database features​ 
-   - We added one click step to dashboard generation and will be publicly available soon.
+   - Develop Smart Contract leveraging relational database features​
+   - We added a one-click step to dashboard generation, and it will be publicly available soon.
 
 Let's :ref:`Getting Started <settingup>`.
 

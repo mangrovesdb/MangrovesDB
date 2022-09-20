@@ -14,18 +14,17 @@ Using this guidance you can simply install mangroves CLI and mangroves compatibl
 
 Prerequisites
 -----------------
-- 2 CPUs or more
-- 2GB of free memory
-- 20GB of free disk space
+There are not that many requirements before installing MGDB. Just be sure you have an internet connection. 
+
 - Internet connection
+- OS of your choice. We are supporting all stacks.
 
 
-.. _Installation:
+.. _Installation: 
 
 Installation
 -----------------
-There are some requirements before installing MGDB. 
-
+Please follow the below guideline to install mangroves.
 
 .. tabs::
 
