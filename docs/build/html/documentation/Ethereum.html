@@ -72,10 +72,11 @@
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
     <link rel="shortcut icon" href="../_static/favicon.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Hyperledger" href="Hyperledger.html" />
+    <link rel="next" title="Hyperledger Fabric" href="Hyperledger.html" />
     <link rel="prev" title="Blockchain Netwroks on MGDB" href="Blockchain_Netwroks_on_MGDB.html" />
 
 
@@ -288,7 +289,16 @@
       
         
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#documentation-ethereum--page-root" class="md-nav__link">Ethereum</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#ethereum-mainnet" class="md-nav__link">Ethereum Mainnet</a>
+        </li>
+        <li class="md-nav__item"><a href="#ethereum-layer-2" class="md-nav__link">Ethereum Layer 2</a>
+        </li></ul>
+            </nav>
+        </li>
     
 <li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/documentation/Ethereum.rst.txt">Show Source</a> </li>
 
@@ -300,29 +310,10 @@
     <li class="md-nav__item">
     
     
-      <a href="Hyperledger.html" class="md-nav__link">Hyperledger</a>
+      <a href="Hyperledger.html" class="md-nav__link">Hyperledger Fabric</a>
       
     
     </li></ul>
-    
-    </li>
-    <li class="md-nav__item">
-    
-      <span class="md-nav__link caption"><span class="caption-text">Queries on MangrovesDB</span></span>
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../queries_on_mgdb/queries_on_mgdb.html" class="md-nav__link">Sample Queries</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../queries_on_mgdb/queries_on_mgdb.html#real-world-queries" class="md-nav__link">Real World Queries</a>
-      
     
     </li>
     <li class="md-nav__item">
@@ -380,7 +371,16 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#documentation-ethereum--page-root" class="md-nav__link">Ethereum</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#ethereum-mainnet" class="md-nav__link">Ethereum Mainnet</a>
+        </li>
+        <li class="md-nav__item"><a href="#ethereum-layer-2" class="md-nav__link">Ethereum Layer 2</a>
+        </li></ul>
+            </nav>
+        </li>
     
 <li class="md-nav__item"><a class="md-nav__extra_link" href="../_sources/documentation/Ethereum.rst.txt">Show Source</a> </li>
 
@@ -397,6 +397,44 @@
             
   <section id="ethereum">
 <h1 id="documentation-ethereum--page-root">Ethereum<a class="headerlink" href="#documentation-ethereum--page-root" title="Permalink to this heading">¶</a></h1>
+<p>Mangroves is fully adaptable to the Ethereum blockchain networks, and it can connect to all the projects on the Ethereum mainnet, layer 2 projects, and private Ethereum networks.</p>
+<section id="ethereum-mainnet">
+<h2 id="ethereum-mainnet">Ethereum Mainnet<a class="headerlink" href="#ethereum-mainnet" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://ethereum.org/en/developers/docs/networks/">Mainnet</a> is the primary public Ethereum production blockchain, where actual-value transactions occur on the distributed ledger.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use this <a class="reference external" href="https://killercoda.com/mangroves/scenario/cli">tutorial</a> to test the free version of <strong>mangroves-cli</strong> services on <code class="docutils literal notranslate"><span class="pre">Ethereum</span> <span class="pre">mainnet</span></code>.
+You can also use this <a class="reference external" href="https://killercoda.com/mangroves/scenario/sqlite">tutorial</a> to test the free version of <strong>mangroves SQLite compatible API</strong> on <code class="docutils literal notranslate"><span class="pre">Ethereum</span> <span class="pre">mainnet</span></code>.</p>
+</div>
+</section>
+<section id="ethereum-layer-2">
+<h2 id="ethereum-layer-2">Ethereum Layer 2<a class="headerlink" href="#ethereum-layer-2" title="Permalink to this heading">¶</a></h2>
+<p><a class="reference external" href="https://ethereum.org/en/layer-2/#:~:text=Layer%202%20projects%20will%20post,secure%20and%20validate%20the%20network">Layer 2 projects</a> will post their transaction data onto Ethereum, relying on Ethereum for data availability. These platforms are decentralized Ethereum scaling solutions.
+Mangroves support all the projects on Ethereum network including all layer 2 projects. For mangroves, it is as easy as just replacing the <code class="docutils literal notranslate"><span class="pre">--url</span></code> with reliable RPC gateways to make connection with these platforms.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<blockquote>
+<div><p>The URL can be any available Ethereum gateway. Mangroves can handle all nodes in different network layers. You can also try your custom full node.</p>
+</div></blockquote>
+<div class="sphinx-tabs docutils container">
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-0-UG9seWdvbg==" aria-selected="true" class="sphinx-tabs-tab group-tab" id="tab-0-UG9seWdvbg==" name="UG9seWdvbg==" role="tab" tabindex="0">Polygon</button><button aria-controls="panel-0-RmFudG9t" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-RmFudG9t" name="RmFudG9t" role="tab" tabindex="-1">Fantom</button><button aria-controls="panel-0-YXJiaXRydW0=" aria-selected="false" class="sphinx-tabs-tab group-tab" id="tab-0-YXJiaXRydW0=" name="YXJiaXRydW0=" role="tab" tabindex="-1">arbitrum</button></div><div aria-labelledby="tab-0-UG9seWdvbg==" class="sphinx-tabs-panel group-tab" id="panel-0-UG9seWdvbg==" name="UG9seWdvbg==" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://polygon-rpc.com
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-RmFudG9t" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-RmFudG9t" name="RmFudG9t" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://rpc.ftm.tools
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-0-YXJiaXRydW0=" class="sphinx-tabs-panel group-tab" hidden="true" id="panel-0-YXJiaXRydW0=" name="YXJiaXRydW0=" role="tabpanel" tabindex="0"><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./mangroves-cli --url https://arb1.arbitrum.io/rpc
+</pre></div>
+</div>
+</div></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can use this <a class="reference external" href="https://killercoda.com/mangroves/scenario/cli-polygon">tutorial</a> to test the free version of mangroves services on <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> platform, and <a class="reference external" href="https://killercoda.com/mangroves/scenario/cli-arbitrum">tutorial</a>  to test the free version of mangroves services on <code class="docutils literal notranslate"><span class="pre">Arbitrum</span></code> platform.
+Feel free to replace the <code class="docutils literal notranslate"><span class="pre">--url</span></code> to make connection with other projects.
+You can also use this <a class="reference external" href="https://killercoda.com/mangroves/scenario/sqlite">tutorial</a> to test the free version of <strong>mangroves SQLite compatible API</strong> on <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> and <code class="docutils literal notranslate"><span class="pre">Arbitrum</span></code>.</p>
+</div>
+</section>
 </section>
 
 
@@ -423,12 +461,12 @@
             </a>
           
           
-            <a href="Hyperledger.html" title="Hyperledger"
+            <a href="Hyperledger.html" title="Hyperledger Fabric"
                class="md-flex md-footer-nav__link md-footer-nav__link--next"
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> Hyperledger </span>
+                class="md-footer-nav__direction"> Next </span> Hyperledger Fabric </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>

@@ -332,25 +332,6 @@
     </li>
     <li class="md-nav__item">
     
-      <span class="md-nav__link caption"><span class="caption-text">Queries on MangrovesDB</span></span>
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../queries_on_mgdb/queries_on_mgdb.html" class="md-nav__link">Sample Queries</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
-    
-      <a href="../queries_on_mgdb/queries_on_mgdb.html#real-world-queries" class="md-nav__link">Real World Queries</a>
-      
-    
-    </li>
-    <li class="md-nav__item">
-    
       <span class="md-nav__link caption"><span class="caption-text">Basic usage</span></span>
     
     </li>
@@ -621,7 +602,25 @@ You can use this <a class="reference external" href="https://killercoda.com/mang
 <h3 id="mangrovesdb-sqlite-library">MangrovesDB sqlite library<a class="headerlink" href="#mangrovesdb-sqlite-library" title="Permalink to this heading">¶</a></h3>
 <p><strong>Mangroves SQLite compatible API</strong> is our powerful tool that can be used to write queries in any programming language of your choice on any platform. You can see some examples of how mangroves in integrated with SQLite SDK to perform queries.</p>
 <div class="sphinx-tabs docutils container">
-<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-11-Qw==" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-Qw==" name="Qw==" role="tab" tabindex="0">C</button><button aria-controls="panel-11-UHl0aG9u" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="-1">Python</button><button aria-controls="panel-11-SmF2YVNjcmlwdA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-SmF2YVNjcmlwdA==" name="SmF2YVNjcmlwdA==" role="tab" tabindex="-1">JavaScript</button></div><div aria-labelledby="tab-11-Qw==" class="sphinx-tabs-panel code-tab group-tab" id="panel-11-Qw==" name="Qw==" role="tabpanel" tabindex="0"><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<div aria-label="Tabbed content" class="closeable" role="tablist"><button aria-controls="panel-11-UHl0aG9u" aria-selected="true" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-UHl0aG9u" name="UHl0aG9u" role="tab" tabindex="0">Python</button><button aria-controls="panel-11-Qw==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-Qw==" name="Qw==" role="tab" tabindex="-1">C</button><button aria-controls="panel-11-SmF2YVNjcmlwdA==" aria-selected="false" class="sphinx-tabs-tab code-tab group-tab" id="tab-11-SmF2YVNjcmlwdA==" name="SmF2YVNjcmlwdA==" role="tab" tabindex="-1">JavaScript</button></div><div aria-labelledby="tab-11-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" id="panel-11-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">Error</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="s1">'https://cloudflare-eth.com/'</span>
+    <span class="n">con</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Connection is established: Mangroves connected to </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">"select * from blocks where number&lt;20;"</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"blocks.csv"</span><span class="p">)</span>
+
+<span class="k">except</span> <span class="n">Error</span><span class="p">:</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">Error</span><span class="p">)</span>
+</pre></div>
+</div>
+</div><div aria-labelledby="tab-11-Qw==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-Qw==" name="Qw==" role="tabpanel" tabindex="0"><div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sqlite3.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
@@ -670,24 +669,6 @@ You can use this <a class="reference external" href="https://killercoda.com/mang
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-</div><div aria-labelledby="tab-11-UHl0aG9u" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-UHl0aG9u" name="UHl0aG9u" role="tabpanel" tabindex="0"><div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sqlite3</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-
-<span class="kn">from</span> <span class="nn">sqlite3</span> <span class="kn">import</span> <span class="n">Error</span>
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">url</span> <span class="o">=</span> <span class="s1">'https://cloudflare-eth.com/'</span>
-    <span class="n">con</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Connection is established: Mangroves connected to </span><span class="si">{</span><span class="n">url</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="s2">"select * from blocks where number&lt;20;"</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
-
-    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">"blocks.csv"</span><span class="p">)</span>
-
-<span class="k">except</span> <span class="n">Error</span><span class="p">:</span>
-   <span class="nb">print</span><span class="p">(</span><span class="n">Error</span><span class="p">)</span>
 </pre></div>
 </div>
 </div><div aria-labelledby="tab-11-SmF2YVNjcmlwdA==" class="sphinx-tabs-panel code-tab group-tab" hidden="true" id="panel-11-SmF2YVNjcmlwdA==" name="SmF2YVNjcmlwdA==" role="tabpanel" tabindex="0"><div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span><span class="w"> </span><span class="nx">Main</span><span class="w"> </span><span class="p">{</span><span class="w"></span>

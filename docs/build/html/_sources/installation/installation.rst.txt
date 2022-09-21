@@ -287,6 +287,26 @@ MangrovesDB sqlite library
 
 .. tabs::
 
+   .. code-tab:: py
+
+         import sqlite3
+         import pandas as pd
+
+         from sqlite3 import Error
+         try:
+             url = 'https://cloudflare-eth.com/'
+             con = sqlite3.connect(url)
+
+             print(f"Connection is established: Mangroves connected to {url}")
+
+             df = pd.read_sql_query("select * from blocks where number<20;", con)
+
+             df.to_csv("blocks.csv")
+
+         except Error:
+            print(Error)
+
+
    .. code-tab:: c
 
          #include <stdio.h>
@@ -339,25 +359,6 @@ MangrovesDB sqlite library
              return 0;
          }
 
-
-   .. code-tab:: py
-
-         import sqlite3
-         import pandas as pd
-
-         from sqlite3 import Error
-         try:
-             url = 'https://cloudflare-eth.com/'
-             con = sqlite3.connect(url)
-
-             print(f"Connection is established: Mangroves connected to {url}")
-
-             df = pd.read_sql_query("select * from blocks where number<20;", con)
-
-             df.to_csv("blocks.csv")
-
-         except Error:
-            print(Error)
 
    .. code-tab:: js
 
