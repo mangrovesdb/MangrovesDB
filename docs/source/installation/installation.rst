@@ -307,6 +307,29 @@ MangrovesDB sqlite library
             print(Error)
 
 
+   .. code-tab:: js
+
+         var sqlite3 = require('sqlite3');
+         var db;
+
+         function runQueries(db) {
+         db.all("select count(hash) from transactions where block_hash='f8b492a7b7eb9396d95c6b9b2f81d19a3661b562460a91c854fd0cbe195e0210';", function(err, rows) {
+             rows.forEach(row => {
+             console.log(row);
+             });
+         });
+         }
+
+         db = new sqlite3.Database('https://cloudflare-eth.com/', (err) => {
+             if (err && err.code == "SQLITE_CANTOPEN") {
+             console.log("Getting error " + err);
+             exit(1);
+             }
+             runQueries(db);
+         });
+
+
+
    .. code-tab:: c
 
          #include <stdio.h>
@@ -360,9 +383,6 @@ MangrovesDB sqlite library
          }
 
 
-   .. code-tab:: js
+.. Attention::
 
-         class Main {
-            public static void main(String[] args) {
-            }
-         }
+    As can be seen the real-time data can be extracted easily using any programming language. This SQLite compatible interface can be integrated with any 3rd party dashboard/analytical services. 
