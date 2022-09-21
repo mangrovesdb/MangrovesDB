@@ -24,7 +24,7 @@ Mangroves is a **SQL layer over any blockchain network**. We proudly focus on si
    - Mangroves CLI to perform queries on real-time blockchain data
    - Mangroves as a gateway to all public/private blockchain networks, such as Ethereum, Polygon, Hyperledger Fabric
    - MGDB is Self-deployable and can connect to clients' private blockchain nodes
-   - Develop Smart Contract leveraging relational database features​
+   - Develop Smart Contract leveraging relational database features
    - We added a one-click step to dashboard generation, and it will be publicly available soon.
 
 Let's :ref:`Getting Started <settingup>`.
