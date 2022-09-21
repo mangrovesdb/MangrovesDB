@@ -76,18 +76,20 @@ To read data from the Ethereum blocks table, simply run your query on mangroves-
 
     - You can query against the data realted to the blocks on the public blockchain.
 
-    .. image:: /images/read_first_blocks.png
-        :width: 600
+      .. code-block:: SQL
 
-    - Feel free to try other queries as well:
+         SELECT number, hash FROM blocks WHERE number<10;
+    
 
     .. image:: /images/read_less_than_10_blocks.png
         :width: 600
 
-    .. code-block:: sql
+    - Feel free to try other queries as well:
 
-    SELECT nonce, size, gas_limit, min_gas_price, gas_used, difficulty, timestamp 
-    FROM blocks WHERE number=15329147;
+      .. code-block:: SQL
+
+         SELECT nonce, size, gas_limit, min_gas_price, gas_used, difficulty, timestamp 
+         FROM blocks WHERE number=15329147;
 
 
     .. image:: /images/read_last_blocks_data.png
