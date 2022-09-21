@@ -1,51 +1,26 @@
 # MangrovesDB Documentations
 
-## Sphinx Quick Start
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![GitHub](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/mangrovesdb/MangrovesDB/blob/master/license.txt)
 
-<code> $ sphinx-quickstart </code>
-
-
-## Make HTML
-Move to the docs folder and run this command.
-```
-$ make html
-```
-
-## Writing Considerations in rst files
-
-- 1- ```=================``` is for the ```H1``` titles;
-- 2- ```-----------------``` is considered for the ```H2```;
-- 3- ```+++++++++++++++++``` is considered for the ```H3```;
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
 
 
-## Convert md to pdf file
-```
-grip your_markdown.md
-```
-
-## Need Help
-check this out: https://chiplicity.readthedocs.io/en/latest/Using_Sphinx/ShowingCodeExamplesInSphinx.html
+**Mangroves** is a **SQL layer over any blockchain network**. We proudly focus on simplifying Blockchain development for data analysts, BI, and blockchain developers by leveraging SQL. You can easily read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2``).
 
 
+## Try Mangroves For Free
 
-## Cuation and Dangers
-```
-.. admonition:: Caution
+You can try mangroves-cli and mangroves SQLite compatible API for free [here](https://killercoda.com/mangroves)
+         
 
-    Please first *install* the **pre-requierments**...
-```
-```
-.. DANGER::
-   Beware killer rabbits!
-```
+## Highlights
+   - If you like SQLite SDK, mangroves compatible API supports all programming languages and any 3rd party dashboard/analytical services
+   - Mangroves CLI to perform queries on real-time blockchain data
+   - Mangroves as a gateway to all public/private blockchain networks, such as Ethereum, Polygon, Hyperledger Fabric
+   - MGDB is Self-deployable and can connect to clients' private blockchain nodes
+   - Develop Smart Contract leveraging relational database features​
+   - We added a one-click step to dashboard generation, and it will be publicly available soon.
 
-
-## Libs and installation methos
-
-### sphinxemoji
-```bash
-pip install sphinxemoji
-```
-[refrence](https://sphinxemojicodes.readthedocs.io/en/stable/#supported-codes)
-some useful emojis are: :dart:, :flame:, :flags:, :flushed:, :grinning:, :heart:, :heavy_check_mark:, ✔️ :heavy_check_mark:, ❤️ :heart:,
-🥵 :hot_face:, ⌛ :hourglass:, ⏳ :hourglass_flowing_sand:, ♨️ :hotsprings:, 😘 :kissing_heart:, 🔵 :large_blue_circle:, 🔷 :large_blue_diamond:, 🔶 :large_orange_diamond:, 🍁 :maple_leaf:, ⛔ :no_entry:, 🚫 :no_entry_sign:, 🛑 :octagonal_sign:, 👉🏻:point_right_tone1:, 🔴 :red_circle:,🙁:slight_frown:,🙂:slight_smile:,🙁:slightly_frowning_face:,🙂:slightly_smiling_face:, 🛑:stop_sign:, ⏱️:stopwatch:, 😛:stuck_out_tongue:,😝:stuck_out_tongue_closed_eyes:,😜:stuck_out_tongue_winking_eye:,😎:sunglasses:
+## Contact Us
+You can find us on our [website](https://www.mgdb.io/).
