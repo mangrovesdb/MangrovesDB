@@ -131,8 +131,6 @@ This table is designed to store the data related to the transactions of the Ethe
 +===========================+=============+
 |             hash          |    text     |
 +---------------------------+-------------+
-|             nonce         |     Int     | 
-+---------------------------+-------------+
 |      transaction_index    |     Int     |
 +---------------------------+-------------+
 |         from_address      |    text     | 

@@ -289,15 +289,56 @@ MangrovesDB sqlite library
 
    .. code-tab:: c
 
-         int main(const int argc, const char **argv) {
-         return 0;
+         #include <stdio.h>
+         #include <sqlite3.h>
+
+         int main() {
+             sqlite3 *db;
+             sqlite3_stmt *stmt;	
+            
+             sqlite3_open("https://cloudflare-eth.com/", &db);
+
+             if (db == NULL) {
+                 printf("Failed to open DB\n");
+                 return 1;
+             }
+
+             printf("Performing query...\n");
+             sqlite3_prepare_v2(db, "select number, hash, parent_hash from blocks where number<10", -1, &stmt, NULL);
+                      
+             printf("Got results:\n");
+             while (sqlite3_step(stmt) != SQLITE_DONE) {
+                 int i;
+                 int num_cols = sqlite3_column_count(stmt);
+                 printf("row> ");
+                 for (i = 0; i < num_cols; i++)
+                 {
+                     switch (sqlite3_column_type(stmt, i))
+                     {
+                     case (SQLITE3_TEXT):
+                         printf("%s, ", sqlite3_column_text(stmt, i));
+                         break;
+                     case (SQLITE_INTEGER):
+                         printf("%d, ", sqlite3_column_int(stmt, i));
+                         break;
+                     case (SQLITE_FLOAT):
+                         printf("%g, ", sqlite3_column_double(stmt, i));
+                         break;
+                     default:
+                         break;
+                     }
+                 }
+                 printf("\n");
+
+             }
+
+             sqlite3_finalize(stmt);
+
+             sqlite3_close(db);
+                
+             return 0;
          }
 
-   .. code-tab:: c++
-
-         int main(const int argc, const char **argv) {
-         return 0;
-         }
 
    .. code-tab:: py
 
@@ -318,15 +359,9 @@ MangrovesDB sqlite library
          except Error:
             print(Error)
 
-   .. code-tab:: java
+   .. code-tab:: js
 
          class Main {
             public static void main(String[] args) {
             }
-         }
-
-   .. code-tab:: r R
-
-         main <- function() {
-            return(0)
          }
