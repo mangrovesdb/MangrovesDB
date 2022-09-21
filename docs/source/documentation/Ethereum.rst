@@ -8,15 +8,13 @@ Ethereum Mainnet
 
 .. Note:: 
 
-    You can use this `tutorial <https://killercoda.com/mangroves/scenario/cli>`_ to test the free version of **mangroves-cli** services on ``Ethereum mainnet``.
-    You can also use this `tutorial <https://killercoda.com/mangroves/scenario/sqlite>`_ to test the free version of **mangroves SQLite compatible API** on ``Ethereum mainnet``.
+    You can use this `tutorial <https://killercoda.com/mangroves/scenario/cli>`_ to test the free version of **mangroves-cli** services on ``Ethereum mainnet`` and well-known layer 2 projects.
+    You can also use this `tutorial <https://killercoda.com/mangroves/scenario/sqlite>`_ to test the free version of **mangroves SQLite compatible API** on ``Ethereum mainnet`` and well-known layer 2 projects.
 
 
 
-
-
-Ethereum Layer 2
-++++++++++++++++++
+Ethereum Layer 2 Projects
++++++++++++++++++++++++++++
 `Layer 2 projects <https://ethereum.org/en/layer-2/#:~:text=Layer%202%20projects%20will%20post,secure%20and%20validate%20the%20network>`_ will post their transaction data onto Ethereum, relying on Ethereum for data availability. These platforms are decentralized Ethereum scaling solutions.
 Mangroves support all the projects on the Ethereum network, including all layer 2 projects. For mangroves, it is as easy as just replacing the ``--url`` with reliable RPC gateways to make a connection with these platforms.
 

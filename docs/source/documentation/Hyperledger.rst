@@ -7,7 +7,7 @@ Hyperledger Fabric is an open-source Permissioned blocckhain project hosted by T
 Mangroves Gateway to Hyperledger Fabric
 +++++++++++++++++++++++++++++++++++++++++++++
 
-:no_entry:| **Coming Soon** |:slight_smile:|
+|:no_entry:| **Coming Soon** |:slight_smile:|
 
 .. admonition:: Note
 
