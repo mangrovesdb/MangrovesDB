@@ -18,7 +18,7 @@ These pre-defined tables are:
 
 .. _blocks:
 
-Block Table
+Blocks Table
 -----------------
 
 The data related to the blocks of the Ethereum public network will be saved here. This base table can be used for any further design of a customized Ethereum-based
@@ -68,11 +68,10 @@ platform.
 +------------------------+------------+ 
 
 
-Sample Block Table Queries
+Sample Blocks Table Queries
 +++++++++++++++++++++++++++++++++++
 
-In order to read data from the ethereum public blockchain, as stated before simply run the MangrovesDB cli as shown below:
-
+To read data from the Ethereum blocks table, simply run your query on mangroves-cli or mangroves SQLite compatible API with the programming language of your choice, as shown below:
 .. image:: /images/MGDB_CLI_Start.png
      :width: 600
 
@@ -149,6 +148,24 @@ This table is designed to store the data related to the transactions of the Ethe
 +---------------------------+-------------+
 |         block_hash        |    text     |
 +---------------------------+-------------+
+
+Sample Transactions Table Queries
++++++++++++++++++++++++++++++++++++
+In order to read data from the Ethereum transactions table, as stated before, simply run your query on mangroves-cli or mangroves SQLite compatible API with the programming language of your choice as shown below:
+
+   - Query the :ref:`Transactions Table <transactions>`:
+
+      .. code-block:: SQL
+
+            select transaction_index, from_address, to_address, value, gas from transactions where block_number=33243462 order by value desc limit 5;
+
+
+   - You can expect a result like this:
+
+   .. image:: /images/polygon_trnsaction.png
+     :width: 600
+
+
 
 
 .. _contractsRef:
