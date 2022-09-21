@@ -41,7 +41,6 @@ Please follow the below guideline to install mangroves.
                         We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on x86-64 Linux** using binary download.
                         You can use this `link <https://killercoda.com/mangroves/scenario/cli>`_ to test the free version of the mangroves-cli.
 
-
                         .. code-block:: bash
 
                             echo "Will be publiched soon"
@@ -100,7 +99,6 @@ Please follow the below guideline to install mangroves.
                         We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on x86-64 macOS** for SQLite compatible sdk.
                         You can use this `link <https://killercoda.com/mangroves/scenario/sqlite>`_ to test the free version of SQLite compatible sdk on python.
 
-
                         .. code-block:: bash
 
                             echo "Will be publiched soon"
@@ -141,7 +139,6 @@ Please follow the below guideline to install mangroves.
 
                         We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on WindowsS**. You shall download and run the installer for the latest release, or if using PowerShell, use terminal command.
                         You can use this `link <https://killercoda.com/mangroves/scenario/cli>`_ to test the free version of the mangroves-cli.
-:
 
                         .. code-block:: bash
 
