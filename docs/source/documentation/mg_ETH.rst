@@ -121,11 +121,24 @@ To read data from the Ethereum blocks table, simply run your query on mangroves-
 
     .. code-tab:: js
 
-         class Main {
-            public static void main(String[] args) {
-            }
+         var sqlite3 = require('sqlite3');
+         var db;
+
+         function runQueries(db) {
+         db.all("SELECT nonce, size, gas_limit, min_gas_price, gas_used, difficulty, timestamp FROM blocks WHERE number=15329147;", function(err, rows) {
+             rows.forEach(row => {
+             console.log(row);
+             });
+         });
          }
 
+         db = new sqlite3.Database('https://cloudflare-eth.com/', (err) => {
+             if (err && err.code == "SQLITE_CANTOPEN") {
+             console.log("Getting error " + err);
+             exit(1);
+             }
+             runQueries(db);
+         });
 
 
 .. _transactionsRef:
@@ -196,7 +209,7 @@ In order to read data from the Ethereum transactions table, as stated before, si
 
              print(f"Connection is established: Mangroves connected to {url}")
 
-             df = pd.read_sql_query("select count(hash) from transactions where block_hash='f8b492a7b7eb9396d95c6b9b2f81d19a3661b562460a91c854fd0cbe195e0210';;", con)
+             df = pd.read_sql_query("select count(hash) from transactions where block_hash='f8b492a7b7eb9396d95c6b9b2f81d19a3661b562460a91c854fd0cbe195e0210';", con)
 
              df.to_csv("blocks.csv")
 
@@ -205,10 +218,24 @@ In order to read data from the Ethereum transactions table, as stated before, si
 
     .. code-tab:: js
 
-         class Main {
-            public static void main(String[] args) {
-            }
+         var sqlite3 = require('sqlite3');
+         var db;
+
+         function runQueries(db) {
+         db.all("select count(hash) from transactions where block_hash='f8b492a7b7eb9396d95c6b9b2f81d19a3661b562460a91c854fd0cbe195e0210';", function(err, rows) {
+             rows.forEach(row => {
+             console.log(row);
+             });
+         });
          }
+
+         db = new sqlite3.Database('https://cloudflare-eth.com/', (err) => {
+             if (err && err.code == "SQLITE_CANTOPEN") {
+             console.log("Getting error " + err);
+             exit(1);
+             }
+             runQueries(db);
+         });
 
 
 .. _contractsRef:
