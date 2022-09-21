@@ -160,14 +160,14 @@ Please follow the below guideline to install mangroves.
 Quickstart Tutorial
 ----------------------
 
-You can simply use mangroves CLI to query data on the public blockchain, e.g., Ethereum. You can also test the mangroves compatible library with SQLite SDK. In what follows, there are some examples of how to test each of these services:
+You can easily use mangroves CLI to query data on the public blockchain, e.g., Ethereum. You can also test the mangroves SQLite compatible API in any programming language and platform. In what follows, there are some examples of how to test each of these services:
 
 MangrovesDB CLI
 +++++++++++++++++
 
 - **1. Running mangroves CLI** 
 
-From a terminal, run:
+After installation, in your terminal, run:
 
 .. tabs::
 
@@ -190,6 +190,10 @@ From a terminal, run:
 
           ./mangroves-cli --url https://cloudflare-eth.com/
 
+
+.. Note:: 
+
+    If installation is not available at this moment, you can use this `tutorial <https://killercoda.com/mangroves/>`_ to test the free version of mangroves services.
 
 .. Note:: 
 
@@ -220,8 +224,7 @@ From a terminal, run:
 
 You can now run your queries in the mangroves CLI. Please see the following examples:
 
-
-   - Query the :ref:`Block Table <blocks>`:
+   - Query the :ref:`Blocks Table <blocks>`:
 
       .. code-block:: SQL
 
@@ -252,12 +255,29 @@ Verify the results in underlying blockchain networks and available blockchain ex
 
 .. Attention::
 
-    Find what you can query from the :ref:`Block Table <blocksRef>`.
+    Find what you can query from the :ref:`Blocks Table <blocksRef>`.
 
 
 .. DANGER::
 
     If you are using public Ethereum gateways, please do not use the mangroves CLI to extract huge portion of data from blockchain |:stop_sign:|. Such queries will last too long or failed. You can try mangroves sqlite sdk comaptible.
+
+
+You can also run query against other tables on underlying blockchain network. For Ethereum mainnet, let's try another query on Transactions table on Polygon using its RPC gateway:
+
+   - Query the :ref:`Transactions Table <transactions>`:
+
+      .. code-block:: SQL
+
+            select transaction_index, from_address, to_address, value, gas from transactions where block_number=33243462 order by value desc limit 5;
+
+
+   - You can expect a result like this:
+
+   .. image:: /images/polygon_trnsaction.png
+     :width: 600
+
+
 
 
 MangrovesDB sqlite library
