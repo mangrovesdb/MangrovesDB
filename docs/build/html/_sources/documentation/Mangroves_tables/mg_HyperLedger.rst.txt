@@ -1,4 +1,0 @@
-.. _mghplegger:
-
-HyperLedger Table
-======================

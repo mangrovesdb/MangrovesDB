@@ -1,4 +1,0 @@
-.. _mgagg:
-
-Aggregate Table
-======================
