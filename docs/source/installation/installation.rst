@@ -38,21 +38,22 @@ Please follow the below guideline to install mangroves.
 
                      .. tab:: Binary download
 
-                        To install the latest mangroves stable release on x86-64 Linux using binary download:
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on x86-64 Linux** using binary download.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/cli>`_ to test the free version of the mangroves-cli.
+
 
                         .. code-block:: bash
 
-                            curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-                            sudo install minikube-linux-amd64 /usr/local/bin/minikube
+                            echo "Will be publiched soon"
 
                      .. tab:: sqlite SDK
 
-                        To install the latest mangroves stable release on x86-64 Linux for sqlite compatible sdk:
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on x86-64 Linux** for SQLite compatible sdk.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/sqlite>`_ to test the free version of SQLite compatible sdk on python.
 
                         .. code-block:: bash
 
-                            curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
-                            sudo dpkg -i minikube_latest_amd64.deb
+                            echo "Will be publiched soon"
 
              .. tab:: ARM64
 
@@ -60,22 +61,22 @@ Please follow the below guideline to install mangroves.
 
                      .. tab:: Binary download
 
-                        To install the latest minikube stable release on ARM64 Linux using binary download:
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on ARM64 Linux** using binary download.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/cli>`_ to test the free version of the mangroves-cli.
 
                         .. code-block:: bash
 
-                            curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-arm64
-                            sudo install minikube-linux-arm64 /usr/local/bin/minikube
+                            echo "Will be publiched soon"
 
 
                      .. tab:: sqlite SDK
 
-                        To install the latest mangroves stable release on ARM64 Linux for sqlite compatible sdk:
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on ARM64 Linux** for SQLite compatible sdk.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/sqlite>`_ to test the free version of SQLite compatible sdk on python.
 
                         .. code-block:: bash
 
-                            curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_arm64.deb
-                            sudo dpkg -i minikube_latest_arm64.deb
+                            echo "Will be publiched soon"
 
    .. tab:: macOS
 
@@ -87,21 +88,22 @@ Please follow the below guideline to install mangroves.
 
                      .. tab:: Binary download
 
-                        To install the latest mangroves stable release on x86-64 macOS using binary download:
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on x86-64 macOS** using binary download.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/cli>`_ to test the free version of the mangroves-cli.
 
                         .. code-block:: bash
 
-                            curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
-                            sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+                            echo "Will be publiched soon"
 
                      .. tab:: sqlite SDK
 
-                        To install the latest mangroves stable release on x86-64 macOS for sqlite compatible sdk:
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on x86-64 macOS** for SQLite compatible sdk.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/sqlite>`_ to test the free version of SQLite compatible sdk on python.
+
 
                         .. code-block:: bash
 
-                            curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64
-                            sudo install minikube-darwin-amd64 /usr/local/bin/minikube
+                            echo "Will be publiched soon"
  
              .. tab:: ARM64
 
@@ -109,22 +111,23 @@ Please follow the below guideline to install mangroves.
 
                      .. tab:: Binary download
 
-                        To install the latest mangroves stable release on ARM64 macOS using binary download:
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on ARM64 macOS** using binary download.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/cli>`_ to test the free version of the mangroves-cli.
 
                         .. code-block:: bash
 
-                            curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-arm64
-                            sudo install minikube-darwin-arm64 /usr/local/bin/minikube
+                            echo "Will be publiched soon"
 
 
                      .. tab:: sqlite SDK
 
-                        To install the latest mangroves stable release on ARM64 macOS for sqlite compatible sdk:
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on ARM64 macOS** for SQLite compatible sdk.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/sqlite>`_ to test the free version of SQLite compatible sdk on python.
+
 
                         .. code-block:: bash
 
-                            curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-darwin-arm64
-                            sudo install minikube-darwin-arm64 /usr/local/bin/minikube
+                            echo "Will be publiched soon"
 
    .. tab:: Windows
 
@@ -136,23 +139,22 @@ Please follow the below guideline to install mangroves.
 
                      .. tab:: .exe download
 
-                        Download and run the installer for the latest release. Or if using PowerShell, use this command:
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on WindowsS**. You shall download and run the installer for the latest release, or if using PowerShell, use terminal command.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/cli>`_ to test the free version of the mangroves-cli.
+:
 
                         .. code-block:: bash
 
-                            New-Item -Path 'c:\' -Name 'minikube' -ItemType Directory -Force
-                            Invoke-WebRequest -OutFile 'c:\minikube\minikube.exe' -Uri 'https://github.com/kubernetes/minikube/releases/latest/download/minikube-windows-amd64.exe' -UseBasicParsing
-
+                            echo "Will be publiched soon"
 
                      .. tab:: sqlite SDK
 
-                        Download and run the installer for the latest release sqlite compatible sdk. Or if using PowerShell, use this command: 
+                        We will open-source the project shortly and release the guideline for installing the **latest mangroves stable release on WindowsS**. You shall download and run the installer for the latest release, or if using PowerShell, use terminal command.
+                        You can use this `link <https://killercoda.com/mangroves/scenario/sqlite>`_ to test the free version of SQLite compatible sdk on python.
 
                         .. code-block:: bash
 
-                            New-Item -Path 'c:\' -Name 'minikube' -ItemType Directory -Force
-                            Invoke-WebRequest -OutFile 'c:\minikube\minikube.exe' -Uri 'https://github.com/kubernetes/minikube/releases/latest/download/minikube-windows-amd64.exe' -UseBasicParsing
-
+                            echo "Will be publiched soon"
 
 
 
