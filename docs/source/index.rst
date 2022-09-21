@@ -54,13 +54,6 @@ Let's :ref:`Getting Started <settingup>`.
 .. toctree::
    :maxdepth: 3
    :hidden:
-   :caption: Queries on MangrovesDB
-   
-   queries_on_mgdb/queries_on_mgdb
-
-.. toctree::
-   :maxdepth: 3
-   :hidden:
    :caption: Basic usage
    
    basic_usage/basic_usage
