@@ -72,48 +72,58 @@ Sample Blocks Table Queries
 +++++++++++++++++++++++++++++++++++
 
 To read data from the Ethereum blocks table, simply run your query on mangroves-cli or mangroves SQLite compatible API with the programming language of your choice, as shown below:
-.. image:: /images/MGDB_CLI_Start.png
-     :width: 600
-
-Then you can query against the data realted to the blocks on the public blockchain.
-
-.. image:: /images/read_first_blocks.png
-     :width: 600
-
-Feel free to try other queries as well:
-
-.. image:: /images/read_less_than_10_blocks.png
-     :width: 600
-
-.. code-block:: sql
-
-   SELECT nonce, size, gas_limit, min_gas_price, gas_used, difficulty, timestamp 
-   FROM blocks WHERE number=15329147;
 
 
-.. image:: /images/read_last_blocks_data.png
-     :width: 600
+    - You can query against the data realted to the blocks on the public blockchain.
 
-.. tabs:: lang
+    .. image:: /images/read_first_blocks.png
+        :width: 600
 
-    .. code-tab:: bash
+    - Feel free to try other queries as well:
 
-        echo "Hello, group!"
+    .. image:: /images/read_less_than_10_blocks.png
+        :width: 600
 
-    .. code-tab:: python
+    .. code-block:: sql
 
-        print("Hello, group!")
+    SELECT nonce, size, gas_limit, min_gas_price, gas_used, difficulty, timestamp 
+    FROM blocks WHERE number=15329147;
 
+
+    .. image:: /images/read_last_blocks_data.png
+        :width: 600
+
+
+- How about **mangroves SQLite compatible API**? Let's try the query using ``Python`` anf ``JS``:
 
 .. tabs:: lang
 
-    .. code-tab:: bash
-
-        echo "Goodbye, group!"
-
     .. code-tab:: python
 
-        print("Goodbye, group!")
+         import sqlite3
+         import pandas as pd
+
+         from sqlite3 import Error
+         try:
+             url = 'https://cloudflare-eth.com/'
+             con = sqlite3.connect(url)
+
+             print(f"Connection is established: Mangroves connected to {url}")
+
+             df = pd.read_sql_query("SELECT nonce, size, gas_limit, min_gas_price, gas_used, difficulty, timestamp FROM blocks WHERE number=15329147;", con)
+
+             df.to_csv("blocks.csv")
+
+         except Error:
+            print(Error)
+
+    .. code-tab:: js
+
+         class Main {
+            public static void main(String[] args) {
+            }
+         }
+
 
 
 .. _transactionsRef:
@@ -149,6 +159,7 @@ This table is designed to store the data related to the transactions of the Ethe
 |         block_hash        |    text     |
 +---------------------------+-------------+
 
+
 Sample Transactions Table Queries
 +++++++++++++++++++++++++++++++++++
 In order to read data from the Ethereum transactions table, as stated before, simply run your query on mangroves-cli or mangroves SQLite compatible API with the programming language of your choice as shown below:
@@ -157,7 +168,8 @@ In order to read data from the Ethereum transactions table, as stated before, si
 
       .. code-block:: SQL
 
-            select transaction_index, from_address, to_address, value, gas from transactions where block_number=33243462 order by value desc limit 5;
+            select transaction_index, from_address, to_address, value, gas
+             from transactions where block_number=33243462 order by value desc limit 5;
 
 
    - You can expect a result like this:
@@ -166,6 +178,35 @@ In order to read data from the Ethereum transactions table, as stated before, si
      :width: 600
 
 
+- Let's **mangroves SQLite compatible API**. We can write our queries using any programming language. We show examples in ``Python`` anf ``JS``:
+
+.. tabs:: lang
+
+    .. code-tab:: python
+
+         import sqlite3
+         import pandas as pd
+
+         from sqlite3 import Error
+         try:
+             url = 'https://cloudflare-eth.com/'
+             con = sqlite3.connect(url)
+
+             print(f"Connection is established: Mangroves connected to {url}")
+
+             df = pd.read_sql_query("select count(hash) from transactions where block_hash='f8b492a7b7eb9396d95c6b9b2f81d19a3661b562460a91c854fd0cbe195e0210';;", con)
+
+             df.to_csv("blocks.csv")
+
+         except Error:
+            print(Error)
+
+    .. code-tab:: js
+
+         class Main {
+            public static void main(String[] args) {
+            }
+         }
 
 
 .. _contractsRef:
