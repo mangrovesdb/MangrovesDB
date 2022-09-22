@@ -383,6 +383,6 @@ MangrovesDB sqlite library
          }
 
 
-.. Attention::
+.. Note:: 
 
     As can be seen the real-time data can be extracted easily using any programming language. This SQLite compatible interface can be integrated with any 3rd party dashboard/analytical services. 
