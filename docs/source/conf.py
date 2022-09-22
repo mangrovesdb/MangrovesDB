@@ -153,6 +153,11 @@ html_theme_options = {
             "title": "Mangroves Website",
         },
         {
+            "href": "https://killercoda.com/mangroves/",
+            "internal": False,
+            "title": "Try For Free",
+        },
+        {
             "href": "https://join.slack.com/t/mangroves-group/shared_invite/zt-1do47vpbb-JmP6Fxg4ROmsCIry9p0r9A",
             "internal": False,
             "title": "Community",
