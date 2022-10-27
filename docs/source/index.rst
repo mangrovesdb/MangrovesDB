@@ -11,8 +11,9 @@
 Welcome!
 =======================================
 
-Mangroves is a **SQL layer over any blockchain network**. We proudly focus on simplifying Blockchain development for data analysts, BI, and blockchain developers by leveraging SQL. You can easily read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2``).
+Mangroves is a **SQL layer over any blockchain network** to simplify Blockchain development. We proudly focus on simplifying Blockchain development for data analysts, BI, and blockchain developers by leveraging SQL. You can easily read/write data from/to underlying blockchain networks including ``ethereum`` (``on-chain, layer 2``).
 
+.. image:: /images/mangroves_product_3.png
 
 .. Note:: 
 
