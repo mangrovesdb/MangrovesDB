@@ -17,6 +17,24 @@ There are two kinds of operations that are supported in a transaction: CRAETE (T
 You can view the transaction specifications in `Github <https://github.com/mangrovesdb/mangroves.git>`_, which describe transaction components and the conditions they have to fulfill in order to be valid.
 
 
+Sample Use-Cases
+===========================
+There are many proven use-cases for Mangroves and here we will name a few of them:
+
+- Fields:  BI, Law enforcement, Finance/Banking, IoT, AI, Supply Chain, Healthcare, Government Sector, Gaming & Media.
+
+- Creating native Blockchain dashboards, providing on-demand analytics, driving ecosystem growth and retention.
+
+- Creating native Blockchain data pipelines
+
+- Develop **Smart Contract** and **calling on-chain smart contract functions** leveraging relational database features.
+
+- Develop native analytics platform by integrating on-chain data with other data sources such as wallet labels.
+
+- SQL-based Ethereum storage parsing and analysis.
+
+- Create on-chain Ethereum Namespace Service (ENS) using SQL. 
+
 
 Basic Use-Cases
 ===========================

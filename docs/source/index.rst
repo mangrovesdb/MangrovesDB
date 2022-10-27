@@ -48,6 +48,7 @@ Let's :ref:`Getting Started <settingup>`.
    :caption: Documentation
    
    documentation/mg_ETH
+   documentation/mg_Solana
    documentation/mg_HyperLedger
    documentation/SQL_Supported_Statements
    documentation/Blockchain_Netwroks_on_MGDB
