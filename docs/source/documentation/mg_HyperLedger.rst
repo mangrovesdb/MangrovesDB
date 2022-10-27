@@ -1,6 +1,6 @@
 .. _mghplegger:
 
-HyperLedger Table
+HyperLedger Tables
 ======================
 
 |:no_entry:| **Coming Soon** |:slight_smile:|
