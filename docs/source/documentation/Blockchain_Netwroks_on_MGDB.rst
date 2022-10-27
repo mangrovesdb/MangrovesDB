@@ -10,7 +10,7 @@ In this section we cover the important blockchain networks which are supported i
 - Mangroves is a **gateway** to ``all public/private blockchain networks``, such as Ethereum, Polygon, Hyperledger Hyperledger, etc.
 - Develop Smart Contract leveraging relational database features.
 
-The initial version of the mangroves can interact with Ethereum and Hyperledger Fabric blockchain networks.
+The initial version of the mangroves can interact with Ethereum-compatible peojects, Solana and Hyperledger Fabric networks.
 
 .. toctree::
    :maxdepth: 2
@@ -18,6 +18,14 @@ The initial version of the mangroves can interact with Ethereum and Hyperledger 
    :caption: Ethereum
 
    Ethereum
+
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+   :caption: Solana
+
+   Solana
+
 
 .. toctree::
    :maxdepth: 2
