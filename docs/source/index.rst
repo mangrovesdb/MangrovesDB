@@ -15,6 +15,7 @@ Mangroves is a **SQL layer over any blockchain network** to simplify Blockchain 
 
 .. image:: /images/mangroves_product_3.png
    :width: 600
+   :align: center
 
 .. Note:: 
 
