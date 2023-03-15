@@ -224,11 +224,18 @@ After installation, in your terminal, run:
 
 You can now run your queries in the mangroves CLI. Please see the following examples:
 
-   - Query the :ref:`Blocks Table <blocks>`:
+   - Streaming Query the :ref:`Blocks Table <blocks>`:
 
       .. code-block:: SQL
 
-            select number, hash, parent_hash from blocks where number=15368213;
+            subscribe (select number, hash, parent_hash from blocks);
+
+
+   - Batch Query the :ref:`Blocks Table <blocks>`:
+
+      .. code-block:: SQL
+
+            select number, hash, parent_hash from ethereum.main.blocks where number=15368213;
 
 
    - You can expect a result like this:
@@ -237,7 +244,8 @@ You can now run your queries in the mangroves CLI. Please see the following exam
      :width: 600
 
 
-Verify the results in underlying blockchain networks and available blockchain explorer platforms. For the abovve query you can chack this `page <https://etherscan.io/block/15368213>`_.
+The streaming result will return data in a real-time fashion. 
+You can verify Verify the results in underlying blockchain networks and available blockchain explorer platforms. For the abovve query you can chack this `page <https://etherscan.io/block/15368213>`_.
 
 .. Note:: 
 
