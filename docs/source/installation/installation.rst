@@ -228,7 +228,7 @@ You can now run your queries in the mangroves CLI. Please see the following exam
 
       .. code-block:: SQL
 
-            subscribe (select number, hash, parent_hash from blocks);
+            subscribe (select number, hash, parent_hash from ethereum.main.blocks);
 
 
    - Batch Query the :ref:`Blocks Table <blocks>`:
@@ -273,7 +273,14 @@ You can verify Verify the results in underlying blockchain networks and availabl
 
 You can also run query against other tables on underlying blockchain network. For Ethereum mainnet, let's try another query on Transactions table on Polygon using its RPC gateway:
 
-   - Query the :ref:`Transactions Table <transactions>`:
+   - Stream Query the :ref:`Transactions Table <transactions>`:
+
+      .. code-block:: SQL
+
+            subscribe (select block_number, transaction_index, from, to, case when to is null then 'contract creation' when to is not null and input='0x' then 'normal' else 'contract_call' end as transaction_type from ethereum.main.transactions);
+
+
+   - Batch Query the :ref:`Transactions Table <transactions>`:
 
       .. code-block:: SQL
 
