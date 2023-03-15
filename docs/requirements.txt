@@ -1,0 +1,12 @@
+sphinx
+myst-parser
+docutils>=0.18.1
+sphinx-design
+sphinx-version-warning
+sphinx_material
+sphinx_copybutton
+sphinx_tabs
+sphinxemoji
+sphinx_copybutton
+numpydoc
+sphinx_markdown_tables
