@@ -113,7 +113,7 @@ html_theme_options = {
     'base_url': 'https://github.com/mangrovesdb/MangrovesDB/tree/sphinx_material/docs',
 
     # Set the color and the accent color
-    'color_primary': 'dark-blue',
+    'color_primary': 'deep-blue',
     'color_accent': 'blue',
     "html_minify": True,
     "html_prettify": True,
