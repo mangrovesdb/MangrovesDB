@@ -11,24 +11,30 @@
 Welcome!
 =======================================
 
-Mangroves is a **versatile SQL layer designed for various blockchain networks**, aiming to streamline and simplify blockchain development for data analysts, business intelligence professionals, and blockchain developers.
+Mangroves is a Decentralized Postgres, a **versatile SQL databse designed for various blockchain networks**, aiming to streamline and simplify blockchain development for data analysts, business intelligence professionals, and blockchain developers.
 
 .. image:: /images/Mangroves_engine_transp.png
-   :width: 600
+   :width: 800
    :align: center
 
 .. Note:: 
 
-    You can try mangroves-cli and mangroves SQLite compatible API for free `here <https://killercoda.com/mangroves>`_.
+    Would you like to watch a demo of our product? If so, please take a look at `this link <https://www.youtube.com/watch?v=dgPLOWS2M0I>`_.
+         
+
+.. Note:: 
+
+    You can try our initial MVP with a SQLite compatible API for free `here <https://killercoda.com/mangroves>`_.
          
 
 - Highlights
-   - If you like SQLite SDK, mangroves compatible API supports all programming languages and any 3rd party dashboard/analytical services
-   - Mangroves CLI to perform queries on real-time blockchain data
-   - Mangroves as a gateway to all public/private blockchain networks, such as Ethereum, Polygon, Hyperledger Fabric
-   - MGDB is Self-deployable and can connect to clients' private blockchain nodes
-   - Develop Smart Contract leveraging relational database features
-   - We added a one-click step to dashboard generation, and it will be publicly available soon.
+   - `Decentralized PostgreSQL`: Mangroves brings the familiarity of PostgreSQL to the world of blockchain, making it easier for developers and analysts to interact with blockchain data using SQL commands.
+   - `Serverless SQL Gateway`: Mangroves provides a serverless SQL gateway that allows users to read from and write into any blockchain directly, making it a seamless experience for those who are already familiar with SQL.
+   - `Self-deployable and native blockchain support`: Mangroves can be self-deployed and offers native support for various blockchain platforms, ensuring that users can utilize the solution that best fits their needs.
+   - `Real-time data streaming`: Mangroves enables real-time data streaming through SQL commands, allowing companies to make data-driven decisions with minimal latency.
+   - `Integration with programming languages and third-party tools`: Mangroves' Postgres-compatible interface allows for easy integration with popular programming languages and analytical tools such as Grafana and Metabase, making it accessible to a wide range of users.
+   - `Simplified blockchain interaction`: By allowing users to write data to the blockchain using SQL, Mangroves makes it easier for both data analysts and blockchain developers to work with blockchain technology without the need to learn new skills.
+   - `Reduced dependency on third-party solutions`: Mangroves eliminates the need for separate data infrastructure or third-party dependencies, allowing companies to fully leverage the blockchain as a database and focus on their core business operations.
 
 Let's :ref:`Getting Started <settingup>`.
 
