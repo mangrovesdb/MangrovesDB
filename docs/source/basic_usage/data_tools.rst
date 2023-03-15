@@ -11,8 +11,8 @@ With **Data Stream**, users can subscribe to receive real-time updates on any SQ
 
 .. image:: /images/connection.gif
    :width: 150
-   :target: http://mgdb.io
-   :align: right
+   :align: center
+
 
 
 Data Batch
@@ -21,8 +21,8 @@ Data Batch enables quick and easy access to the information stored on the blockc
 
 .. image:: /images/note.gif
    :width: 150
-   :target: http://mgdb.io
-   :align: right
+   :align: center
+
 
 
 Live Table
@@ -31,8 +31,9 @@ Live Table is a unique feature that persists in the database and is constantly u
 
 .. image:: /images/list.gif
    :width: 150
-   :target: http://mgdb.io
-   :align: right
+   :align: center
+
+
 
 Mangroves Dev Tool
 --------------------------------
@@ -40,5 +41,4 @@ The Mangroves Dev Tool is a web3-native SQL engine that allows developers to eas
 
 .. image:: /images/settings.gif
    :width: 150
-   :target: http://mgdb.io
-   :align: right
+   :align: center
