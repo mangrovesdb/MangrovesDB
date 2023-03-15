@@ -13,7 +13,7 @@ Welcome!
 
 Mangroves is a **versatile SQL layer designed for various blockchain networks**, aiming to streamline and simplify blockchain development for data analysts, business intelligence professionals, and blockchain developers.
 
-.. image:: /images/Mangroves_engine.png
+.. image:: /images/Mangroves_engine_transp.png
    :width: 600
    :align: center
 
